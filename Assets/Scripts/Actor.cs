@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Controllers;
 using Photon.Pun;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -23,6 +24,8 @@ public class Actor : MonoBehaviourPunCallbacks
     public Side Side => side;
 
     public int HandCapacity => handCapacity;
+
+    public Actor Opponent => opponent;
     
     #region Private Fields
     
@@ -31,6 +34,9 @@ public class Actor : MonoBehaviourPunCallbacks
     
     [SerializeField]
     private GameObject[] deck;
+    
+    [SerializeField]
+    private GameObject cameraGameObject;
 
     [SerializeField]
     private int handCapacity;
@@ -47,12 +53,50 @@ public class Actor : MonoBehaviourPunCallbacks
     private bool _canAct;
     private bool _isActing;
 
-    private int _health;
+    [SerializeField]
+    private int health;
+
+    public int Health
+    {
+        get => health;
+        set => health = value;
+    }
 
     private bool _queuedEndTurn;
     
     #endregion
 
+    private void Start()
+    {
+        if (GameManager.Instance.ClientSide == Side)
+        {
+            cameraGameObject.SetActive(true);
+            if (TryGetComponent<AiController>(out var aiController)) aiController.enabled = false;
+            if (TryGetComponent<PlayerController>(out var playerController)) playerController.enabled = true;
+        }
+        else
+        {
+            cameraGameObject.SetActive(false);
+            if (TryGetComponent<AiController>(out var aiController) && GameManager.Instance.GameType == GameType.Singleplayer) aiController.enabled = true;
+            if (TryGetComponent<PlayerController>(out var playerController) && GameManager.Instance.GameType == GameType.Multiplayer) playerController.enabled = false;
+        }
+        if (Side == Side.Normal) StartGame();
+    }
+
+    public void Update()
+    {
+        if (Health <= 0f)
+        {
+            GameManager.Instance.EndGame(opponent);
+        }
+    }
+
+    private void StartGame()
+    {
+        _canAct = true;
+        _isActing = false;
+    }
+    
     public void Draw()
     {
         if (!_canAct || _isActing) return;
@@ -79,6 +123,13 @@ public class Actor : MonoBehaviourPunCallbacks
     {
         if (_isActing) return;
         photonView.RPC(nameof(EndTurnCommon), RpcTarget.All);
+    }
+
+    public void DestroyPiece(Piece piece)
+    {
+        _pieces.Remove(piece);
+        Destroy(piece.gameObject);
+        //Destroy animation.
     }
 
     [PunRPC]

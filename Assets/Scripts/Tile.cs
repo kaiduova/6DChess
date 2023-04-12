@@ -55,6 +55,8 @@ public class Tile : MonoBehaviour
     [SerializeField]
     private Actor owningActor;
 
+    private bool _hasOwningActor;
+
     private Piece _currentPiece;
 
     /// <summary>
@@ -74,6 +76,16 @@ public class Tile : MonoBehaviour
     private void Awake()
     {
         Board.Instance.Tiles.Add(this);
+        _hasOwningActor = owningActor != null;
+    }
+
+    private void Update()
+    {
+        if (_hasOwningActor && _currentPiece.Actor == owningActor.Opponent)
+        {
+            owningActor.Opponent.DestroyPiece(_currentPiece);
+            owningActor.Health--;
+        }
     }
 
     /// <summary>
