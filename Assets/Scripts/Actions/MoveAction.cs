@@ -48,7 +48,7 @@ namespace Actions
             }
         }
 
-        private static Vector2 InvertY(Vector2 input)
+        public static Vector2 InvertY(Vector2 input)
         {
             Vector2 output;
             output.x = input.x;

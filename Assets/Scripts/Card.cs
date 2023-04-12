@@ -14,6 +14,13 @@ public class Card : MonoBehaviour
     
     public bool Selected { get; set; }
 
+    private Vector3 _startingScale;
+
+    private void Awake()
+    {
+        _startingScale = transform.localScale;
+    }
+
     private void OnMouseDown()
     {
         if (!PlayerController.Instance.Actor.Hand.Contains(this)) return;
@@ -22,9 +29,14 @@ public class Card : MonoBehaviour
 
     private void Update()
     {
-        if (Selected)
+        if (Selected && transform.localScale == _startingScale)
         {
-            //Implement selected effect.
+            transform.localScale = _startingScale * 1.2f;
+        }
+        
+        if (!Selected && transform.localScale != _startingScale)
+        {
+            transform.localScale = _startingScale;
         }
     }
 }

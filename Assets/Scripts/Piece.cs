@@ -35,4 +35,9 @@ public class Piece : MonoBehaviour
         _actionIterator++;
         _orderedActions[_actionIterator - 1].PerformAction(NextAction);
     }
+
+    public void Destroy()
+    {
+        Actor.DestroyPiece(this);
+    }
 }

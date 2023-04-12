@@ -47,6 +47,12 @@ public class Actor : MonoBehaviourPunCallbacks
     [SerializeField]
     private Side side;
 
+    [SerializeField]
+    private GameObject cardSpawnLocationMarker;
+
+    [SerializeField]
+    private GameObject[] handLocationMarkers;
+        
     private int _currentlyActingPieceIndex;
     private Piece[] _orderedPieces;
 
@@ -68,6 +74,8 @@ public class Actor : MonoBehaviourPunCallbacks
 
     private void Start()
     {
+        if (handLocationMarkers.Length < handCapacity)
+            throw new Exception("There must be at least an equal amount of hand location markers as the capacity.");
         if (GameManager.Instance.ClientSide == Side)
         {
             cameraGameObject.SetActive(true);
@@ -100,8 +108,16 @@ public class Actor : MonoBehaviourPunCallbacks
     public void Draw()
     {
         if (!_canAct || _isActing) return;
+        if (_hand.Count >= handCapacity) return;
         _isActing = true;
-        photonView.RPC(nameof(DrawCommon), RpcTarget.All, Random.Range(0, deck.Length));
+        if (GameManager.Instance.GameType == GameType.Multiplayer)
+        {
+            photonView.RPC(nameof(DrawCommon), RpcTarget.All, Random.Range(0, deck.Length));
+        }
+        else
+        {
+            DrawCommon(Random.Range(0, deck.Length));
+        }
     }
 
     public void SpawnPiece(Tile tile, Card card)
@@ -109,20 +125,41 @@ public class Actor : MonoBehaviourPunCallbacks
         //Spawns piece on the tile.
         if (!_canAct || _isActing) return;
         _isActing = true;
-        photonView.RPC(nameof(SpawnPieceCommon), RpcTarget.All, tile.location, _hand.IndexOf(card));
+        if (GameManager.Instance.GameType == GameType.Multiplayer)
+        {
+            photonView.RPC(nameof(SpawnPieceCommon), RpcTarget.All, tile.location, _hand.IndexOf(card));
+        }
+        else
+        {
+            SpawnPieceCommon(tile.location, _hand.IndexOf(card));
+        }
     }
 
     public void PerformPieceActions()
     {
         if (!_canAct || _isActing) return;
         _isActing = true;
-        photonView.RPC(nameof(PerformPieceActionsCommon), RpcTarget.All);
+        if (GameManager.Instance.GameType == GameType.Multiplayer)
+        {
+            photonView.RPC(nameof(PerformPieceActionsCommon), RpcTarget.All);
+        }
+        else
+        {
+            PerformPieceActionsCommon();
+        }
     }
     
     public void EndTurn()
     {
         if (_isActing) return;
-        photonView.RPC(nameof(EndTurnCommon), RpcTarget.All);
+        if (GameManager.Instance.GameType == GameType.Multiplayer)
+        {
+            photonView.RPC(nameof(EndTurnCommon), RpcTarget.All);
+        }
+        else
+        {
+            EndTurnCommon();
+        }
     }
 
     public void DestroyPiece(Piece piece)
@@ -135,18 +172,49 @@ public class Actor : MonoBehaviourPunCallbacks
     [PunRPC]
     private void DrawCommon(int deckIndex)
     {
-        if (_hand.Count > handCapacity) return;
+        if (_hand.Count >= handCapacity) return;
         _isActing = true;
-        var card = Instantiate(deck[deckIndex], transform.GetChild(_hand.Count));
-        _hand.Add(card.GetComponent<Card>());
+        var card = Instantiate(deck[deckIndex], cardSpawnLocationMarker.transform.position, Quaternion.identity);
+        var cardComp = card.GetComponent<Card>();
+        _hand.Add(cardComp);
         //Animation here.
-        //Move stop acting to after animation.
+        StartCoroutine(DrawAnimation(card, _hand.IndexOf(cardComp)));
+    }
+
+    private IEnumerator DrawAnimation(GameObject card, int index)
+    {
+        for (var angle = 0f; angle <= 180f; angle += 18f)
+        {
+            card.transform.rotation = Quaternion.Euler(0, 0, angle);
+            yield return new WaitForSeconds(0.05f);
+        }
+
+        const float duration = 0.5f;
+        for (var t = 0f; t <= duration; t += Time.deltaTime)
+        {
+            card.transform.position = Vector3.Lerp(cardSpawnLocationMarker.transform.position, handLocationMarkers[index].transform.position, t/duration);
+            yield return null;
+        }
+
+        card.transform.position = handLocationMarkers[index].transform.position;
         _isActing = false;
+    }
+
+    private IEnumerator RelocateCard(GameObject card, Vector3 origin, Vector3 newLocation)
+    {
+        const float duration = 0.2f;
+        for (var t = 0f; t <= duration; t += Time.deltaTime)
+        {
+            card.transform.position = Vector3.Lerp(origin, newLocation, t/duration);
+            yield return null;
+        }
+        card.transform.position = newLocation;
     }
 
     [PunRPC]
     private void SpawnPieceCommon(Vector2 location, int cardIndex)
     {
+        _isActing = true;
         var tile = Board.Instance.Tiles.First(tile => tile.location == location);
         var piece = Instantiate(_hand[cardIndex].PiecePrefab, tile.transform, false);
         var pieceComp = piece.GetComponent<Piece>();
@@ -157,6 +225,11 @@ public class Actor : MonoBehaviourPunCallbacks
         Destroy(_hand[cardIndex]);
         //Card destroy animation here.
         _hand.RemoveAt(cardIndex);
+        for (var i = cardIndex; i < _hand.Count; i++)
+        {
+            StartCoroutine(RelocateCard(_hand[i].gameObject, _hand[i].gameObject.transform.position,
+                handLocationMarkers[i].transform.position));
+        }
         //Move stop acting to after animation.
         _isActing = false;
     }
@@ -164,6 +237,7 @@ public class Actor : MonoBehaviourPunCallbacks
     [PunRPC]
     private void PerformPieceActionsCommon()
     {
+        _isActing = true;
         _orderedPieces = _pieces.OrderBy(piece => piece.transform.position.x)
             .ThenBy(piece => piece.transform.position.z).ToArray();
         _currentlyActingPieceIndex = 0;

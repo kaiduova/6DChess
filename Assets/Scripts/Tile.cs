@@ -73,6 +73,8 @@ public class Tile : MonoBehaviour
 
     public Actor OwningActor => owningActor;
 
+    public Piece CurrentPiece => _currentPiece;
+
     private void Awake()
     {
         Board.Instance.Tiles.Add(this);
@@ -83,7 +85,7 @@ public class Tile : MonoBehaviour
     {
         if (_hasOwningActor && _currentPiece.Actor == owningActor.Opponent)
         {
-            owningActor.Opponent.DestroyPiece(_currentPiece);
+            _currentPiece.Destroy();
             owningActor.Health--;
         }
     }
@@ -100,7 +102,7 @@ public class Tile : MonoBehaviour
     
     public void SetOrReplacePieceOnTile(Piece piece)
     {
-        if (_currentPiece != null) Destroy(_currentPiece.gameObject);
+        if (_currentPiece != null) _currentPiece.Destroy();
         _currentPiece = piece;
         piece.Tile = this;
         piece.transform.localPosition = Vector3.zero;
