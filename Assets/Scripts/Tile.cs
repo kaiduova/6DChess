@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Controllers;
 using UnityEditor;
 using UnityEngine;
 
@@ -66,6 +67,10 @@ public class Tile : MonoBehaviour
     /// </summary>
     public Vector2 location;
 
+    public Actor SpawningActor => spawningActor;
+
+    public Actor OwningActor => owningActor;
+
     private void Awake()
     {
         Board.Instance.Tiles.Add(this);
@@ -123,5 +128,11 @@ public class Tile : MonoBehaviour
         var z = relativeCoordinate.y * minRadius;
         var x = relativeCoordinate.x * 1.5f * sideLength;
         return new Vector3(x, 0f, z);
+    }
+
+    private void OnMouseDown()
+    {
+        if (spawningActor == null || spawningActor != PlayerController.Instance.Actor) return;
+        PlayerController.Instance.ClickedTile(this);
     }
 }

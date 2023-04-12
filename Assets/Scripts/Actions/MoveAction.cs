@@ -20,7 +20,7 @@ namespace Actions
 
         public override void PerformAction(ActionFinishCallback callback)
         {
-            var destination = Piece.Tile.location + relativeMoveCoordinate;
+            var destination = Piece.Actor.Side == Side.Normal ? Piece.Tile.location + relativeMoveCoordinate : Piece.Tile.location + InvertY(relativeMoveCoordinate);
             Piece.Tile.DisconnectPieceFromTile();
             var destinationTile = Board.Instance.Tiles.FirstOrDefault(tile => tile.location == destination);
             if (destinationTile == null) return;
@@ -46,6 +46,14 @@ namespace Actions
                     transform.localPosition = Vector3.Lerp(Vector3.zero, _origin, _moveTimer / moveDuration);
                     break;
             }
+        }
+
+        private static Vector2 InvertY(Vector2 input)
+        {
+            Vector2 output;
+            output.x = input.x;
+            output.y = -input.y;
+            return output;
         }
     }
 }
