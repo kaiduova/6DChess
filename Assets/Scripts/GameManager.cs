@@ -28,6 +28,8 @@ public class GameManager : MonoBehaviourPunCallbacks
 
     public bool Connected { get; private set; }
 
+    public bool HostingGame { get; set; }
+
     private void Awake()
     {
         if (Instance != null) Destroy(this);
@@ -47,6 +49,24 @@ public class GameManager : MonoBehaviourPunCallbacks
     private void Update()
     {
         Connected = PhotonNetwork.IsConnected;
+
+        if (PhotonNetwork.IsConnectedAndReady && PhotonNetwork.InRoom)
+        {
+            GameType = GameType.Multiplayer;
+            if (PhotonNetwork.IsMasterClient)
+            {
+                ClientSide = Side.Normal;
+            }
+            else
+            {
+                ClientSide = Side.Inverted;
+            }
+        }
+        else if (!PhotonNetwork.InRoom)
+        {
+            GameType = GameType.Singleplayer;
+            ClientSide = Side.Normal;
+        }
     }
 
     public override void OnConnectedToMaster()
@@ -62,6 +82,12 @@ public class GameManager : MonoBehaviourPunCallbacks
     public void EndGame(Actor winner)
     {
         StartCoroutine(FadeAndChangeScene(winner.Side == ClientSide ? winSceneIndex : loseSceneIndex));
+        if (PhotonNetwork.InRoom)
+        {
+            PhotonNetwork.LeaveRoom();
+        }
+
+        HostingGame = false;
     }
     
     private IEnumerator FadeAndChangeScene(int index)
@@ -75,15 +101,5 @@ public class GameManager : MonoBehaviourPunCallbacks
         }
         SceneManager.LoadScene(index);
         fadeScreen.color = new Color(0, 0, 0, 0);
-    }
-
-    public void StartMultiplayerLobby()
-    {
-        
-    }
-
-    public void JoinMultiplayerLobby()
-    {
-        
     }
 }
