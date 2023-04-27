@@ -8,7 +8,11 @@ public class Piece : MonoBehaviour
     private Action[] _orderedActions;
     private int _actionIterator;
     private PieceFinishCallback _finishCallback;
+
+    [SerializeField]
+    private int damage;
     
+    public int Damage { get => damage; }
     public Actor Actor { get; set; }
     public Tile Tile { get; set; }
 

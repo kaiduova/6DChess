@@ -75,7 +75,7 @@ public class Tile : MonoBehaviour
 
     public Piece CurrentPiece => _currentPiece;
 
-    private void Awake()
+    private void Start()
     {
         Board.Instance.Tiles.Add(this);
         _hasOwningActor = owningActor != null;
@@ -83,10 +83,10 @@ public class Tile : MonoBehaviour
 
     private void Update()
     {
-        if (_hasOwningActor && _currentPiece.Actor == owningActor.Opponent)
+        if (_hasOwningActor && _currentPiece != null && _currentPiece.Actor == owningActor.Opponent)
         {
+            owningActor.Health -= _currentPiece.Damage;
             _currentPiece.Destroy();
-            owningActor.Health--;
         }
     }
 
@@ -146,6 +146,7 @@ public class Tile : MonoBehaviour
 
     private void OnMouseDown()
     {
+        print("Clicked");
         if (spawningActor == null || spawningActor != PlayerController.Instance.Actor) return;
         PlayerController.Instance.ClickedTile(this);
     }

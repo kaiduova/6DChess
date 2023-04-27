@@ -17,6 +17,8 @@ namespace Controllers
         
         private bool _queuedEndTurn;
 
+        private bool _moved;
+
         public static PlayerController Instance { get; set; }
 
         private void Awake()
@@ -32,23 +34,22 @@ namespace Controllers
             {
                 _actionTimer -= Time.deltaTime;
             }
-
-            if (_actionTimer <= 0f)
-            {
-                _queuedExecute = true;
-            }
-
-            if (_queuedExecute && !Actor.IsActing)
+            
+            if (!Actor.IsActing && !_moved)
             {
                 Actor.PerformPieceActions();
+            }
+            
+            if (_actionTimer <= 0f)
+            {
                 _queuedEndTurn = true;
-                _queuedExecute = false;
             }
 
             if (_queuedEndTurn && !Actor.IsActing)
             {
                 Actor.EndTurn();
                 _queuedEndTurn = false;
+                _moved = false;
             }
         }
 
@@ -63,7 +64,7 @@ namespace Controllers
         {
             if (_selectedCard == null || _selectedCard.gameObject == null || !Actor.CanAct) return;
             Actor.SpawnPiece(tile, _selectedCard);
-            _queuedExecute = true;
+            _queuedEndTurn = true;
         }
     }
 }
