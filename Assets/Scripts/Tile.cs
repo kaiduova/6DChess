@@ -146,7 +146,7 @@ public class Tile : MonoBehaviour
 
     private void OnMouseDown()
     {
-        print("Clicked");
+        print(PlayerController.Instance.Actor);
         if (spawningActor == null || spawningActor != PlayerController.Instance.Actor) return;
         PlayerController.Instance.ClickedTile(this);
     }

@@ -79,14 +79,21 @@ public class Actor : MonoBehaviourPunCallbacks
         if (GameManager.Instance.ClientSide == Side)
         {
             cameraGameObject.SetActive(true);
-            if (TryGetComponent<AiController>(out var aiController)) aiController.enabled = false;
-            if (TryGetComponent<PlayerController>(out var playerController)) playerController.enabled = true;
+            if (TryGetComponent<AiController>(out var aiController))
+            {
+                aiController.enabled = false;
+            }
+
+            if (TryGetComponent<PlayerController>(out var playerController))
+            {
+                playerController.enabled = true;
+            }
         }
         else
         {
             cameraGameObject.SetActive(false);
             if (TryGetComponent<AiController>(out var aiController) && GameManager.Instance.GameType == GameType.Singleplayer) aiController.enabled = true;
-            if (TryGetComponent<PlayerController>(out var playerController) && GameManager.Instance.GameType == GameType.Multiplayer) playerController.enabled = false;
+            if (TryGetComponent<PlayerController>(out var playerController)) playerController.enabled = false;
         }
         if (Side == Side.Normal) StartGame();
     }
@@ -216,13 +223,14 @@ public class Actor : MonoBehaviourPunCallbacks
     {
         _isActing = true;
         var tile = Board.Instance.Tiles.First(tile => tile.location == location);
-        var piece = Instantiate(_hand[cardIndex].PiecePrefab, tile.transform, false);
+        var piece = Instantiate(_hand[cardIndex].PiecePrefab, tile.transform.position, Quaternion.identity);
+        piece.transform.parent = tile.transform;
         var pieceComp = piece.GetComponent<Piece>();
         tile.SetOrReplacePieceOnTile(pieceComp);
         _pieces.Add(pieceComp);
         pieceComp.Actor = this;
         //Spawn animation here.
-        Destroy(_hand[cardIndex]);
+        Destroy(_hand[cardIndex].gameObject);
         //Card destroy animation here.
         _hand.RemoveAt(cardIndex);
         for (var i = cardIndex; i < _hand.Count; i++)

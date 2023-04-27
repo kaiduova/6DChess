@@ -21,14 +21,10 @@ namespace Controllers
 
         public static PlayerController Instance { get; set; }
 
-        private void Awake()
-        {
-            Instance = this;
-        }
-        
         protected override void Update()
         {
             base.Update();
+            Instance = this;
             if (!Actor.CanAct) _actionTimer = actionTime;
             else
             {
@@ -55,13 +51,15 @@ namespace Controllers
 
         public void ClickedCard(Card card)
         {
-            _selectedCard.Selected = false;
+            print("Clicked Card");
+            if (_selectedCard != null) _selectedCard.Selected = false;
             _selectedCard = card;
             card.Selected = true;
         }
 
         public void ClickedTile(Tile tile)
         {
+            print("Clicked Card");
             if (_selectedCard == null || _selectedCard.gameObject == null || !Actor.CanAct) return;
             Actor.SpawnPiece(tile, _selectedCard);
             _queuedEndTurn = true;

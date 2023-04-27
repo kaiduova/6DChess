@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviourPunCallbacks
 
     private void Awake()
     {
-        if (Instance != null) Destroy(this);
+        if (Instance != null) Destroy(gameObject);
         else Instance = this;
         DontDestroyOnLoad(this);
         PhotonNetwork.AutomaticallySyncScene = true;
@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviourPunCallbacks
     private void Update()
     {
         Connected = PhotonNetwork.IsConnected;
-
+        
         if (PhotonNetwork.IsConnectedAndReady && PhotonNetwork.InRoom)
         {
             GameType = GameType.Multiplayer;

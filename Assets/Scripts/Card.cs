@@ -29,6 +29,11 @@ public class Card : MonoBehaviour
 
     private void Update()
     {
+        if (!PlayerController.Instance.Actor.CanAct)
+        {
+            Selected = false;
+        }
+        
         if (Selected && transform.localScale == _startingScale)
         {
             transform.localScale = _startingScale * 1.2f;
