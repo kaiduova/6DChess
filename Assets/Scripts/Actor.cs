@@ -96,9 +96,13 @@ public class Actor : MonoBehaviourPunCallbacks
         else
         {
             cameraGameObject.SetActive(false);
-            if (TryGetComponent<AiController>(out var aiController) && GameManager.Instance.GameType == GameType.Singleplayer) aiController.enabled = true;
+            if (TryGetComponent<AiController>(out var aiController))
+            {
+                aiController.enabled = GameManager.Instance.GameType == GameType.Singleplayer;
+            }
             if (TryGetComponent<PlayerController>(out var playerController)) playerController.enabled = false;
         }
+        
         if (Side == Side.Normal) StartGame();
     }
 
@@ -107,6 +111,7 @@ public class Actor : MonoBehaviourPunCallbacks
         if (Health <= 0f)
         {
             GameManager.Instance.EndGame(opponent);
+            Health = 1;
         }
 
         healthText.text = Health.ToString();

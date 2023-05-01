@@ -42,6 +42,7 @@ namespace Actions
                 _moving = false;
                 Piece.Tile.DisconnectPieceFromTile();
                 _destinationTile.SetOrReplacePieceOnTile(Piece);
+                
                 _callback();
             }
         }

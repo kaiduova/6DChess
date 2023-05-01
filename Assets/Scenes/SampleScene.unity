@@ -214,6 +214,7 @@ GameObject:
   m_Component:
   - component: {fileID: 98569785}
   - component: {fileID: 98569786}
+  - component: {fileID: 98569787}
   m_Layer: 0
   m_Name: Tile(Clone)
   m_TagString: Untagged
@@ -254,6 +255,20 @@ MonoBehaviour:
   spawningActor: {fileID: 644973983}
   owningActor: {fileID: 644973983}
   location: {x: 1, y: 5}
+--- !u!136 &98569787
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 98569784}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.09
+  m_Height: 0.1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.02, z: 0}
 --- !u!1 &108273423
 GameObject:
   m_ObjectHideFlags: 0
@@ -436,6 +451,7 @@ GameObject:
   m_Component:
   - component: {fileID: 110809861}
   - component: {fileID: 110809862}
+  - component: {fileID: 110809863}
   m_Layer: 0
   m_Name: Tile(Clone)
   m_TagString: Untagged
@@ -476,6 +492,20 @@ MonoBehaviour:
   spawningActor: {fileID: 644973983}
   owningActor: {fileID: 644973983}
   location: {x: 0, y: 4}
+--- !u!136 &110809863
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 110809860}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.09
+  m_Height: 0.1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.02, z: 0}
 --- !u!1 &119623336
 GameObject:
   m_ObjectHideFlags: 0
@@ -568,7 +598,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 68deef40eea87494e81b6a8abd4addd2, type: 2}
+  - {fileID: 2100000, guid: 3eb66c752107f204280c81101a8ba7c1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1331,8 +1361,9 @@ GameObject:
   - component: {fileID: 484459021}
   - component: {fileID: 484459020}
   - component: {fileID: 484459022}
+  - component: {fileID: 484459023}
   m_Layer: 0
-  m_Name: NormalActor
+  m_Name: NormalSide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1395,6 +1426,28 @@ MonoBehaviour:
   actionTime: 10
   currentlyActing: {fileID: 1035871807}
   time: {fileID: 2087780480}
+--- !u!114 &484459023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 484459019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 1
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &495834378
 GameObject:
   m_ObjectHideFlags: 0
@@ -1623,8 +1676,9 @@ GameObject:
   - component: {fileID: 644973983}
   - component: {fileID: 644973982}
   - component: {fileID: 644973981}
+  - component: {fileID: 644973985}
   m_Layer: 0
-  m_Name: InvertedActor
+  m_Name: InvertedSide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1699,6 +1753,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &644973985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 644973980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 2
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &654064062
 GameObject:
   m_ObjectHideFlags: 0
@@ -2058,7 +2134,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 68deef40eea87494e81b6a8abd4addd2, type: 2}
+  - {fileID: 2100000, guid: 3eb66c752107f204280c81101a8ba7c1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2759,7 +2835,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 68deef40eea87494e81b6a8abd4addd2, type: 2}
+  - {fileID: 2100000, guid: 3eb66c752107f204280c81101a8ba7c1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3593,6 +3669,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1460321684}
   - component: {fileID: 1460321685}
+  - component: {fileID: 1460321686}
   m_Layer: 0
   m_Name: Tile(Clone)
   m_TagString: Untagged
@@ -3633,6 +3710,20 @@ MonoBehaviour:
   spawningActor: {fileID: 644973983}
   owningActor: {fileID: 644973983}
   location: {x: -2, y: 4}
+--- !u!136 &1460321686
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1460321683}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.09
+  m_Height: 0.1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.02, z: 0}
 --- !u!1 &1471444041
 GameObject:
   m_ObjectHideFlags: 0
@@ -4569,6 +4660,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1954789719}
   - component: {fileID: 1954789720}
+  - component: {fileID: 1954789721}
   m_Layer: 0
   m_Name: Tile(Clone)
   m_TagString: Untagged
@@ -4609,6 +4701,20 @@ MonoBehaviour:
   spawningActor: {fileID: 644973983}
   owningActor: {fileID: 644973983}
   location: {x: 2, y: 4}
+--- !u!136 &1954789721
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1954789718}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.09
+  m_Height: 0.1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.02, z: 0}
 --- !u!1 &1956255900
 GameObject:
   m_ObjectHideFlags: 0
@@ -4684,6 +4790,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1959297211}
   - component: {fileID: 1959297212}
+  - component: {fileID: 1959297213}
   m_Layer: 0
   m_Name: Tile(Clone)
   m_TagString: Untagged
@@ -4724,6 +4831,20 @@ MonoBehaviour:
   spawningActor: {fileID: 644973983}
   owningActor: {fileID: 644973983}
   location: {x: -1, y: 5}
+--- !u!136 &1959297213
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959297210}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.09
+  m_Height: 0.1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.02, z: 0}
 --- !u!1 &1977192491
 GameObject:
   m_ObjectHideFlags: 0
@@ -4868,7 +4989,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 68deef40eea87494e81b6a8abd4addd2, type: 2}
+  - {fileID: 2100000, guid: 3eb66c752107f204280c81101a8ba7c1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5001,7 +5122,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 68deef40eea87494e81b6a8abd4addd2, type: 2}
+  - {fileID: 2100000, guid: 3eb66c752107f204280c81101a8ba7c1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

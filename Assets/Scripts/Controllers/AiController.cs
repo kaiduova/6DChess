@@ -1,5 +1,7 @@
+using System;
 using System.Linq;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Controllers
 {
@@ -10,7 +12,10 @@ namespace Controllers
 
         private int _spawnsLeft, _movesLeft;
 
-        private bool _numbersRefreshed;
+        private void Start()
+        {
+            RefreshNumbers();
+        }
 
         protected override void Update()
         {

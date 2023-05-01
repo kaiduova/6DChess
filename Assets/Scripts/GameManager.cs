@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Controllers;
 using Photon.Pun;
 using Photon.Realtime;
 using UnityEngine;
@@ -29,6 +30,9 @@ public class GameManager : MonoBehaviourPunCallbacks
     public bool Connected { get; private set; }
 
     public bool HostingGame { get; set; }
+
+    private bool _lastGameWon;
+    private bool _queuedLoadFinishScene;
 
     private void Awake()
     {
@@ -71,7 +75,13 @@ public class GameManager : MonoBehaviourPunCallbacks
 
     public override void OnConnectedToMaster()
     {
+        base.OnConnectedToMaster();
         print("Connected to master.");
+        if (_queuedLoadFinishScene)
+        {
+            SceneManager.LoadScene(_lastGameWon ? winSceneIndex : loseSceneIndex);
+            _queuedLoadFinishScene = false;
+        }
     }
 
     public override void OnDisconnected(DisconnectCause cause)
@@ -81,12 +91,16 @@ public class GameManager : MonoBehaviourPunCallbacks
 
     public void EndGame(Actor winner)
     {
-        SceneManager.LoadScene(winner.Side == ClientSide ? winSceneIndex : loseSceneIndex);
+        _lastGameWon = winner.TryGetComponent<PlayerController>(out var playerController) && playerController.isActiveAndEnabled;
         if (PhotonNetwork.InRoom)
         {
+            _queuedLoadFinishScene = true;
             PhotonNetwork.LeaveRoom();
         }
-
+        else
+        {
+            SceneManager.LoadScene(_lastGameWon ? winSceneIndex : loseSceneIndex);
+        }
         HostingGame = false;
     }
 }

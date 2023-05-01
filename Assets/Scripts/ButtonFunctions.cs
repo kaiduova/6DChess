@@ -20,6 +20,13 @@ public class ButtonFunctions : MonoBehaviourPunCallbacks
     [SerializeField]
     private TMP_Text connectionStatus;
     
+    [SerializeField]
+    private TMP_Text roomStatus;
+
+    private bool _queuedCreateRoomRequest;
+    
+    private bool _queuedJoinRoomRequest;
+    
     public void LoadScene(int index)
     {
         SceneManager.LoadScene(index);
@@ -52,8 +59,31 @@ public class ButtonFunctions : MonoBehaviourPunCallbacks
         if (PhotonNetwork.InRoom)
         {
             PhotonNetwork.LeaveRoom();
+            _queuedCreateRoomRequest = true;
         }
+        else
+        {
+            DefaultCreateRoom();
+        }
+    }
 
+    public override void OnConnectedToMaster()
+    {
+        base.OnConnectedToMaster();
+        if (_queuedCreateRoomRequest)
+        {
+            DefaultCreateRoom();
+            _queuedCreateRoomRequest = false;
+        }
+        if (_queuedJoinRoomRequest)
+        {
+            PhotonNetwork.JoinRoom(inputField.text);
+            _queuedJoinRoomRequest = false;
+        }
+    }
+
+    private void DefaultCreateRoom()
+    {
         var roomOptions = new RoomOptions();
         roomOptions.MaxPlayers = 2;
         PhotonNetwork.CreateRoom(inputField.text, roomOptions);
@@ -63,6 +93,7 @@ public class ButtonFunctions : MonoBehaviourPunCallbacks
     {
         base.OnCreatedRoom();
         print("Room created.");
+        roomStatus.text = "Room created.";
     }
 
     public void JoinMultiplayerGame()
@@ -76,9 +107,12 @@ public class ButtonFunctions : MonoBehaviourPunCallbacks
         if (PhotonNetwork.InRoom)
         {
             PhotonNetwork.LeaveRoom();
+            _queuedJoinRoomRequest = true;
         }
-
-        PhotonNetwork.JoinRoom(inputField.text);
+        else
+        {
+            PhotonNetwork.JoinRoom(inputField.text);
+        }
     }
 
     public override void OnJoinedRoom()
@@ -91,5 +125,6 @@ public class ButtonFunctions : MonoBehaviourPunCallbacks
     {
         base.OnJoinRoomFailed(returnCode, message);
         print("Room couldn't be joined.");
+        roomStatus.text = "Room couldn't be joined.";
     }
 }

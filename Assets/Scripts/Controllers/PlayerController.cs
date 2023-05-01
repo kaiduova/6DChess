@@ -26,11 +26,16 @@ namespace Controllers
 
         public static PlayerController Instance { get; set; }
 
+        private void Start()
+        {
+            _actionTimer = actionTime;
+        }
+
         protected override void Update()
         {
             base.Update();
             Instance = this;
-            if (!Actor.CanAct || _moved && Actor.IsActing) _actionTimer = actionTime;
+            if (!Actor.CanAct || Actor.IsActing) _actionTimer = actionTime;
             else
             {
                 _actionTimer -= Time.deltaTime;
