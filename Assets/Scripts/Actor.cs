@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Controllers;
 using Photon.Pun;
+using TMPro;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -52,6 +53,9 @@ public class Actor : MonoBehaviourPunCallbacks
 
     [SerializeField]
     private GameObject[] handLocationMarkers;
+
+    [SerializeField]
+    private TMP_Text healthText;
         
     private int _currentlyActingPieceIndex;
     private Piece[] _orderedPieces;
@@ -104,6 +108,8 @@ public class Actor : MonoBehaviourPunCallbacks
         {
             GameManager.Instance.EndGame(opponent);
         }
+
+        healthText.text = Health.ToString();
     }
 
     private void StartGame()
@@ -246,22 +252,44 @@ public class Actor : MonoBehaviourPunCallbacks
     private void PerformPieceActionsCommon()
     {
         _isActing = true;
-        _orderedPieces = _pieces.OrderBy(piece => piece.transform.position.x)
-            .ThenBy(piece => piece.transform.position.z).ToArray();
+        if (side == Side.Normal)
+        {
+            _orderedPieces = _pieces.OrderByDescending(piece => piece.transform.position.z)
+                .ThenBy(piece => piece.transform.position.x).ToArray();
+        }
+        else
+        {
+            _orderedPieces = _pieces.OrderBy(piece => piece.transform.position.z)
+                .ThenByDescending(piece => piece.transform.position.x).ToArray();
+        }
+        
         _currentlyActingPieceIndex = 0;
         NextPieceAct();
     }
-    
+
     private void NextPieceAct()
     {
-        if (_currentlyActingPieceIndex >= _orderedPieces.Length)
+        while (true)
         {
-            _currentlyActingPieceIndex = 0;
-            _isActing = false;
-            return;
+            if (_currentlyActingPieceIndex >= _orderedPieces.Length)
+            {
+                _currentlyActingPieceIndex = 0;
+                _isActing = false;
+                return;
+            }
+
+            _currentlyActingPieceIndex++;
+            
+            //Skip piece if destroyed.
+            if (_orderedPieces[_currentlyActingPieceIndex - 1] != null)
+                _orderedPieces[_currentlyActingPieceIndex - 1].Act(NextPieceAct);
+            else
+            {
+                continue;
+            }
+
+            break;
         }
-        _currentlyActingPieceIndex++;
-        _orderedPieces[_currentlyActingPieceIndex - 1].Act(NextPieceAct);
     }
 
     [PunRPC]

@@ -81,25 +81,12 @@ public class GameManager : MonoBehaviourPunCallbacks
 
     public void EndGame(Actor winner)
     {
-        StartCoroutine(FadeAndChangeScene(winner.Side == ClientSide ? winSceneIndex : loseSceneIndex));
+        SceneManager.LoadScene(winner.Side == ClientSide ? winSceneIndex : loseSceneIndex);
         if (PhotonNetwork.InRoom)
         {
             PhotonNetwork.LeaveRoom();
         }
 
         HostingGame = false;
-    }
-    
-    private IEnumerator FadeAndChangeScene(int index)
-    {
-        var color = Color.black;
-        for (float alpha = 0f; alpha <= 1; alpha += 0.05f)
-        {
-            color.a = alpha;
-            fadeScreen.color = color;
-            yield return new WaitForSeconds(.1f);
-        }
-        SceneManager.LoadScene(index);
-        fadeScreen.color = new Color(0, 0, 0, 0);
     }
 }

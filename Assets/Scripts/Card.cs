@@ -29,7 +29,7 @@ public class Card : MonoBehaviour
 
     private void Update()
     {
-        if (!PlayerController.Instance.Actor.CanAct)
+        if (!PlayerController.Instance.Actor.CanAct || PlayerController.Instance.Actor.IsActing)
         {
             Selected = false;
         }

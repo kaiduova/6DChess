@@ -15,36 +15,34 @@ namespace Actions
         private float _moveTimer;
 
         private ActionFinishCallback _callback;
+        
+        private Tile _destinationTile;
 
-        private Vector3 _origin;
+        private bool _moving;
 
         public override void PerformAction(ActionFinishCallback callback)
         {
             var destination = Piece.Actor.Side == Side.Normal ? Piece.Tile.location + relativeMoveCoordinate : Piece.Tile.location + InvertY(relativeMoveCoordinate);
-            Piece.Tile.DisconnectPieceFromTile();
-            var destinationTile = Board.Instance.Tiles.FirstOrDefault(tile => tile.location == destination);
-            if (destinationTile == null) return;
-            destinationTile.SetOrReplacePieceOnTile(Piece);
+            _destinationTile = Board.Instance.Tiles.FirstOrDefault(tile => tile.location == destination);
+            if (_destinationTile == null) return;
             _moveTimer = moveDuration;
             _callback = callback;
-            _origin = transform.localPosition;
+            _moving = true;
         }
 
         private void Update()
         {
-            switch (_moveTimer)
+            if (_moveTimer > 0f)
             {
-                case <= 0 and > -100f:
-                    _moveTimer = -200f;
-                    transform.localPosition = Vector3.zero;
-                    _callback();
-                    return;
-                case < 0f:
-                    return;
-                default:
-                    _moveTimer -= Time.deltaTime;
-                    transform.localPosition = Vector3.Lerp(Vector3.zero, _origin, _moveTimer / moveDuration);
-                    break;
+                _moveTimer -= Time.deltaTime;
+                transform.position = Vector3.Lerp(Piece.Tile.transform.position, _destinationTile.transform.position, 1 - (_moveTimer / moveDuration));
+            }
+            else if (_moving)
+            {
+                _moving = false;
+                Piece.Tile.DisconnectPieceFromTile();
+                _destinationTile.SetOrReplacePieceOnTile(Piece);
+                _callback();
             }
         }
 

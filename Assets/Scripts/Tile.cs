@@ -11,6 +11,8 @@ public struct TileLocationList
     public List<Vector2> locations;
 }
 
+#if UNITY_EDITOR
+
 [CustomEditor(typeof(Tile))]
 public class TileEditor : Editor
 {
@@ -40,6 +42,8 @@ public class TileEditor : Editor
         }
     }
 }
+
+#endif
 
 public class Tile : MonoBehaviour
 {
@@ -105,7 +109,9 @@ public class Tile : MonoBehaviour
         if (_currentPiece != null) _currentPiece.Destroy();
         _currentPiece = piece;
         piece.Tile = this;
-        piece.transform.localPosition = Vector3.zero;
+        var pieceTransform = piece.transform;
+        pieceTransform.parent = gameObject.transform;
+        pieceTransform.localPosition = Vector3.zero;
     }
 
     public void GenerateTiles()
@@ -146,7 +152,6 @@ public class Tile : MonoBehaviour
 
     private void OnMouseDown()
     {
-        print(PlayerController.Instance.Actor);
         if (spawningActor == null || spawningActor != PlayerController.Instance.Actor) return;
         PlayerController.Instance.ClickedTile(this);
     }
