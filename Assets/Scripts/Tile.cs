@@ -103,6 +103,14 @@ public class Tile : MonoBehaviour
         _currentPiece.transform.parent = null;
         _currentPiece = null;
     }
+
+    public void TempPlacePieceOnTile(Piece piece)
+    {
+        piece.Tile = this;
+        var pieceTransform = piece.transform;
+        pieceTransform.parent = gameObject.transform;
+        pieceTransform.localPosition = Vector3.zero;
+    }
     
     public void SetOrReplacePieceOnTile(Piece piece)
     {

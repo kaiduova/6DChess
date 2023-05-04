@@ -270,6 +270,11 @@ public class Actor : MonoBehaviourPunCallbacks
         
         _currentlyActingPieceIndex = 0;
         NextPieceAct();
+        foreach (var piece in _pieces)
+        {
+            if (piece.Tile.CurrentPiece != piece)
+                throw new Exception("The piece " + piece + " needs to end on a non-jump move action.");
+        }
     }
 
     private void NextPieceAct()
