@@ -79,6 +79,8 @@ public class Tile : MonoBehaviour
 
     public Piece CurrentPiece => _currentPiece;
 
+    public float MaxWidth => maxWidth;
+
     private void Start()
     {
         Board.Instance.Tiles.Add(this);

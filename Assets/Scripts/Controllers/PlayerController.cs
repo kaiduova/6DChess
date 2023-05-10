@@ -21,6 +21,8 @@ namespace Controllers
 
         private bool _moved;
 
+        private bool _showingIcons;
+
         [SerializeField]
         private TMP_Text currentlyActing, time;
 
@@ -34,13 +36,15 @@ namespace Controllers
         protected override void Update()
         {
             base.Update();
+            //Locking mechanism where Actor.IsActing is set to true by time-based functions that are responsible
+            //for setting it back to false when they're done. Calls therefore go from top to bottom.
             Instance = this;
             if (!Actor.CanAct || Actor.IsActing) _actionTimer = actionTime;
             else
             {
                 _actionTimer -= Time.deltaTime;
             }
-            
+
             if (!Actor.IsActing && !_moved && Actor.CanAct)
             {
                 Actor.PerformPieceActions();
@@ -57,6 +61,24 @@ namespace Controllers
                 Actor.EndTurn();
                 _queuedEndTurn = false;
                 _moved = false;
+            }
+            
+            //Non-locking.
+            if (!Actor.IsActing && Actor.CanAct)
+            {
+                foreach (var piece in Actor.Pieces)
+                {
+                    _showingIcons = true;
+                    piece.ShowIcons();
+                }
+            }
+            else if (_showingIcons)
+            {
+                foreach (var piece in Actor.Pieces)
+                {
+                    _showingIcons = false;
+                    piece.HideIcons();
+                }
             }
 
             if (Actor.CanAct && !Actor.IsActing)

@@ -19,9 +19,6 @@ namespace Actions
         [SerializeField]
         private Direction movePattern;
 
-        [SerializeField]
-        private bool isFlipped;
-        
         [SerializeField, Header("MAKE SURE THE LAST MOVE IS NON-JUMP!")]
         private bool isJump;
 
@@ -53,7 +50,7 @@ namespace Actions
         public override void PerformAction(ActionFinishCallback callback)
         {
             Tile destinationTile;
-            if (!isFlipped)
+            if (!Piece.IsFlipped)
             {
                 if (TryNormalMove(out destinationTile))
                 {
@@ -62,7 +59,7 @@ namespace Actions
                 else if (TryFlippedMove(out destinationTile))
                 {
                     destinationTile = _destinationTile;
-                    isFlipped = true;
+                    Piece.IsFlipped = true;
                 }
                 else
                 {
@@ -78,7 +75,7 @@ namespace Actions
                 else if (TryNormalMove(out destinationTile))
                 {
                     destinationTile = _destinationTile;
-                    isFlipped = false;
+                    Piece.IsFlipped = false;
                 }
                 else
                 {
