@@ -9,13 +9,7 @@ using UnityEngine.UI;
 public class ButtonFunctions : MonoBehaviourPunCallbacks
 {
     [SerializeField]
-    private int testGameSceneIndex;
-    
-    [SerializeField]
-    private int menuSceneIndex;
-
-    [SerializeField]
-    private TMP_InputField inputField;
+    private TMP_InputField inputFieldMultiplayer, inputFieldScene;
 
     [SerializeField]
     private TMP_Text connectionStatus;
@@ -39,13 +33,13 @@ public class ButtonFunctions : MonoBehaviourPunCallbacks
         if (PhotonNetwork.IsConnectedAndReady && PhotonNetwork.InRoom && PhotonNetwork.CurrentRoom.PlayerCount == 2 && PhotonNetwork.IsMasterClient && !GameManager.Instance.HostingGame)
         {
             GameManager.Instance.HostingGame = true;
-            PhotonNetwork.LoadLevel(testGameSceneIndex);
+            PhotonNetwork.LoadLevel(int.Parse(inputFieldScene.text));
         }
     }
 
     public void StartSingleplayerGame()
     {
-        LoadScene(testGameSceneIndex);
+        LoadScene(int.Parse(inputFieldScene.text));
     }
     
     public void HostMultiplayerGame()
@@ -77,7 +71,7 @@ public class ButtonFunctions : MonoBehaviourPunCallbacks
         }
         if (_queuedJoinRoomRequest)
         {
-            PhotonNetwork.JoinRoom(inputField.text);
+            PhotonNetwork.JoinRoom(inputFieldMultiplayer.text);
             _queuedJoinRoomRequest = false;
         }
     }
@@ -86,7 +80,7 @@ public class ButtonFunctions : MonoBehaviourPunCallbacks
     {
         var roomOptions = new RoomOptions();
         roomOptions.MaxPlayers = 2;
-        PhotonNetwork.CreateRoom(inputField.text, roomOptions);
+        PhotonNetwork.CreateRoom(inputFieldMultiplayer.text, roomOptions);
     }
 
     public override void OnCreatedRoom()
@@ -111,7 +105,7 @@ public class ButtonFunctions : MonoBehaviourPunCallbacks
         }
         else
         {
-            PhotonNetwork.JoinRoom(inputField.text);
+            PhotonNetwork.JoinRoom(inputFieldMultiplayer.text);
         }
     }
 
