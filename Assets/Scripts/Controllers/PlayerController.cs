@@ -95,12 +95,16 @@ namespace Controllers
 
         public void ClickedCard(Card card)
         {
-            if (_selectedCard != null) _selectedCard.Selected = false;
+            if (_selectedCard != null)
+            {
+                _selectedCard.Selected = false;
+            }
             _selectedCard = card;
             card.Selected = true;
+            card.Dragging = true;
         }
 
-        public void ClickedTile(Tile tile)
+        public void ReleasedOnTile(Tile tile)
         {
             if (_selectedCard == null || _selectedCard.gameObject == null || !Actor.CanAct || Actor.IsActing) return;
             Actor.SpawnPiece(tile, _selectedCard);

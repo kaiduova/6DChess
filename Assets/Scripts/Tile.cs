@@ -55,6 +55,7 @@ public enum TileEffect
     Arrow
 }
 
+[RequireComponent(typeof(SphereCollider))]
 public class Tile : MonoBehaviour
 {
     [SerializeField]
@@ -98,6 +99,8 @@ public class Tile : MonoBehaviour
     [SerializeField]
     public Actions.Direction arrowTarget;
 
+    private Collider _collider;
+
     public Actor SpawningActor => spawningActor;
 
     public Actor OwningActor => owningActor;
@@ -105,6 +108,11 @@ public class Tile : MonoBehaviour
     public Piece CurrentPiece => _currentPiece;
 
     public float MaxWidth => maxWidth;
+
+    private void Awake()
+    {
+        _collider = GetComponent<Collider>();
+    }
 
     private void Start()
     {
@@ -176,9 +184,16 @@ public class Tile : MonoBehaviour
         return new Vector3(x, 0f, z);
     }
 
-    private void OnMouseDown()
+    private void Update()
     {
-        if (spawningActor == null || spawningActor != PlayerController.Instance.Actor) return;
-        PlayerController.Instance.ClickedTile(this);
+        if (Input.GetKeyUp(KeyCode.Mouse0))
+        {
+            if (spawningActor == null || spawningActor != PlayerController.Instance.Actor) return;
+            var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (_collider.Raycast(ray, out _, 100f))
+            {
+                PlayerController.Instance.ReleasedOnTile(this);
+            }
+        }
     }
 }

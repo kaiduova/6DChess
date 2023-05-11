@@ -194,6 +194,7 @@ public class Actor : MonoBehaviourPunCallbacks
         _isActing = true;
         var card = Instantiate(deck[deckIndex], cardSpawnLocationMarker.transform.position, Quaternion.identity);
         var cardComp = card.GetComponent<Card>();
+        cardComp.Actor = this;
         _hand.Add(cardComp);
         //Animation here.
         StartCoroutine(DrawAnimation(card, _hand.IndexOf(cardComp)));
@@ -227,7 +228,6 @@ public class Actor : MonoBehaviourPunCallbacks
             yield return null;
         }
         card.transform.position = newLocation;
-        card.GetComponent<Card>().IntendedPosition = newLocation;
     }
 
     [PunRPC]
