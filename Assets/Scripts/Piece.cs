@@ -98,6 +98,12 @@ public class Piece : MonoBehaviour
 
     private void NextAction()
     {
+        if (Tile.OwningActor != null && Actor != Tile.OwningActor)
+        {
+            Tile.OwningActor.Health -= damage;
+            Destroy();
+        }
+        
         if (_actionIterator >= _orderedActions.Length)
         {
             _actionIterator = 0;

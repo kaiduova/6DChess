@@ -47,6 +47,7 @@ public class TileEditor : Editor
 
 public enum TileEffect
 {
+    None,
     Random,
     Teleport,
     Instakill,
@@ -109,15 +110,6 @@ public class Tile : MonoBehaviour
     {
         Board.Instance.Tiles.Add(this);
         _hasOwningActor = owningActor != null;
-    }
-
-    private void Update()
-    {
-        if (_hasOwningActor && _currentPiece != null && _currentPiece.Actor == owningActor.Opponent)
-        {
-            owningActor.Health -= _currentPiece.Damage;
-            _currentPiece.Destroy();
-        }
     }
 
     /// <summary>

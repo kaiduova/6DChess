@@ -5,6 +5,7 @@ using System.Linq;
 using Controllers;
 using UnityEngine;
 
+[RequireComponent(typeof(BoxCollider))]
 public class Card : MonoBehaviour
 {
     [SerializeField]
@@ -29,10 +30,23 @@ public class Card : MonoBehaviour
 
     private void Update()
     {
-        if (!PlayerController.Instance.Actor.CanAct || PlayerController.Instance.Actor.IsActing)
+        if (!PlayerController.Instance.Actor.CanAct || PlayerController.Instance.Actor.IsActing /*|| Input.GetKeyUp(KeyCode.Mouse0)*/)
         {
             Selected = false;
         }
+
+        /*
+        if (Selected)
+        {
+            var plane = new Plane(Vector3.up, 2f);
+            if (Camera.main != null)
+            {
+                plane.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), );
+            }
+            if ()
+            transform.position =
+        }
+        */
         
         if (Selected && transform.localScale == _startingScale)
         {

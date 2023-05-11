@@ -26,7 +26,7 @@ namespace Actions
                 {
                     case TileEffect.Random:
                         IList enumValues = Enum.GetValues(typeof(TileEffect));
-                        Piece.Tile.tileEffect = (TileEffect)enumValues[Random.Range(1, enumValues.Count)];
+                        Piece.Tile.tileEffect = (TileEffect)enumValues[Random.Range(2, enumValues.Count)];
                         continue;
                     case TileEffect.Teleport:
                         Piece.Tile.DisconnectPieceFromTile();
@@ -50,7 +50,8 @@ namespace Actions
                         _arrowMoving = true;
                         return;
                     default:
-                        throw new ArgumentOutOfRangeException();
+                        callback();
+                        return;
                 }
             }
         }
