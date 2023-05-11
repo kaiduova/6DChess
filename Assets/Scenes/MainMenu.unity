@@ -381,7 +381,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d30be289ff84a6e88bcc3179ed36a03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  testGameSceneIndex: 4
+  testGameSceneIndex: 3
   menuSceneIndex: 0
   inputField: {fileID: 1184978382}
   connectionStatus: {fileID: 207691392}

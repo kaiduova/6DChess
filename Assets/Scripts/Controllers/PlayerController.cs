@@ -23,19 +23,48 @@ namespace Controllers
 
         private bool _showingIcons;
 
+        private Tile _currentlyPlacingTile;
+
         [SerializeField]
         private TMP_Text currentlyActing, time;
+
+        [SerializeField]
+        private GameObject directionalIndicator;
 
         public static PlayerController Instance { get; set; }
 
         private void Start()
         {
             _actionTimer = actionTime;
+            directionalIndicator.SetActive(false);
         }
 
         protected override void Update()
         {
             base.Update();
+
+            if (_currentlyPlacingTile != null)
+            {
+                directionalIndicator.SetActive(true);
+                directionalIndicator.transform.position = _currentlyPlacingTile.transform.position;
+                if (Input.GetKeyDown(KeyCode.Mouse0))
+                {
+                    var plane = new Plane(Vector3.up, -2f);
+                    if (Camera.main == null) throw new Exception("Camera missing");
+                    var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                    plane.Raycast(ray, out var enter);
+                    //Right side is normal.
+                    if (ray.GetPoint(enter).x >= _currentlyPlacingTile.transform.position.x)
+                    {
+                        SpawnOnSide(Actor.Side != Side.Normal);
+                    }
+                    else
+                    {
+                        SpawnOnSide(Actor.Side == Side.Normal);
+                    }
+                }
+            }
+            
             //Locking mechanism where Actor.IsActing is set to true by time-based functions that are responsible
             //for setting it back to false when they're done. Calls therefore go from top to bottom.
             Instance = this;
@@ -59,6 +88,8 @@ namespace Controllers
             if (_queuedEndTurn && !Actor.IsActing)
             {
                 Actor.EndTurn();
+                directionalIndicator.SetActive(false);
+                _currentlyPlacingTile = null;
                 _queuedEndTurn = false;
                 _moved = false;
             }
@@ -95,6 +126,7 @@ namespace Controllers
 
         public void ClickedCard(Card card)
         {
+            if (_currentlyPlacingTile) return;
             if (_selectedCard != null)
             {
                 _selectedCard.Selected = false;
@@ -107,7 +139,14 @@ namespace Controllers
         public void ReleasedOnTile(Tile tile)
         {
             if (_selectedCard == null || _selectedCard.gameObject == null || !Actor.CanAct || Actor.IsActing) return;
-            Actor.SpawnPiece(tile, _selectedCard);
+            _currentlyPlacingTile = tile;
+        }
+
+        private void SpawnOnSide(bool isFlipped)
+        {
+            if (_currentlyPlacingTile == null) return;
+            Actor.SpawnPiece(_currentlyPlacingTile, _selectedCard, isFlipped);
+            _currentlyPlacingTile = null;
             _queuedEndTurn = true;
         }
     }

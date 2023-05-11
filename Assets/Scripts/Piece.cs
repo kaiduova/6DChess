@@ -23,9 +23,8 @@ public class Piece : MonoBehaviour
 
     [SerializeField]
     private IndicatorIcon[] indicatorIcons;
-
-    [SerializeField]
-    private bool isFlipped;
+    
+    private bool _isFlipped;
 
     private bool _iconsFlipped;
     
@@ -37,8 +36,8 @@ public class Piece : MonoBehaviour
 
     public bool IsFlipped
     {
-        get => isFlipped;
-        set => isFlipped = value;
+        get => _isFlipped;
+        set => _isFlipped = value;
     }
 
     private void Awake()

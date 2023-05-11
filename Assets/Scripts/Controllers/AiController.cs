@@ -32,7 +32,7 @@ namespace Controllers
             if (_spawnsLeft > 0 && !Actor.IsActing)
             {
                 var spawnableTileArray = Board.Instance.Tiles.Where(tile => tile.SpawningActor == Actor).ToArray();
-                Actor.SpawnPiece(spawnableTileArray[Random.Range(0, spawnableTileArray.Length)], Actor.Hand.Last());
+                Actor.SpawnPiece(spawnableTileArray[Random.Range(0, spawnableTileArray.Length)], Actor.Hand.Last(), RandomBool());
                 _spawnsLeft--;
             }
 
@@ -47,6 +47,11 @@ namespace Controllers
         {
             _spawnsLeft = spawnsPerTurn;
             _movesLeft = movesPerTurn;
+        }
+        
+        public static bool RandomBool()
+        {
+            return Random.Range(0, 2) == 0;
         }
     }
 }

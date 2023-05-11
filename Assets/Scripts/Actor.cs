@@ -138,7 +138,7 @@ public class Actor : MonoBehaviourPunCallbacks
         }
     }
 
-    public void SpawnPiece(Tile tile, Card card)
+    public void SpawnPiece(Tile tile, Card card, bool isFlipped)
     {
         //Spawns piece on the tile.
         if (!_canAct || _isActing) return;
@@ -149,7 +149,7 @@ public class Actor : MonoBehaviourPunCallbacks
         }
         else
         {
-            SpawnPieceCommon(tile.location, _hand.IndexOf(card));
+            SpawnPieceCommon(tile.location, _hand.IndexOf(card), isFlipped);
         }
     }
 
@@ -231,13 +231,14 @@ public class Actor : MonoBehaviourPunCallbacks
     }
 
     [PunRPC]
-    private void SpawnPieceCommon(Vector2 location, int cardIndex)
+    private void SpawnPieceCommon(Vector2 location, int cardIndex, bool isFlipped)
     {
         _isActing = true;
         var tile = Board.Instance.Tiles.First(tile => tile.location == location);
         var piece = Instantiate(_hand[cardIndex].PiecePrefab, tile.transform.position, Quaternion.identity);
         piece.transform.parent = tile.transform;
         var pieceComp = piece.GetComponent<Piece>();
+        pieceComp.IsFlipped = isFlipped;
         tile.SetOrReplacePieceOnTile(pieceComp);
         _pieces.Add(pieceComp);
         pieceComp.Actor = this;
