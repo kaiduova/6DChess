@@ -272,6 +272,7 @@ public class Actor : MonoBehaviourPunCallbacks
         NextPieceAct();
         foreach (var piece in _pieces)
         {
+            piece.InSludge = false;
             if (piece.Tile.CurrentPiece != piece)
                 throw new Exception("The piece " + piece + " needs to end on a non-jump move action.");
         }

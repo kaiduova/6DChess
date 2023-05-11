@@ -33,7 +33,7 @@ namespace Actions
 
         private bool _moving;
 
-        private Vector2 TranslateToRelativeCoordinate(Direction direction)
+        public static Vector2 TranslateToRelativeCoordinate(Direction direction)
         {
             return direction switch
             {
@@ -49,6 +49,11 @@ namespace Actions
         
         public override void PerformAction(ActionFinishCallback callback)
         {
+            if (Piece.InSludge)
+            {
+                callback();
+                return;
+            }
             Tile destinationTile;
             if (!Piece.IsFlipped)
             {

@@ -29,6 +29,8 @@ public class Piece : MonoBehaviour
 
     private bool _iconsFlipped;
     
+    public bool InSludge { get; set; }
+    
     public int Damage { get => damage; }
     public Actor Actor { get; set; }
     public Tile Tile { get; set; }

@@ -45,6 +45,15 @@ public class TileEditor : Editor
 
 #endif
 
+public enum TileEffect
+{
+    Random,
+    Teleport,
+    Instakill,
+    Sludge,
+    Arrow
+}
+
 public class Tile : MonoBehaviour
 {
     [SerializeField]
@@ -72,6 +81,21 @@ public class Tile : MonoBehaviour
     /// More specifically any coordinate with an odd and an even number cannot exist.
     /// </summary>
     public Vector2 location;
+
+    [SerializeField]
+    public TileEffect tileEffect;
+
+    /// <summary>
+    /// For Teleport.
+    /// </summary>
+    [SerializeField]
+    public Tile teleportTarget;
+    
+    /// <summary>
+    /// For Arrow.
+    /// </summary>
+    [SerializeField]
+    public Actions.Direction arrowTarget;
 
     public Actor SpawningActor => spawningActor;
 
