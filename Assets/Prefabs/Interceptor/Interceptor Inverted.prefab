@@ -94,8 +94,11 @@ GameObject:
   - component: {fileID: 3603423070857443521}
   - component: {fileID: 3603423070857443534}
   - component: {fileID: 3603423070857443535}
+  - component: {fileID: -9078767998329999639}
   - component: {fileID: 4581311872877912141}
+  - component: {fileID: 1440191240690580849}
   - component: {fileID: 6241204046905080108}
+  - component: {fileID: 8933215110742628575}
   - component: {fileID: 2347755254493809441}
   m_Layer: 0
   m_Name: Interceptor Inverted
@@ -151,7 +154,7 @@ MonoBehaviour:
   movePattern: 1
   isJump: 0
   moveDuration: 1
---- !u!114 &4581311872877912141
+--- !u!114 &-9078767998329999639
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -160,14 +163,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 3603423070857443528}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8cd8c17e93a6436080e6369f09d5cd35, type: 3}
+  m_Script: {fileID: 11500000, guid: e7313f5aa48a4cf481a0befede4aac5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   actionOrder: 2
-  movePattern: 1
-  isJump: 0
-  moveDuration: 1
---- !u!114 &6241204046905080108
+  arrowMoveDuration: 1
+--- !u!114 &4581311872877912141
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -183,6 +184,50 @@ MonoBehaviour:
   movePattern: 1
   isJump: 0
   moveDuration: 1
+--- !u!114 &1440191240690580849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3603423070857443528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7313f5aa48a4cf481a0befede4aac5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionOrder: 4
+  arrowMoveDuration: 1
+--- !u!114 &6241204046905080108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3603423070857443528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cd8c17e93a6436080e6369f09d5cd35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionOrder: 5
+  movePattern: 1
+  isJump: 0
+  moveDuration: 1
+--- !u!114 &8933215110742628575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3603423070857443528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7313f5aa48a4cf481a0befede4aac5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionOrder: 6
+  arrowMoveDuration: 1
 --- !u!114 &2347755254493809441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,5 +240,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 506713f5e3ae4a54b3b2b49059fb56f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actionOrder: 4
+  actionOrder: 7
   relativeAttackCoordinate: {x: 0, y: -2}

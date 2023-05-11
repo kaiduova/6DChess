@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4942057540051692963}
   - component: {fileID: 4942057540051692972}
   - component: {fileID: 4942057540051692973}
+  - component: {fileID: 3703358414494894854}
   - component: {fileID: 4974011646538976843}
   - component: {fileID: 4001098184373674234}
   m_Layer: 0
@@ -67,6 +68,20 @@ MonoBehaviour:
   movePattern: 0
   isJump: 0
   moveDuration: 1
+--- !u!114 &3703358414494894854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4942057540051692970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7313f5aa48a4cf481a0befede4aac5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionOrder: 2
+  arrowMoveDuration: 1
 --- !u!114 &4974011646538976843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79,7 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 506713f5e3ae4a54b3b2b49059fb56f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actionOrder: 2
+  actionOrder: 3
   relativeAttackCoordinate: {x: 1, y: 1}
 --- !u!114 &4001098184373674234
 MonoBehaviour:
@@ -93,7 +108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 506713f5e3ae4a54b3b2b49059fb56f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actionOrder: 3
+  actionOrder: 4
   relativeAttackCoordinate: {x: 2, y: 2}
 --- !u!1 &4942057540467675391
 GameObject:
