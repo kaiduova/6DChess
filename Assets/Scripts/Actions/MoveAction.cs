@@ -100,7 +100,10 @@ namespace Actions
             else if (_moving)
             {
                 _moving = false;
-                Piece.Tile.DisconnectPieceFromTile();
+                if (Piece.Tile.CurrentPiece == Piece)
+                {
+                    Piece.Tile.DisconnectPieceFromTile();
+                }
                 if (isJump)
                 {
                     _destinationTile.TempPlacePieceOnTile(Piece);
