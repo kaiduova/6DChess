@@ -57,34 +57,30 @@ namespace Actions
             Tile destinationTile;
             if (!Piece.IsFlipped)
             {
-                if (TryNormalMove(out destinationTile))
+                if (!TryNormalMove(out destinationTile))
                 {
-                    destinationTile = _destinationTile;
-                }
-                else if (TryFlippedMove(out destinationTile))
-                {
-                    destinationTile = _destinationTile;
-                    Piece.IsFlipped = true;
-                }
-                else
-                {
-                    throw new Exception("Piece predicted to walk off the board.");
+                    if (TryFlippedMove(out destinationTile))
+                    {
+                        Piece.IsFlipped = true;
+                    }
+                    else
+                    {
+                        throw new Exception("Piece predicted to walk off the board.");
+                    }
                 }
             }
             else
             {
-                if (TryFlippedMove(out destinationTile))
+                if (!TryFlippedMove(out destinationTile))
                 {
-                    destinationTile = _destinationTile;
-                }
-                else if (TryNormalMove(out destinationTile))
-                {
-                    destinationTile = _destinationTile;
-                    Piece.IsFlipped = false;
-                }
-                else
-                {
-                    throw new Exception("Piece predicted to walk off the board.");
+                    if (TryNormalMove(out destinationTile))
+                    {
+                        Piece.IsFlipped = false;
+                    }
+                    else
+                    {
+                        throw new Exception("Piece predicted to walk off the board.");
+                    }
                 }
             }
 
@@ -141,7 +137,7 @@ namespace Actions
                 ? Piece.Tile.location + coordinate
                 : Piece.Tile.location + InvertY(coordinate);
             destinationTile = Board.Instance.Tiles.FirstOrDefault(tile => tile.location == destination);
-            return _destinationTile != null;
+            return destinationTile != null;
         }
 
         private bool TryFlippedMove(out Tile destinationTile)
@@ -151,7 +147,7 @@ namespace Actions
                 ? Piece.Tile.location + coordinate
                 : Piece.Tile.location + InvertY(coordinate);
             destinationTile = Board.Instance.Tiles.FirstOrDefault(tile => tile.location == destination);
-            return _destinationTile != null;
+            return destinationTile != null;
         }
     }
 }
