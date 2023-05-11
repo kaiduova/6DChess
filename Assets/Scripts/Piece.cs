@@ -102,6 +102,8 @@ public class Piece : MonoBehaviour
         {
             Tile.OwningActor.Health -= damage;
             Destroy();
+            _finishCallback();
+            return;
         }
         
         if (_actionIterator >= _orderedActions.Length)
