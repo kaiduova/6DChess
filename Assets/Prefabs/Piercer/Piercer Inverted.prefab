@@ -64,7 +64,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actionOrder: 1
   movePattern: 0
-  isJump: 0
+  isJump: 1
   moveDuration: 1
 --- !u!114 &5260292286299714863
 MonoBehaviour:

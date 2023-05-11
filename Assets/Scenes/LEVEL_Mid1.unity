@@ -833,7 +833,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 68deef40eea87494e81b6a8abd4addd2, type: 2}
+  - {fileID: 2100000, guid: 80527c85f4d834a4f896ade8cfbb66b1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -920,6 +920,9 @@ MonoBehaviour:
   spawningActor: {fileID: 0}
   owningActor: {fileID: 0}
   location: {x: 2, y: 2}
+  tileEffect: 0
+  teleportTarget: {fileID: 0}
+  arrowTarget: 0
 --- !u!1 &209032162
 GameObject:
   m_ObjectHideFlags: 0
@@ -985,6 +988,9 @@ MonoBehaviour:
   spawningActor: {fileID: 0}
   owningActor: {fileID: 0}
   location: {x: -1, y: 1}
+  tileEffect: 0
+  teleportTarget: {fileID: 0}
+  arrowTarget: 0
 --- !u!1 &224195265
 GameObject:
   m_ObjectHideFlags: 0
@@ -1133,6 +1139,9 @@ MonoBehaviour:
   spawningActor: {fileID: 0}
   owningActor: {fileID: 0}
   location: {x: 1, y: 1}
+  tileEffect: 0
+  teleportTarget: {fileID: 0}
+  arrowTarget: 0
 --- !u!1 &242675653
 GameObject:
   m_ObjectHideFlags: 0
@@ -1195,9 +1204,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilePrefab: {fileID: 819090373}
   maxWidth: 2
-  spawningActor: {fileID: 0}
-  owningActor: {fileID: 0}
+  spawningActor: {fileID: 484459020}
+  owningActor: {fileID: 484459020}
   location: {x: -1, y: -1}
+  tileEffect: 0
+  teleportTarget: {fileID: 0}
+  arrowTarget: 0
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -1381,6 +1393,9 @@ MonoBehaviour:
   spawningActor: {fileID: 0}
   owningActor: {fileID: 0}
   location: {x: 4, y: 2}
+  tileEffect: 0
+  teleportTarget: {fileID: 0}
+  arrowTarget: 0
 --- !u!1 &402061488
 GameObject:
   m_ObjectHideFlags: 0
@@ -1446,6 +1461,9 @@ MonoBehaviour:
   spawningActor: {fileID: 0}
   owningActor: {fileID: 0}
   location: {x: -3, y: 5}
+  tileEffect: 0
+  teleportTarget: {fileID: 0}
+  arrowTarget: 0
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1622,7 +1640,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 68deef40eea87494e81b6a8abd4addd2, type: 2}
+  - {fileID: 2100000, guid: 3eb66c752107f204280c81101a8ba7c1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1709,6 +1727,9 @@ MonoBehaviour:
   spawningActor: {fileID: 0}
   owningActor: {fileID: 0}
   location: {x: -2, y: 2}
+  tileEffect: 0
+  teleportTarget: {fileID: 0}
+  arrowTarget: 0
 --- !u!1 &483611470
 GameObject:
   m_ObjectHideFlags: 0
@@ -1774,6 +1795,9 @@ MonoBehaviour:
   spawningActor: {fileID: 0}
   owningActor: {fileID: 0}
   location: {x: -5, y: 1}
+  tileEffect: 0
+  teleportTarget: {fileID: 0}
+  arrowTarget: 0
 --- !u!1 &484459019
 GameObject:
   m_ObjectHideFlags: 0
@@ -1806,7 +1830,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deck:
-  - {fileID: 8485078294492037666, guid: 5b5bf157d89d3d64a857d3f5cf627cd7, type: 3}
+  - {fileID: 8485078294492037666, guid: 1ca8b266d24e0c04c8ea4e097d56e3b5, type: 3}
+  - {fileID: 8485078294492037666, guid: e3320a51cd5439d4f93530daf7d4071e, type: 3}
+  - {fileID: 8485078294492037666, guid: de200def760747145b7dba3c3ce33532, type: 3}
+  - {fileID: 8485078294492037666, guid: b073fdbffd7ca534a89f02c8bc27cae2, type: 3}
+  - {fileID: 8485078294492037666, guid: a8ce009d3e0b02f429d1d2f01ace6e43, type: 3}
   cameraGameObject: {fileID: 330585543}
   handCapacity: 4
   opponent: {fileID: 644973983}
@@ -1847,7 +1875,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actor: {fileID: 484459020}
-  actionTime: 10
+  actionTime: 60
   currentlyActing: {fileID: 1035871807}
   time: {fileID: 2087780480}
 --- !u!114 &484459023
@@ -1934,9 +1962,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilePrefab: {fileID: 819090373}
   maxWidth: 2
-  spawningActor: {fileID: 0}
-  owningActor: {fileID: 0}
+  spawningActor: {fileID: 484459020}
+  owningActor: {fileID: 484459020}
   location: {x: 2, y: 0}
+  tileEffect: 0
+  teleportTarget: {fileID: 0}
+  arrowTarget: 0
 --- !u!1 &513530188
 GameObject:
   m_ObjectHideFlags: 0
@@ -2002,6 +2033,9 @@ MonoBehaviour:
   spawningActor: {fileID: 0}
   owningActor: {fileID: 0}
   location: {x: 3, y: 3}
+  tileEffect: 0
+  teleportTarget: {fileID: 0}
+  arrowTarget: 0
 --- !u!1 &517401234
 GameObject:
   m_ObjectHideFlags: 0
@@ -2064,9 +2098,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilePrefab: {fileID: 819090373}
   maxWidth: 2
-  spawningActor: {fileID: 0}
-  owningActor: {fileID: 0}
+  spawningActor: {fileID: 644973983}
+  owningActor: {fileID: 644973983}
   location: {x: -2, y: 8}
+  tileEffect: 0
+  teleportTarget: {fileID: 0}
+  arrowTarget: 0
 --- !u!1 &523932224
 GameObject:
   m_ObjectHideFlags: 0
@@ -2128,7 +2165,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 68deef40eea87494e81b6a8abd4addd2, type: 2}
+  - {fileID: 2100000, guid: 3eb66c752107f204280c81101a8ba7c1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2298,6 +2335,9 @@ MonoBehaviour:
   spawningActor: {fileID: 0}
   owningActor: {fileID: 0}
   location: {x: -2, y: 4}
+  tileEffect: 0
+  teleportTarget: {fileID: 0}
+  arrowTarget: 0
 --- !u!1 &576859608
 GameObject:
   m_ObjectHideFlags: 0
@@ -2446,6 +2486,9 @@ MonoBehaviour:
   spawningActor: {fileID: 0}
   owningActor: {fileID: 0}
   location: {x: -1, y: 7}
+  tileEffect: 0
+  teleportTarget: {fileID: 0}
+  arrowTarget: 0
 --- !u!1 &644973980
 GameObject:
   m_ObjectHideFlags: 0
@@ -2510,7 +2553,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deck:
-  - {fileID: 8485078294492037666, guid: fb7fbb5685c02f84f84291fe80b88413, type: 3}
+  - {fileID: 8485078294492037666, guid: 0662d731c8e730d498c59be9be720e87, type: 3}
+  - {fileID: 8485078294492037666, guid: 18f84c6f1a1469b40bfcd28b95f4b821, type: 3}
+  - {fileID: 8485078294492037666, guid: 3e294a83e44e915479b9e6d79f11ede1, type: 3}
   cameraGameObject: {fileID: 900251165}
   handCapacity: 1
   opponent: {fileID: 484459020}
@@ -2622,6 +2667,9 @@ MonoBehaviour:
   spawningActor: {fileID: 0}
   owningActor: {fileID: 0}
   location: {x: 3, y: 1}
+  tileEffect: 0
+  teleportTarget: {fileID: 0}
+  arrowTarget: 0
 --- !u!1 &682430413
 GameObject:
   m_ObjectHideFlags: 0
@@ -2687,6 +2735,9 @@ MonoBehaviour:
   spawningActor: {fileID: 0}
   owningActor: {fileID: 0}
   location: {x: 1, y: 5}
+  tileEffect: 0
+  teleportTarget: {fileID: 0}
+  arrowTarget: 0
 --- !u!1 &703928981
 GameObject:
   m_ObjectHideFlags: 0
@@ -2835,6 +2886,9 @@ MonoBehaviour:
   spawningActor: {fileID: 0}
   owningActor: {fileID: 0}
   location: {x: 1, y: 9}
+  tileEffect: 0
+  teleportTarget: {fileID: 0}
+  arrowTarget: 0
 --- !u!1 &726976308
 GameObject:
   m_ObjectHideFlags: 0
@@ -2980,9 +3034,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilePrefab: {fileID: 819090373}
   maxWidth: 2
-  spawningActor: {fileID: 0}
-  owningActor: {fileID: 0}
+  spawningActor: {fileID: 484459020}
+  owningActor: {fileID: 484459020}
   location: {x: 0, y: -2}
+  tileEffect: 0
+  teleportTarget: {fileID: 0}
+  arrowTarget: 0
 --- !u!1 &742900066
 GameObject:
   m_ObjectHideFlags: 0
@@ -3048,6 +3105,9 @@ MonoBehaviour:
   spawningActor: {fileID: 0}
   owningActor: {fileID: 0}
   location: {x: 4, y: 4}
+  tileEffect: 0
+  teleportTarget: {fileID: 0}
+  arrowTarget: 0
 --- !u!1 &756791347
 GameObject:
   m_ObjectHideFlags: 0
@@ -3113,6 +3173,9 @@ MonoBehaviour:
   spawningActor: {fileID: 0}
   owningActor: {fileID: 0}
   location: {x: -4, y: 4}
+  tileEffect: 0
+  teleportTarget: {fileID: 0}
+  arrowTarget: 0
 --- !u!1 &782453080
 GameObject:
   m_ObjectHideFlags: 0
@@ -3178,6 +3241,9 @@ MonoBehaviour:
   spawningActor: {fileID: 0}
   owningActor: {fileID: 0}
   location: {x: -1, y: 5}
+  tileEffect: 0
+  teleportTarget: {fileID: 0}
+  arrowTarget: 0
 --- !u!1 &799765697
 GameObject:
   m_ObjectHideFlags: 0
@@ -3243,6 +3309,9 @@ MonoBehaviour:
   spawningActor: {fileID: 0}
   owningActor: {fileID: 0}
   location: {x: 2, y: 6}
+  tileEffect: 0
+  teleportTarget: {fileID: 0}
+  arrowTarget: 0
 --- !u!1001 &819090372
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3438,6 +3507,9 @@ MonoBehaviour:
   spawningActor: {fileID: 0}
   owningActor: {fileID: 0}
   location: {x: 5, y: 3}
+  tileEffect: 0
+  teleportTarget: {fileID: 0}
+  arrowTarget: 0
 --- !u!1 &854833965
 GameObject:
   m_ObjectHideFlags: 0
@@ -3586,6 +3658,9 @@ MonoBehaviour:
   spawningActor: {fileID: 0}
   owningActor: {fileID: 0}
   location: {x: 4, y: 0}
+  tileEffect: 0
+  teleportTarget: {fileID: 0}
+  arrowTarget: 0
 --- !u!1 &898250114
 GameObject:
   m_ObjectHideFlags: 0
@@ -3932,9 +4007,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilePrefab: {fileID: 819090373}
   maxWidth: 2
-  spawningActor: {fileID: 0}
-  owningActor: {fileID: 0}
+  spawningActor: {fileID: 644973983}
+  owningActor: {fileID: 644973983}
   location: {x: -1, y: 9}
+  tileEffect: 0
+  teleportTarget: {fileID: 0}
+  arrowTarget: 0
 --- !u!1 &921977631
 GameObject:
   m_ObjectHideFlags: 0
@@ -4000,6 +4078,9 @@ MonoBehaviour:
   spawningActor: {fileID: 0}
   owningActor: {fileID: 0}
   location: {x: 1, y: 7}
+  tileEffect: 0
+  teleportTarget: {fileID: 0}
+  arrowTarget: 0
 --- !u!1 &949255709
 GameObject:
   m_ObjectHideFlags: 0
@@ -4145,9 +4226,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilePrefab: {fileID: 819090373}
   maxWidth: 2
-  spawningActor: {fileID: 0}
-  owningActor: {fileID: 0}
+  spawningActor: {fileID: 644973983}
+  owningActor: {fileID: 644973983}
   location: {x: 2, y: 8}
+  tileEffect: 0
+  teleportTarget: {fileID: 0}
+  arrowTarget: 0
 --- !u!1 &984157260
 GameObject:
   m_ObjectHideFlags: 0
@@ -4213,6 +4297,9 @@ MonoBehaviour:
   spawningActor: {fileID: 0}
   owningActor: {fileID: 0}
   location: {x: 0, y: 2}
+  tileEffect: 0
+  teleportTarget: {fileID: 0}
+  arrowTarget: 0
 --- !u!1 &991069549
 GameObject:
   m_ObjectHideFlags: 0
@@ -4278,6 +4365,9 @@ MonoBehaviour:
   spawningActor: {fileID: 0}
   owningActor: {fileID: 0}
   location: {x: 5, y: 1}
+  tileEffect: 0
+  teleportTarget: {fileID: 0}
+  arrowTarget: 0
 --- !u!1 &999024632
 GameObject:
   m_ObjectHideFlags: 0
@@ -4426,6 +4516,9 @@ MonoBehaviour:
   spawningActor: {fileID: 0}
   owningActor: {fileID: 0}
   location: {x: -4, y: 0}
+  tileEffect: 0
+  teleportTarget: {fileID: 0}
+  arrowTarget: 0
 --- !u!1 &1035871805
 GameObject:
   m_ObjectHideFlags: 0
@@ -4792,6 +4885,9 @@ MonoBehaviour:
   spawningActor: {fileID: 0}
   owningActor: {fileID: 0}
   location: {x: 0, y: 4}
+  tileEffect: 0
+  teleportTarget: {fileID: 0}
+  arrowTarget: 0
 --- !u!1 &1054868224
 GameObject:
   m_ObjectHideFlags: 0
@@ -4853,7 +4949,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 68deef40eea87494e81b6a8abd4addd2, type: 2}
+  - {fileID: 2100000, guid: 3eb66c752107f204280c81101a8ba7c1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4936,7 +5032,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 68deef40eea87494e81b6a8abd4addd2, type: 2}
+  - {fileID: 2100000, guid: 80527c85f4d834a4f896ade8cfbb66b1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5023,6 +5119,9 @@ MonoBehaviour:
   spawningActor: {fileID: 0}
   owningActor: {fileID: 0}
   location: {x: -5, y: 3}
+  tileEffect: 0
+  teleportTarget: {fileID: 0}
+  arrowTarget: 0
 --- !u!1 &1152027968
 GameObject:
   m_ObjectHideFlags: 0
@@ -5088,6 +5187,9 @@ MonoBehaviour:
   spawningActor: {fileID: 0}
   owningActor: {fileID: 0}
   location: {x: 1, y: 3}
+  tileEffect: 0
+  teleportTarget: {fileID: 0}
+  arrowTarget: 0
 --- !u!1 &1166677746
 GameObject:
   m_ObjectHideFlags: 0
@@ -5315,7 +5417,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 68deef40eea87494e81b6a8abd4addd2, type: 2}
+  - {fileID: 2100000, guid: 80527c85f4d834a4f896ade8cfbb66b1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5399,9 +5501,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilePrefab: {fileID: 819090373}
   maxWidth: 2
-  spawningActor: {fileID: 0}
-  owningActor: {fileID: 0}
+  spawningActor: {fileID: 644973983}
+  owningActor: {fileID: 644973983}
   location: {x: 0, y: 8}
+  tileEffect: 0
+  teleportTarget: {fileID: 0}
+  arrowTarget: 0
 --- !u!1 &1314304194
 GameObject:
   m_ObjectHideFlags: 0
@@ -5467,6 +5572,9 @@ MonoBehaviour:
   spawningActor: {fileID: 0}
   owningActor: {fileID: 0}
   location: {x: -2, y: 6}
+  tileEffect: 0
+  teleportTarget: {fileID: 0}
+  arrowTarget: 0
 --- !u!1 &1338464645
 GameObject:
   m_ObjectHideFlags: 0
@@ -5615,6 +5723,9 @@ MonoBehaviour:
   spawningActor: {fileID: 0}
   owningActor: {fileID: 0}
   location: {x: -3, y: 1}
+  tileEffect: 0
+  teleportTarget: {fileID: 0}
+  arrowTarget: 0
 --- !u!1 &1389506871
 GameObject:
   m_ObjectHideFlags: 0
@@ -5779,9 +5890,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilePrefab: {fileID: 819090373}
   maxWidth: 2
-  spawningActor: {fileID: 0}
-  owningActor: {fileID: 0}
+  spawningActor: {fileID: 484459020}
+  owningActor: {fileID: 484459020}
   location: {x: 3, y: -1}
+  tileEffect: 0
+  teleportTarget: {fileID: 0}
+  arrowTarget: 0
 --- !u!1 &1405525473
 GameObject:
   m_ObjectHideFlags: 0
@@ -6197,7 +6311,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 68deef40eea87494e81b6a8abd4addd2, type: 2}
+  - {fileID: 2100000, guid: 80527c85f4d834a4f896ade8cfbb66b1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6284,6 +6398,9 @@ MonoBehaviour:
   spawningActor: {fileID: 0}
   owningActor: {fileID: 0}
   location: {x: 0, y: 6}
+  tileEffect: 0
+  teleportTarget: {fileID: 0}
+  arrowTarget: 0
 --- !u!1 &1549035002
 GameObject:
   m_ObjectHideFlags: 0
@@ -6429,9 +6546,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilePrefab: {fileID: 819090373}
   maxWidth: 2
-  spawningActor: {fileID: 0}
-  owningActor: {fileID: 0}
+  spawningActor: {fileID: 484459020}
+  owningActor: {fileID: 484459020}
   location: {x: -3, y: -1}
+  tileEffect: 0
+  teleportTarget: {fileID: 0}
+  arrowTarget: 0
 --- !u!1 &1564500819
 GameObject:
   m_ObjectHideFlags: 0
@@ -6493,7 +6613,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 68deef40eea87494e81b6a8abd4addd2, type: 2}
+  - {fileID: 2100000, guid: 80527c85f4d834a4f896ade8cfbb66b1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6829,9 +6949,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilePrefab: {fileID: 819090373}
   maxWidth: 2
-  spawningActor: {fileID: 0}
-  owningActor: {fileID: 0}
+  spawningActor: {fileID: 484459020}
+  owningActor: {fileID: 484459020}
   location: {x: -2, y: 0}
+  tileEffect: 0
+  teleportTarget: {fileID: 0}
+  arrowTarget: 0
 --- !u!1 &1710923491
 GameObject:
   m_ObjectHideFlags: 0
@@ -6897,6 +7020,9 @@ MonoBehaviour:
   spawningActor: {fileID: 0}
   owningActor: {fileID: 0}
   location: {x: -1, y: 3}
+  tileEffect: 0
+  teleportTarget: {fileID: 0}
+  arrowTarget: 0
 --- !u!1 &1734090312
 GameObject:
   m_ObjectHideFlags: 0
@@ -7242,6 +7368,9 @@ MonoBehaviour:
   spawningActor: {fileID: 0}
   owningActor: {fileID: 0}
   location: {x: -3, y: 3}
+  tileEffect: 0
+  teleportTarget: {fileID: 0}
+  arrowTarget: 0
 --- !u!1 &1754897304
 GameObject:
   m_ObjectHideFlags: 0
@@ -7303,7 +7432,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 68deef40eea87494e81b6a8abd4addd2, type: 2}
+  - {fileID: 2100000, guid: 80527c85f4d834a4f896ade8cfbb66b1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7473,6 +7602,9 @@ MonoBehaviour:
   spawningActor: {fileID: 0}
   owningActor: {fileID: 0}
   location: {x: -4, y: 2}
+  tileEffect: 0
+  teleportTarget: {fileID: 0}
+  arrowTarget: 0
 --- !u!1 &1803872944
 GameObject:
   m_ObjectHideFlags: 0
@@ -7534,7 +7666,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 68deef40eea87494e81b6a8abd4addd2, type: 2}
+  - {fileID: 2100000, guid: 3eb66c752107f204280c81101a8ba7c1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7783,7 +7915,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 68deef40eea87494e81b6a8abd4addd2, type: 2}
+  - {fileID: 2100000, guid: 80527c85f4d834a4f896ade8cfbb66b1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7949,7 +8081,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 68deef40eea87494e81b6a8abd4addd2, type: 2}
+  - {fileID: 2100000, guid: 3eb66c752107f204280c81101a8ba7c1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8119,6 +8251,9 @@ MonoBehaviour:
   spawningActor: {fileID: 0}
   owningActor: {fileID: 0}
   location: {x: 2, y: 4}
+  tileEffect: 0
+  teleportTarget: {fileID: 0}
+  arrowTarget: 0
 --- !u!1 &2029953934
 GameObject:
   m_ObjectHideFlags: 0
@@ -8246,6 +8381,9 @@ MonoBehaviour:
   spawningActor: {fileID: 0}
   owningActor: {fileID: 0}
   location: {x: 3, y: 5}
+  tileEffect: 0
+  teleportTarget: {fileID: 0}
+  arrowTarget: 0
 --- !u!1 &2061093176
 GameObject:
   m_ObjectHideFlags: 0
@@ -8707,6 +8845,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilePrefab: {fileID: 819090373}
   maxWidth: 2
-  spawningActor: {fileID: 0}
-  owningActor: {fileID: 0}
+  spawningActor: {fileID: 484459020}
+  owningActor: {fileID: 484459020}
   location: {x: 1, y: -1}
+  tileEffect: 0
+  teleportTarget: {fileID: 0}
+  arrowTarget: 0
