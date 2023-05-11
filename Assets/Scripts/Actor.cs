@@ -227,6 +227,7 @@ public class Actor : MonoBehaviourPunCallbacks
             yield return null;
         }
         card.transform.position = newLocation;
+        card.GetComponent<Card>().IntendedPosition = newLocation;
     }
 
     [PunRPC]
