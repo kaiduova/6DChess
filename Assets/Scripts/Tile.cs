@@ -98,6 +98,9 @@ public class Tile : MonoBehaviour
     /// </summary>
     [SerializeField]
     public Actions.Direction arrowTarget;
+    
+    [SerializeField]
+    public Side arrowSide;
 
     private Collider _collider;
 

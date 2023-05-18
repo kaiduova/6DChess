@@ -42,6 +42,11 @@ namespace Actions
                         callback();
                         return;
                     case TileEffect.Arrow:
+                        if (Piece.Tile.arrowSide != Piece.Actor.Side)
+                        {
+                            callback();
+                            return;
+                        }
                         var coordinate = MoveAction.TranslateToRelativeCoordinate(Piece.Tile.arrowTarget);
                         var destination = Piece.Tile.location + coordinate;
                         _arrowDestinationTile = Board.Instance.Tiles.FirstOrDefault(tile => tile.location == destination);
