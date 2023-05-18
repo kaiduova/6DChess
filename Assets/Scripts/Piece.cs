@@ -37,6 +37,9 @@ public class Piece : MonoBehaviour
     [SerializeField]
     public Sprite pieceInfo;
 
+    [SerializeField]
+    public bool isVengeful;
+
     public bool IsFlipped
     {
         get => _isFlipped;

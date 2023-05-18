@@ -75,7 +75,7 @@ namespace Actions
                 Piece.Tile.DisconnectPieceFromTile();
                 _arrowDestinationTile.SetOrReplacePieceOnTile(Piece);
 
-                if (Piece.Tile.tileEffect == TileEffect.Arrow)
+                if (Piece.Tile.tileEffect != TileEffect.None)
                 {
                     PerformAction(_callback);
                 }
