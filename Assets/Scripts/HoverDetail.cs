@@ -20,7 +20,6 @@ public class HoverDetail : MonoBehaviour
             }
             if (hit.collider.gameObject.TryGetComponent<Card>(out var card))
             {
-                if (piece.pieceInfo == null) return;
                 if (card.PiecePrefab == null) return;
                 if (!card.PiecePrefab.TryGetComponent<Piece>(out var cardPiece)) return;
                 if (cardPiece.pieceInfo == null) return;
