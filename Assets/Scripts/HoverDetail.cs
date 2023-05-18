@@ -10,7 +10,7 @@ public class HoverDetail : MonoBehaviour
     
     private void Update()
     {
-        /*
+        if (pieceInfoLocationMarker == null) return;
         var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         Physics.Raycast(ray, out var hit, 100f);
         if (hit.collider != null)
@@ -24,7 +24,7 @@ public class HoverDetail : MonoBehaviour
 
                 if (_currentlyActivePieceInfo == null)
                 {
-                    _currentlyActivePieceInfo = Instantiate(piece.pieceInfo, pieceInfoLocationMarker.transform);
+                    _currentlyActivePieceInfo = Instantiate(piece.pieceInfoPrefab, pieceInfoLocationMarker.transform);
                     _currentlyActivePieceInfo.transform.localPosition = Vector3.zero;
                 }
             }
@@ -37,11 +37,10 @@ public class HoverDetail : MonoBehaviour
 
                 if (_currentlyActivePieceInfo == null)
                 {
-                    _currentlyActivePieceInfo = Instantiate(card.PiecePrefab.GetComponent<Piece>().pieceInfo, pieceInfoLocationMarker.transform);
+                    _currentlyActivePieceInfo = Instantiate(card.PiecePrefab.GetComponent<Piece>().pieceInfoPrefab, pieceInfoLocationMarker.transform);
                     _currentlyActivePieceInfo.transform.localPosition = Vector3.zero;
                 }
             }
         }
-        */
     }
 }

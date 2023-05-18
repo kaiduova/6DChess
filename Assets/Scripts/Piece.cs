@@ -35,7 +35,7 @@ public class Piece : MonoBehaviour
     public Tile Tile { get; set; }
 
     [SerializeField]
-    public GameObject pieceInfo;
+    public GameObject pieceInfoPrefab;
 
     public bool IsFlipped
     {
@@ -64,8 +64,6 @@ public class Piece : MonoBehaviour
                 //Set parent and relative locations and disable.
             }
         }
-        
-        pieceInfo.SetActive(false);
     }
 
     public void ShowIcons()
