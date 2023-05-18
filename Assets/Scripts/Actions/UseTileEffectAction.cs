@@ -29,8 +29,9 @@ namespace Actions
                         Piece.Tile.tileEffect = (TileEffect)enumValues[Random.Range(2, enumValues.Count)];
                         continue;
                     case TileEffect.Teleport:
+                        var oldTile = Piece.Tile;
                         Piece.Tile.DisconnectPieceFromTile();
-                        Piece.Tile.teleportTarget.SetOrReplacePieceOnTile(Piece);
+                        oldTile.teleportTarget.SetOrReplacePieceOnTile(Piece);
                         callback();
                         return;
                     case TileEffect.Instakill:

@@ -34,6 +34,9 @@ public class Piece : MonoBehaviour
     public Actor Actor { get; set; }
     public Tile Tile { get; set; }
 
+    [SerializeField]
+    public GameObject pieceInfo;
+
     public bool IsFlipped
     {
         get => _isFlipped;
@@ -61,6 +64,8 @@ public class Piece : MonoBehaviour
                 //Set parent and relative locations and disable.
             }
         }
+        
+        pieceInfo.SetActive(false);
     }
 
     public void ShowIcons()
