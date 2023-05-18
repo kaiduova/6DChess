@@ -25,7 +25,6 @@ public class HoverDetail : MonoBehaviour
                 _currentPiece.HideIcons();
                 _currentPiece = null;
             }
-            return;
         }
         var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         Physics.Raycast(ray, out var hit, 100f);
