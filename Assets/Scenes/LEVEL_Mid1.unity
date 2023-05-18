@@ -1466,9 +1466,9 @@ MonoBehaviour:
   spawningActor: {fileID: 0}
   owningActor: {fileID: 0}
   location: {x: -3, y: 5}
-  tileEffect: 0
+  tileEffect: 5
   teleportTarget: {fileID: 0}
-  arrowTarget: 0
+  arrowTarget: 1
   arrowSide: 0
 --- !u!1 &410087039
 GameObject:
@@ -7333,7 +7333,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 68deef40eea87494e81b6a8abd4addd2, type: 2}
+  - {fileID: 2100000, guid: 73f5350ae11c4594cb1d8eb74f78c7b1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8000,7 +8000,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 68deef40eea87494e81b6a8abd4addd2, type: 2}
+  - {fileID: 2100000, guid: 73f5350ae11c4594cb1d8eb74f78c7b1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8635,7 +8635,7 @@ MonoBehaviour:
   location: {x: 3, y: 5}
   tileEffect: 0
   teleportTarget: {fileID: 0}
-  arrowTarget: 0
+  arrowTarget: 1
   arrowSide: 0
 --- !u!1 &2061093176
 GameObject:

@@ -54,9 +54,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  indicatorIcons: []
+  indicatorIcons:
+  - relativeCoordinate: {x: 1, y: 1}
+    iconObject: {fileID: 1737966203021383954, guid: ecc1796cafe6a3440afa55a326e71d55,
+      type: 3}
+  - relativeCoordinate: {x: 2, y: 2}
+    iconObject: {fileID: 1737966203021383954, guid: ecc1796cafe6a3440afa55a326e71d55,
+      type: 3}
+  - relativeCoordinate: {x: 3, y: 3}
+    iconObject: {fileID: 1737966203021383954, guid: ecc1796cafe6a3440afa55a326e71d55,
+      type: 3}
+  - relativeCoordinate: {x: 3, y: 1}
+    iconObject: {fileID: 5485747449275024183, guid: 2cf66392ebeb4a54bb94fe8b0dd5c788,
+      type: 3}
   pieceInfo: {fileID: 21300000, guid: f90b4a54e388c564983b152f96083006, type: 3}
   isVengeful: 0
+  lifestealHealValue: 0
 --- !u!114 &4942057540051692973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73,6 +86,7 @@ MonoBehaviour:
   movePattern: 1
   isJump: 0
   moveDuration: 1
+  pauseTurnsAfterMove: 0
 --- !u!114 &8897735218944541487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -103,6 +117,7 @@ MonoBehaviour:
   movePattern: 1
   isJump: 0
   moveDuration: 1
+  pauseTurnsAfterMove: 0
 --- !u!114 &2376058838944661248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,6 +148,7 @@ MonoBehaviour:
   movePattern: 1
   isJump: 0
   moveDuration: 1
+  pauseTurnsAfterMove: 0
 --- !u!114 &749105049254035432
 MonoBehaviour:
   m_ObjectHideFlags: 0

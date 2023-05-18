@@ -51,9 +51,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  indicatorIcons: []
+  indicatorIcons:
+  - relativeCoordinate: {x: 0, y: 2}
+    iconObject: {fileID: 1737966203021383954, guid: ecc1796cafe6a3440afa55a326e71d55,
+      type: 3}
+  - relativeCoordinate: {x: 0, y: 4}
+    iconObject: {fileID: 1737966203021383954, guid: ecc1796cafe6a3440afa55a326e71d55,
+      type: 3}
+  - relativeCoordinate: {x: 0, y: 6}
+    iconObject: {fileID: 1737966203021383954, guid: ecc1796cafe6a3440afa55a326e71d55,
+      type: 3}
   pieceInfo: {fileID: 21300000, guid: a09784ad8f2d1ae4281ed13a4418c523, type: 3}
   isVengeful: 0
+  lifestealHealValue: 0
 --- !u!114 &4942057540051692973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70,6 +80,7 @@ MonoBehaviour:
   movePattern: 0
   isJump: 0
   moveDuration: 1
+  pauseTurnsAfterMove: 0
 --- !u!114 &9153199987196801462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -100,6 +111,7 @@ MonoBehaviour:
   movePattern: 0
   isJump: 0
   moveDuration: 1
+  pauseTurnsAfterMove: 0
 --- !u!114 &-6511377359171243633
 MonoBehaviour:
   m_ObjectHideFlags: 0
