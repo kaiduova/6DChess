@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5260292286299714863}
   - component: {fileID: 7506417859882674411}
   - component: {fileID: 6197164064580099651}
+  - component: {fileID: -2719358620055397977}
   m_Layer: 0
   m_Name: Juggernaut Inverted
   m_TagString: Untagged
@@ -52,7 +53,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 5
   indicatorIcons: []
-  isFlipped: 0
+  pieceInfo: {fileID: 21300000, guid: e762102a636a4684aad716e027e57c9a, type: 3}
+  isVengeful: 0
 --- !u!114 &4942057540051692973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,6 +129,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actionOrder: 5
   relativeAttackCoordinate: {x: 0, y: 2}
+--- !u!136 &-2719358620055397977
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4942057540051692970}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.5, z: 0}
 --- !u!1 &4942057540467675391
 GameObject:
   m_ObjectHideFlags: 0

@@ -130,6 +130,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 5
+  indicatorIcons: []
+  pieceInfoPrefab: {fileID: 3796653928773452318, guid: 785c33b8146ec164f91f19d40b1938b5,
+    type: 3}
 --- !u!114 &7298346824234398548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,5 +146,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actionOrder: 0
-  relativeMoveCoordinate: {x: 0, y: 2}
+  movePattern: 0
+  isJump: 0
   moveDuration: 1
