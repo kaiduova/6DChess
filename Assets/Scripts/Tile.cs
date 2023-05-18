@@ -153,8 +153,13 @@ public class Tile : MonoBehaviour
     
     public void SetOrReplacePieceOnTile(Piece piece)
     {
-        var isVengeful = _currentPiece.isVengeful;
-        if (_currentPiece != null) _currentPiece.Destroy();
+        bool isVengeful = false;
+        if (_currentPiece != null)
+        {
+            isVengeful = _currentPiece.isVengeful;
+            _currentPiece.Destroy();
+        }
+
         if (isVengeful)
         {
             piece.Destroy();

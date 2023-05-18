@@ -64,7 +64,7 @@ public class Piece : MonoBehaviour
                 //Set parent and relative locations and disable.
                 indicatorIcons[i].iconObject = Instantiate(indicatorIcons[i].iconObject, gameObject.transform);
                 var relativePosition =
-                    Tile.RelativeCoordinateToRelativePosition(indicatorIcons[i].relativeCoordinate, Tile.MaxWidth);
+                    Tile.RelativeCoordinateToRelativePosition(indicatorIcons[i].relativeCoordinate, 2);
                 indicatorIcons[i].iconObject.transform.localPosition =
                     Actor.Side == Side.Normal ? relativePosition : InvertZ(relativePosition);
                 indicatorIcons[i].iconObject.SetActive(false);
