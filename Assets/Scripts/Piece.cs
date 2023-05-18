@@ -82,13 +82,13 @@ public class Piece : MonoBehaviour
             if (IsFlipped && !_iconsFlipped)
             {
                 indicatorIcons[i].iconObject.transform.position =
-                    InvertX(indicatorIcons[i].iconObject.transform.position);
+                    InvertX(indicatorIcons[i].iconObject.transform.localPosition);
             }
 
             if (!IsFlipped && _iconsFlipped)
             {
                 indicatorIcons[i].iconObject.transform.position =
-                    InvertX(indicatorIcons[i].iconObject.transform.position);
+                    InvertX(indicatorIcons[i].iconObject.transform.localPosition);
             }
         }
 
