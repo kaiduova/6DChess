@@ -20,6 +20,7 @@ public class TileEditor : Editor
     {
         base.OnInspectorGUI();
         var tile = (Tile)target;
+        Board.Instance = tile.GetComponentInParent<Board>();
 
         if (GUILayout.Button("Generate Surrounding Tiles"))
         {
@@ -39,6 +40,15 @@ public class TileEditor : Editor
         {
             Board.Instance = tile.GetComponentInParent<Board>();
             Board.Instance.locationList.locations.Clear();
+        }
+
+        if (GUILayout.Button("Set Material To All"))
+        {
+            var material = tile.transform.GetChild(0).GetComponent<MeshRenderer>().material;
+            foreach (var iteratedTile in Board.Instance.Tiles)
+            {
+                iteratedTile.transform.GetChild(0).GetComponent<MeshRenderer>().material = material;
+            }
         }
     }
 }
