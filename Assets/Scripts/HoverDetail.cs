@@ -12,6 +12,8 @@ public class HoverDetail : MonoBehaviour
     private float infoVanishDelay;
 
     private float _timeToVanish;
+
+    private Piece _currentPiece;
     
     private void Update()
     {
@@ -25,8 +27,10 @@ public class HoverDetail : MonoBehaviour
                 pieceInfoDisplay.enabled = true;
                 _timeToVanish = infoVanishDelay;
                 pieceInfoDisplay.sprite = piece.pieceInfo;
+                _currentPiece = piece;
+                piece.ShowIcons();
             }
-            if (hit.collider.gameObject.TryGetComponent<Card>(out var card))
+            else if (hit.collider.gameObject.TryGetComponent<Card>(out var card))
             {
                 if (card.PiecePrefab == null) return;
                 if (!card.PiecePrefab.TryGetComponent<Piece>(out var cardPiece)) return;
@@ -34,6 +38,16 @@ public class HoverDetail : MonoBehaviour
                 pieceInfoDisplay.enabled = true;
                 _timeToVanish = infoVanishDelay;
                 pieceInfoDisplay.sprite = cardPiece.pieceInfo;
+                _currentPiece = piece;
+                cardPiece.ShowIcons();
+            }
+            else
+            {
+                if (_currentPiece != null)
+                {
+                    _currentPiece.HideIcons();
+                    _currentPiece = null;
+                }
             }
         }
 

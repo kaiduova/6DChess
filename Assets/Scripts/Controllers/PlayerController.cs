@@ -21,8 +21,6 @@ namespace Controllers
 
         private bool _moved;
 
-        private bool _showingIcons;
-
         private Tile _currentlyPlacingTile;
 
         [SerializeField]
@@ -48,13 +46,39 @@ namespace Controllers
             {
                 directionalIndicator.SetActive(true);
                 directionalIndicator.transform.position = _currentlyPlacingTile.transform.position;
+                var plane = new Plane(Vector3.up, -2f);
+                if (Camera.main == null) throw new Exception("Camera missing");
+                var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                plane.Raycast(ray, out var enter);
+                //Right side is normal.
+                if (ray.GetPoint(enter).x >= _currentlyPlacingTile.transform.position.x)
+                {
+                    if (Actor.Side == Side.Normal)
+                    {
+                        directionalIndicator.transform.GetChild(0).transform.localRotation =
+                            Quaternion.Euler(90, 180, 90);
+                    }
+                    else
+                    {
+                        directionalIndicator.transform.GetChild(0).transform.localRotation =
+                            Quaternion.Euler(90, 0, 90);
+                    }
+                }
+                else
+                {
+                    if (Actor.Side == Side.Normal)
+                    {
+                        directionalIndicator.transform.GetChild(0).transform.localRotation =
+                            Quaternion.Euler(90, 0, 90);
+                    }
+                    else
+                    {
+                        directionalIndicator.transform.GetChild(0).transform.localRotation =
+                            Quaternion.Euler(90, 180, 90);
+                    }
+                }
                 if (Input.GetKeyDown(KeyCode.Mouse0))
                 {
-                    var plane = new Plane(Vector3.up, -2f);
-                    if (Camera.main == null) throw new Exception("Camera missing");
-                    var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-                    plane.Raycast(ray, out var enter);
-                    //Right side is normal.
                     if (ray.GetPoint(enter).x >= _currentlyPlacingTile.transform.position.x)
                     {
                         SpawnOnSide(Actor.Side != Side.Normal);
@@ -93,24 +117,6 @@ namespace Controllers
                 _currentlyPlacingTile = null;
                 _queuedEndTurn = false;
                 _moved = false;
-            }
-            
-            //Non-locking.
-            if (!Actor.IsActing && Actor.CanAct)
-            {
-                foreach (var piece in Actor.Pieces)
-                {
-                    _showingIcons = true;
-                    piece.ShowIcons();
-                }
-            }
-            else if (_showingIcons)
-            {
-                foreach (var piece in Actor.Pieces)
-                {
-                    _showingIcons = false;
-                    piece.HideIcons();
-                }
             }
 
             if (Actor.CanAct && !Actor.IsActing)
