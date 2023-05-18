@@ -36,6 +36,7 @@ namespace Controllers
         private void Start()
         {
             _actionTimer = actionTime;
+
             directionalIndicator.SetActive(false);
         }
 

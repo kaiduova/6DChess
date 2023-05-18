@@ -48,19 +48,24 @@ public class Piece : MonoBehaviour
 
     private void Start()
     {
-        for (var i = 0; i < indicatorIcons.Length; i++)
+        if (indicatorIcons != null)
         {
-            indicatorIcons[i].iconObject = Instantiate(indicatorIcons[i].iconObject, gameObject.transform);
-            var relativePosition = Tile.RelativeCoordinateToRelativePosition(indicatorIcons[i].relativeCoordinate, Tile.MaxWidth);
-            indicatorIcons[i].iconObject.transform.localPosition =
-                Actor.Side == Side.Normal ? relativePosition : InvertZ(relativePosition);
-            indicatorIcons[i].iconObject.SetActive(false);
-            //Set parent and relative locations and disable.
+            for (var i = 0; i < indicatorIcons.Length; i++)
+            {
+                indicatorIcons[i].iconObject = Instantiate(indicatorIcons[i].iconObject, gameObject.transform);
+                var relativePosition =
+                    Tile.RelativeCoordinateToRelativePosition(indicatorIcons[i].relativeCoordinate, Tile.MaxWidth);
+                indicatorIcons[i].iconObject.transform.localPosition =
+                    Actor.Side == Side.Normal ? relativePosition : InvertZ(relativePosition);
+                indicatorIcons[i].iconObject.SetActive(false);
+                //Set parent and relative locations and disable.
+            }
         }
     }
 
     public void ShowIcons()
     {
+        if (indicatorIcons == null) return;
         for (var i = 0; i < indicatorIcons.Length; i++)
         {
             indicatorIcons[i].iconObject.SetActive(true);
@@ -83,6 +88,7 @@ public class Piece : MonoBehaviour
 
     public void HideIcons()
     {
+        if (indicatorIcons == null) return;
         for (var i = 0; i < indicatorIcons.Length; i++)
         {
             indicatorIcons[i].iconObject.SetActive(false);
