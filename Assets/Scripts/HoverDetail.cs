@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Controllers;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,6 +18,15 @@ public class HoverDetail : MonoBehaviour
     
     private void Update()
     {
+        if (PlayerController.Instance.Actor.IsActing || PlayerController.Instance.Actor.Opponent.IsActing)
+        {
+            if (_currentPiece != null)
+            {
+                _currentPiece.HideIcons();
+                _currentPiece = null;
+            }
+            return;
+        }
         var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         Physics.Raycast(ray, out var hit, 100f);
         if (hit.collider != null)
