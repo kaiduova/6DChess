@@ -18,6 +18,7 @@ namespace Actions
                 callback();
                 return;
             }
+            //var isVengeful = 
             targetTile.CurrentPiece.Destroy();
             callback();
         }
