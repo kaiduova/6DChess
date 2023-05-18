@@ -1,45 +1,25 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HoverDetail : MonoBehaviour
 {
-    private GameObject _currentlyActivePieceInfo;
-
     [SerializeField]
-    private GameObject pieceInfoLocationMarker;
+    private Image pieceInfoDisplay;
     
     private void Update()
     {
-        if (pieceInfoLocationMarker == null) return;
         var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         Physics.Raycast(ray, out var hit, 100f);
         if (hit.collider != null)
         {
             if (hit.collider.gameObject.TryGetComponent<Piece>(out var piece))
             {
-                if (_currentlyActivePieceInfo != null)
-                {
-                    Destroy(_currentlyActivePieceInfo);
-                }
-
-                if (_currentlyActivePieceInfo == null)
-                {
-                    _currentlyActivePieceInfo = Instantiate(piece.pieceInfoPrefab, pieceInfoLocationMarker.transform);
-                    _currentlyActivePieceInfo.transform.localPosition = Vector3.zero;
-                }
+                pieceInfoDisplay.sprite = piece.pieceInfo;
             }
             if (hit.collider.gameObject.TryGetComponent<Card>(out var card))
             {
-                if (_currentlyActivePieceInfo != null)
-                {
-                    Destroy(_currentlyActivePieceInfo);
-                }
-
-                if (_currentlyActivePieceInfo == null)
-                {
-                    _currentlyActivePieceInfo = Instantiate(card.PiecePrefab.GetComponent<Piece>().pieceInfoPrefab, pieceInfoLocationMarker.transform);
-                    _currentlyActivePieceInfo.transform.localPosition = Vector3.zero;
-                }
+                pieceInfoDisplay.sprite = card.PiecePrefab.GetComponent<Piece>().pieceInfo;
             }
         }
     }

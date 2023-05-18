@@ -35,7 +35,7 @@ public class Piece : MonoBehaviour
     public Tile Tile { get; set; }
 
     [SerializeField]
-    public GameObject pieceInfoPrefab;
+    public Sprite pieceInfo;
 
     public bool IsFlipped
     {
