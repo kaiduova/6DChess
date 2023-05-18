@@ -81,13 +81,13 @@ public class Piece : MonoBehaviour
             //Check for mirrored movement.
             if (IsFlipped && !_iconsFlipped)
             {
-                indicatorIcons[i].iconObject.transform.position =
+                indicatorIcons[i].iconObject.transform.localPosition =
                     InvertX(indicatorIcons[i].iconObject.transform.localPosition);
             }
 
             if (!IsFlipped && _iconsFlipped)
             {
-                indicatorIcons[i].iconObject.transform.position =
+                indicatorIcons[i].iconObject.transform.localPosition =
                     InvertX(indicatorIcons[i].iconObject.transform.localPosition);
             }
         }
