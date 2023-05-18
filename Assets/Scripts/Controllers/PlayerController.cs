@@ -21,8 +21,6 @@ namespace Controllers
 
         private bool _moved;
 
-        private bool _showingIcons;
-
         private Tile _currentlyPlacingTile;
 
         [SerializeField]
@@ -93,24 +91,6 @@ namespace Controllers
                 _currentlyPlacingTile = null;
                 _queuedEndTurn = false;
                 _moved = false;
-            }
-            
-            //Non-locking.
-            if (!Actor.IsActing && Actor.CanAct)
-            {
-                foreach (var piece in Actor.Pieces)
-                {
-                    _showingIcons = true;
-                    piece.ShowIcons();
-                }
-            }
-            else if (_showingIcons)
-            {
-                foreach (var piece in Actor.Pieces)
-                {
-                    _showingIcons = false;
-                    piece.HideIcons();
-                }
             }
 
             if (Actor.CanAct && !Actor.IsActing)
