@@ -15,11 +15,16 @@ public class HoverDetail : MonoBehaviour
         {
             if (hit.collider.gameObject.TryGetComponent<Piece>(out var piece))
             {
+                if (piece.pieceInfo == null) return;
                 pieceInfoDisplay.sprite = piece.pieceInfo;
             }
             if (hit.collider.gameObject.TryGetComponent<Card>(out var card))
             {
-                pieceInfoDisplay.sprite = card.PiecePrefab.GetComponent<Piece>().pieceInfo;
+                if (piece.pieceInfo == null) return;
+                if (card.PiecePrefab == null) return;
+                if (!card.PiecePrefab.TryGetComponent<Piece>(out var cardPiece)) return;
+                if (cardPiece.pieceInfo == null) return;
+                pieceInfoDisplay.sprite = cardPiece.pieceInfo;
             }
         }
     }
