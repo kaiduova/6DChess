@@ -33,6 +33,11 @@ namespace Actions
 
         private bool _moving;
 
+        private int _pauseCounter;
+
+        [SerializeField]
+        private int pauseTurnsAfterMove;
+
         public static Vector2 TranslateToRelativeCoordinate(Direction direction)
         {
             return direction switch
@@ -54,6 +59,14 @@ namespace Actions
                 callback();
                 return;
             }
+
+            if (_pauseCounter > 0)
+            {
+                _pauseCounter--;
+                callback();
+                return;
+            }
+
             Tile destinationTile;
             if (!Piece.IsFlipped)
             {
@@ -88,6 +101,7 @@ namespace Actions
             _moveTimer = moveDuration;
             _callback = callback;
             _moving = true;
+            _pauseCounter = pauseTurnsAfterMove;
         }
 
         private void Update()

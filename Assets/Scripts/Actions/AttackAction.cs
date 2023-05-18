@@ -18,8 +18,13 @@ namespace Actions
                 callback();
                 return;
             }
-            //var isVengeful = 
+
+            var isVengeful = targetTile.CurrentPiece.isVengeful;
             targetTile.CurrentPiece.Destroy();
+            if (isVengeful)
+            {
+                Piece.Destroy();
+            }
             callback();
         }
     }

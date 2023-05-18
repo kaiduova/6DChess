@@ -40,6 +40,9 @@ public class Piece : MonoBehaviour
     [SerializeField]
     public bool isVengeful;
 
+    [SerializeField]
+    private int lifestealHealValue;
+
     public bool IsFlipped
     {
         get => _isFlipped;
@@ -58,13 +61,13 @@ public class Piece : MonoBehaviour
         {
             for (var i = 0; i < indicatorIcons.Length; i++)
             {
+                //Set parent and relative locations and disable.
                 indicatorIcons[i].iconObject = Instantiate(indicatorIcons[i].iconObject, gameObject.transform);
                 var relativePosition =
                     Tile.RelativeCoordinateToRelativePosition(indicatorIcons[i].relativeCoordinate, Tile.MaxWidth);
                 indicatorIcons[i].iconObject.transform.localPosition =
                     Actor.Side == Side.Normal ? relativePosition : InvertZ(relativePosition);
                 indicatorIcons[i].iconObject.SetActive(false);
-                //Set parent and relative locations and disable.
             }
         }
     }
@@ -112,6 +115,7 @@ public class Piece : MonoBehaviour
         if (Tile.OwningActor != null && Actor != Tile.OwningActor)
         {
             Tile.OwningActor.Health -= damage;
+            Actor.Health += lifestealHealValue;
             Destroy();
             _finishCallback();
             return;
