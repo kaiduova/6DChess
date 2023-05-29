@@ -31,5 +31,6 @@ public class SelectableCard : MonoBehaviour
     private void OnMouseDown()
     {
         Select();
+        Deselect();
     }
 }
