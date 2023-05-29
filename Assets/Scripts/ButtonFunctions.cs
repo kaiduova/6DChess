@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using WebSocketSharp;
 
 public class ButtonFunctions : MonoBehaviourPunCallbacks
 {
@@ -40,7 +41,16 @@ public class ButtonFunctions : MonoBehaviourPunCallbacks
     public void StartSingleplayerGame()
     {
         GameManager.Instance.GenerateSceneOrder();
-        LoadScene(int.Parse(inputFieldScene.text));
+        GameManager.Instance.ResetAddedCards();
+        if (inputFieldScene.text.IsNullOrEmpty())
+        {
+
+            GameManager.Instance.LoadNextGameScene();
+        }
+        else
+        {
+            LoadScene(int.Parse(inputFieldScene.text));
+        }
     }
     
     public void HostMultiplayerGame()
