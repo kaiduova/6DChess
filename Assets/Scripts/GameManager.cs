@@ -60,7 +60,7 @@ public class GameManager : MonoBehaviourPunCallbacks
     private bool _lastGameWon;
     private bool _queuedLoadFinishScene;
 
-    private List<int> _sceneOrder;
+    private readonly List<int> _sceneOrder = new();
 
     private int _currentIndexOnSceneOrder;
 
