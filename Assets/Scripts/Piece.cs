@@ -43,6 +43,8 @@ public class Piece : MonoBehaviour
     [SerializeField]
     private int lifestealHealValue;
 
+    public bool QueueDestroy { get; set; }
+
     public bool IsFlipped
     {
         get => _isFlipped;
@@ -116,6 +118,13 @@ public class Piece : MonoBehaviour
         {
             Tile.OwningActor.Health -= damage;
             Actor.Health += lifestealHealValue;
+            Destroy();
+            _finishCallback();
+            return;
+        }
+
+        if (QueueDestroy)
+        {
             Destroy();
             _finishCallback();
             return;

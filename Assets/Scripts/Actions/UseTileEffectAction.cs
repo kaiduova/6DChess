@@ -35,8 +35,8 @@ namespace Actions
                         callback();
                         return;
                     case TileEffect.Instakill:
+                        Piece.QueueDestroy = true;
                         callback();
-                        Piece.Destroy();
                         return;
                     case TileEffect.Sludge:
                         Piece.InSludge = true;
