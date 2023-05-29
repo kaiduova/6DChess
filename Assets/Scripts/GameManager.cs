@@ -1,12 +1,14 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Controllers;
 using Photon.Pun;
 using Photon.Realtime;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public enum GameType
 {
@@ -14,20 +16,40 @@ public enum GameType
     Multiplayer
 }
 
+public enum GameDifficulty
+{
+    Easy,
+    Medium,
+    Hard,
+    Boss
+}
+
 public class GameManager : MonoBehaviourPunCallbacks
 {
     [SerializeField]
-    private int winSceneIndex, loseSceneIndex, selectionSceneIndex;
+    private int winSceneIndex, loseSceneIndex, selectionSceneIndex, numberOfSelectableCardsToOffer;
 
     [SerializeField]
     private Image fadeScreen;
 
     [SerializeField]
     private int[] easyScenes, mediumScenes, hardScenes, bossScenes;
-    
+
+    [SerializeField]
+    private int numEasyScenesToSelect, numMediumScenesToSelect, numHardScenesToSelect, numBossScenesToSelect;
+
+    [SerializeField]
+    private GameObject[] easySelectableCards, mediumSelectableCards, hardSelectableCards, bossSelectableCards;
+
+    public List<GameObject> AddedCardPrefabs { get; } = new();
+
+    private GameObject[] _selectableCardListToUse;
+
     public Side ClientSide { get; set; }
 
     public GameType GameType { get; set; }
+
+    public GameDifficulty GameDifficulty { get; private set; }
 
     public static GameManager Instance { get; set; }
 
@@ -58,6 +80,8 @@ public class GameManager : MonoBehaviourPunCallbacks
         {
             PhotonNetwork.ConnectUsingSettings();
         }
+
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     private void Update()
@@ -80,11 +104,6 @@ public class GameManager : MonoBehaviourPunCallbacks
         {
             GameType = GameType.Singleplayer;
             ClientSide = Side.Normal;
-        }
-
-        if (_inSelectionScene)
-        {
-            
         }
     }
 
@@ -112,12 +131,16 @@ public class GameManager : MonoBehaviourPunCallbacks
             EndSession(winner);
             return;
         }
-        //Go to selection scene, then to next in scene order.
-        _inSelectionScene = true;
+
+        if (_currentIndexOnSceneOrder >= _sceneOrder.Count - 1)
+        {
+            EndSession(winner);
+            return;
+        }
         SceneManager.LoadScene(selectionSceneIndex);
     }
 
-    public void EndSession(Actor winner)
+    private void EndSession(Actor winner)
     {
         _lastGameWon = winner.TryGetComponent<PlayerController>(out var playerController) && playerController.isActiveAndEnabled;
         if (PhotonNetwork.InRoom)
@@ -134,6 +157,76 @@ public class GameManager : MonoBehaviourPunCallbacks
 
     public void GenerateSceneOrder()
     {
+        _sceneOrder.Clear();
+        RandomlyAddToSceneOrder(easyScenes.ToList(), numEasyScenesToSelect);
+        RandomlyAddToSceneOrder(mediumScenes.ToList(), numMediumScenesToSelect);
+        RandomlyAddToSceneOrder(hardScenes.ToList(), numHardScenesToSelect);
+        RandomlyAddToSceneOrder(bossScenes.ToList(), numBossScenesToSelect);
+        _currentIndexOnSceneOrder = -1;
+    }
+
+    private void RandomlyAddToSceneOrder(IList<int> scenes, int maxScenes)
+    {
+        while (true)
+        {
+            if (scenes.Count == 0 || scenes.Count >= maxScenes) break;
+            var selectedScene = scenes[Random.Range(0, scenes.Count)];
+            _sceneOrder.Add(selectedScene);
+            scenes.Remove(selectedScene);
+        }
+    }
+
+    private List<T> RandomSelect<T>(IList<T> items, int numToSelect)
+    {
+        List<T> returnList = new();
+        while (true)
+        {
+            if (items.Count == 0 || items.Count >= numToSelect) break;
+            var selected = items[Random.Range(0, items.Count)];
+            returnList.Add(selected);
+            items.Remove(selected);
+        }
+
+        return returnList;
+    }
+
+    public void LoadNextGameScene()
+    {
+        _currentIndexOnSceneOrder++;
+        if (easyScenes.Contains(_sceneOrder[_currentIndexOnSceneOrder]))
+        {
+            GameDifficulty = GameDifficulty.Easy;
+            _selectableCardListToUse = easySelectableCards;
+        }
+        else if (mediumScenes.Contains(_sceneOrder[_currentIndexOnSceneOrder]))
+        {
+            GameDifficulty = GameDifficulty.Medium;
+            _selectableCardListToUse = mediumSelectableCards;
+        }
+        else if (hardScenes.Contains(_sceneOrder[_currentIndexOnSceneOrder]))
+        {
+            GameDifficulty = GameDifficulty.Hard;
+            _selectableCardListToUse = hardSelectableCards;
+        }
+        else if (bossScenes.Contains(_sceneOrder[_currentIndexOnSceneOrder]))
+        {
+            GameDifficulty = GameDifficulty.Boss;
+            _selectableCardListToUse = bossSelectableCards;
+        }
+        SceneManager.LoadScene(_sceneOrder[_currentIndexOnSceneOrder]);
+    }
+
+    public void ResetAddedCards()
+    {
+        AddedCardPrefabs.Clear();
+    }
+
+    public void OnSceneLoaded(Scene scene, LoadSceneMode loadSceneMode)
+    {
         
+        if (scene.buildIndex == selectionSceneIndex)
+        {
+            SelectionScene.Instance.Initialize(RandomSelect(_selectableCardListToUse, numberOfSelectableCardsToOffer));
+        }
     }
 }

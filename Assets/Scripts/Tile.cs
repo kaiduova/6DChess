@@ -112,6 +112,11 @@ public class Tile : MonoBehaviour
     [SerializeField]
     public Side arrowSide;
 
+    [SerializeField] public GameObject randomOriginalVisual,
+        randomTeleportVisual,
+        randomInstakillVisual,
+        randomSludgeVisual;
+
     private Collider _collider;
 
     public Actor SpawningActor => spawningActor;
@@ -131,6 +136,25 @@ public class Tile : MonoBehaviour
     {
         Board.Instance.Tiles.Add(this);
         _hasOwningActor = owningActor != null;
+        if (randomOriginalVisual != null)
+        {
+            randomOriginalVisual.SetActive(true);
+        }
+
+        if (randomTeleportVisual != null)
+        {
+            randomTeleportVisual.SetActive(false);
+        }
+
+        if (randomInstakillVisual != null)
+        {
+            randomInstakillVisual.SetActive(false);
+        }
+
+        if (randomSludgeVisual != null)
+        {
+            randomSludgeVisual.SetActive(false);
+        }
     }
 
     /// <summary>
