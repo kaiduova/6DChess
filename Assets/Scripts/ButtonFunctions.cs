@@ -21,7 +21,7 @@ public class ButtonFunctions : MonoBehaviourPunCallbacks
     
     private bool _queuedJoinRoomRequest;
     
-    public void LoadScene(int index)
+    public static void LoadScene(int index)
     {
         SceneManager.LoadScene(index);
     }
@@ -39,6 +39,7 @@ public class ButtonFunctions : MonoBehaviourPunCallbacks
 
     public void StartSingleplayerGame()
     {
+        GameManager.Instance.GenerateSceneOrder();
         LoadScene(int.Parse(inputFieldScene.text));
     }
     

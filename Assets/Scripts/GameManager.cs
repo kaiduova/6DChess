@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using Controllers;
 using Photon.Pun;
 using Photon.Realtime;
@@ -16,10 +17,13 @@ public enum GameType
 public class GameManager : MonoBehaviourPunCallbacks
 {
     [SerializeField]
-    private int winSceneIndex, loseSceneIndex;
+    private int winSceneIndex, loseSceneIndex, selectionSceneIndex;
 
     [SerializeField]
     private Image fadeScreen;
+
+    [SerializeField]
+    private int[] easyScenes, mediumScenes, hardScenes, bossScenes;
     
     public Side ClientSide { get; set; }
 
@@ -33,6 +37,12 @@ public class GameManager : MonoBehaviourPunCallbacks
 
     private bool _lastGameWon;
     private bool _queuedLoadFinishScene;
+
+    private List<int> _sceneOrder;
+
+    private int _currentIndexOnSceneOrder;
+
+    private bool _inSelectionScene;
 
     private void Awake()
     {
@@ -71,6 +81,11 @@ public class GameManager : MonoBehaviourPunCallbacks
             GameType = GameType.Singleplayer;
             ClientSide = Side.Normal;
         }
+
+        if (_inSelectionScene)
+        {
+            
+        }
     }
 
     public override void OnConnectedToMaster()
@@ -92,6 +107,19 @@ public class GameManager : MonoBehaviourPunCallbacks
     public void EndGame(Actor winner)
     {
         _lastGameWon = winner.TryGetComponent<PlayerController>(out var playerController) && playerController.isActiveAndEnabled;
+        if (GameType == GameType.Multiplayer || _lastGameWon == false)
+        {
+            EndSession(winner);
+            return;
+        }
+        //Go to selection scene, then to next in scene order.
+        _inSelectionScene = true;
+        SceneManager.LoadScene(selectionSceneIndex);
+    }
+
+    public void EndSession(Actor winner)
+    {
+        _lastGameWon = winner.TryGetComponent<PlayerController>(out var playerController) && playerController.isActiveAndEnabled;
         if (PhotonNetwork.InRoom)
         {
             _queuedLoadFinishScene = true;
@@ -102,5 +130,10 @@ public class GameManager : MonoBehaviourPunCallbacks
             SceneManager.LoadScene(_lastGameWon ? winSceneIndex : loseSceneIndex);
         }
         HostingGame = false;
+    }
+
+    public void GenerateSceneOrder()
+    {
+        
     }
 }
