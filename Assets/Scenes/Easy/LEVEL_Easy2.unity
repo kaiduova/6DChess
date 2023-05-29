@@ -7471,7 +7471,7 @@ MonoBehaviour:
   location: {x: -4, y: 0}
   tileEffect: 5
   teleportTarget: {fileID: 0}
-  arrowTarget: 1
+  arrowTarget: 2
   arrowSide: 1
 --- !u!1 &1725122702
 GameObject:
