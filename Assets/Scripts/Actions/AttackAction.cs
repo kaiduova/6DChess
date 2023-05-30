@@ -11,9 +11,6 @@ namespace Actions
         private Vector2 relativeAttackCoordinate;
 
         [SerializeField]
-        private Direction animationDirection;
-
-        [SerializeField]
         private float attackTime;
         
         public override void PerformAction(ActionFinishCallback callback)
@@ -26,20 +23,29 @@ namespace Actions
                 return;
             }
 
-            var isVengeful = targetTile.CurrentPiece.isVengeful;
-            targetTile.CurrentPiece.Destroy();
+            StartCoroutine(PerformAttack(attackTime, targetTile, callback));
+        }
+        
+        private IEnumerator PerformAttack(float inAttackTime, Tile inTargetTile, ActionFinishCallback callback)
+        {
+            Piece.StopRotationLock = true;
+            var isVengeful = inTargetTile.CurrentPiece.isVengeful;
+            var originalRotation = Piece.transform.GetChild(0).rotation;
+            //Rotate and play animation.
+            var lookRotation =
+                Quaternion.LookRotation(inTargetTile.transform.position - transform.position, Vector3.up);
+            Piece.transform.GetChild(0).rotation = Quaternion.Euler(originalRotation.eulerAngles.x, lookRotation.y, originalRotation.eulerAngles.z);
+
+            yield return new WaitForSeconds(inAttackTime);
+            
+            inTargetTile.CurrentPiece.Destroy();
             if (isVengeful)
             {
                 Piece.QueueDestroy = true;
             }
             callback();
+            Piece.transform.GetChild(0).rotation = originalRotation;
+            Piece.StopRotationLock = false;
         }
-
-        /*
-        private IEnumerator PerformAttack(float inAttackTime, Direction inAnimationDirection, )
-        {
-            Piece.StopRotationLock = true;
-        }
-        */
     }
 }
