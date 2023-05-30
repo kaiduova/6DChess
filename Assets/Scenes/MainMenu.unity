@@ -1808,7 +1808,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   winSceneIndex: 1
   loseSceneIndex: 2
+  selectionSceneIndex: 3
+  numberOfSelectableCardsToOffer: 4
   fadeScreen: {fileID: 1478371093}
+  easyScenes: 0600000007000000
+  mediumScenes: 
+  hardScenes: 
+  bossScenes: 
+  numEasyScenesToSelect: 3
+  numMediumScenesToSelect: 4
+  numHardScenesToSelect: 2
+  numBossScenesToSelect: 1
+  easySelectableCards:
+  - {fileID: 206303078549874440, guid: 7f7f2642859b24849b75cd5482dd1b18, type: 3}
+  - {fileID: 206303078549874440, guid: 7f7f2642859b24849b75cd5482dd1b18, type: 3}
+  - {fileID: 206303078549874440, guid: 7f7f2642859b24849b75cd5482dd1b18, type: 3}
+  - {fileID: 206303078549874440, guid: 7f7f2642859b24849b75cd5482dd1b18, type: 3}
+  mediumSelectableCards: []
+  hardSelectableCards: []
+  bossSelectableCards: []
 --- !u!114 &1478371093
 MonoBehaviour:
   m_ObjectHideFlags: 0

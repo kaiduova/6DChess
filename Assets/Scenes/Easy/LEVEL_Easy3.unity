@@ -306,6 +306,10 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomTeleportVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &58278120
 GameObject:
   m_ObjectHideFlags: 0
@@ -538,6 +542,10 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomTeleportVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &108273423
 GameObject:
   m_ObjectHideFlags: 0
@@ -862,6 +870,10 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomTeleportVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &119623336
 GameObject:
   m_ObjectHideFlags: 0
@@ -962,6 +974,10 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomTeleportVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &211912070
 GameObject:
   m_ObjectHideFlags: 0
@@ -1564,6 +1580,10 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomTeleportVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &363245274
 GameObject:
   m_ObjectHideFlags: 0
@@ -1799,6 +1819,10 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomTeleportVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1983,6 +2007,10 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomTeleportVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &484459019
 GameObject:
   m_ObjectHideFlags: 0
@@ -2352,6 +2380,10 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomTeleportVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &664660343
 GameObject:
   m_ObjectHideFlags: 0
@@ -2587,6 +2619,10 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomTeleportVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &694530866
 GameObject:
   m_ObjectHideFlags: 0
@@ -2656,6 +2692,10 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomTeleportVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &813236041
 GameObject:
   m_ObjectHideFlags: 0
@@ -3217,6 +3257,10 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomTeleportVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &1011497893
 GameObject:
   m_ObjectHideFlags: 0
@@ -3286,6 +3330,10 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomTeleportVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &1031684396
 GameObject:
   m_ObjectHideFlags: 0
@@ -3656,6 +3704,10 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomTeleportVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &1111475940
 GameObject:
   m_ObjectHideFlags: 0
@@ -3725,6 +3777,10 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomTeleportVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &1122323684
 GameObject:
   m_ObjectHideFlags: 0
@@ -3794,6 +3850,10 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomTeleportVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &1142104208
 GameObject:
   m_ObjectHideFlags: 0
@@ -3895,6 +3955,10 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomTeleportVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &1295956612
 GameObject:
   m_ObjectHideFlags: 0
@@ -3964,6 +4028,10 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomTeleportVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &1306948204
 GameObject:
   m_ObjectHideFlags: 0
@@ -4116,6 +4184,10 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomTeleportVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &1314403443
 GameObject:
   m_ObjectHideFlags: 0
@@ -4469,6 +4541,10 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomTeleportVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &1401703708
 GameObject:
   m_ObjectHideFlags: 0
@@ -4538,6 +4614,10 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomTeleportVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &1405525473
 GameObject:
   m_ObjectHideFlags: 0
@@ -4802,6 +4882,10 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomTeleportVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &1433765877
 GameObject:
   m_ObjectHideFlags: 0
@@ -5043,6 +5127,10 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomTeleportVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &1471444041
 GameObject:
   m_ObjectHideFlags: 0
@@ -5346,6 +5434,10 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomTeleportVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &1591471016
 GameObject:
   m_ObjectHideFlags: 0
@@ -5498,6 +5590,10 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomTeleportVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &1640592680
 GameObject:
   m_ObjectHideFlags: 0
@@ -5687,6 +5783,10 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomTeleportVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &1652907326
 GameObject:
   m_ObjectHideFlags: 0
@@ -5953,6 +6053,10 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomTeleportVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &1734564851
 GameObject:
   m_ObjectHideFlags: 0
@@ -6219,6 +6323,10 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomTeleportVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &1773583424
 GameObject:
   m_ObjectHideFlags: 0
@@ -6454,6 +6562,10 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomTeleportVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &1828285788
 GameObject:
   m_ObjectHideFlags: 0
@@ -6523,6 +6635,10 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomTeleportVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &1862600984
 GameObject:
   m_ObjectHideFlags: 0
@@ -6592,6 +6708,10 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomTeleportVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &1870980322
 GameObject:
   m_ObjectHideFlags: 0
@@ -6744,6 +6864,10 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomTeleportVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &1977467451
 GameObject:
   m_ObjectHideFlags: 0
@@ -6813,6 +6937,10 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomTeleportVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &1999551615
 GameObject:
   m_ObjectHideFlags: 0
@@ -6882,6 +7010,10 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomTeleportVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &2001104845
 GameObject:
   m_ObjectHideFlags: 0
@@ -6951,6 +7083,10 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomTeleportVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &2009543396
 GameObject:
   m_ObjectHideFlags: 0
@@ -7020,6 +7156,10 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomTeleportVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &2029953934
 GameObject:
   m_ObjectHideFlags: 0
@@ -7716,3 +7856,7 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomTeleportVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
