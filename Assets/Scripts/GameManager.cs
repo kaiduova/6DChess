@@ -140,7 +140,7 @@ public class GameManager : MonoBehaviourPunCallbacks
         SceneManager.LoadScene(selectionSceneIndex);
     }
 
-    private void EndSession(Actor winner)
+    public void EndSession(Actor winner)
     {
         _lastGameWon = winner.TryGetComponent<PlayerController>(out var playerController) && playerController.isActiveAndEnabled;
         if (PhotonNetwork.InRoom)
