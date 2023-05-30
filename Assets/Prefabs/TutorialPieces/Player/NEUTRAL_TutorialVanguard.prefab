@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4001098184373674234}
   - component: {fileID: 7612671613917601634}
   m_Layer: 0
-  m_Name: FIRST_TutorialVanguard
+  m_Name: NEUTRAL_TutorialVanguard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -63,13 +63,7 @@ MonoBehaviour:
   lifestealHealValue: 0
   pauseTurnsAfterTurn: 0
   isForwardMoving: 1
-  textSectionTriggerBindings:
-  - condition: 0
-    index: 1
-  - condition: 3
-    index: 2
-  - condition: 1
-    index: 5
+  textSectionTriggerBindings: []
 --- !u!114 &4942057540051692973
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -940,13 +940,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deck:
-  - {fileID: 8485078294492037666, guid: 9505b1d057031e447a7862e0297d1a66, type: 3}
-  - {fileID: 8485078294492037666, guid: 9505b1d057031e447a7862e0297d1a66, type: 3}
-  - {fileID: 8485078294492037666, guid: 9505b1d057031e447a7862e0297d1a66, type: 3}
-  - {fileID: 8485078294492037666, guid: 9505b1d057031e447a7862e0297d1a66, type: 3}
-  - {fileID: 8485078294492037666, guid: 9505b1d057031e447a7862e0297d1a66, type: 3}
-  - {fileID: 8485078294492037666, guid: 9505b1d057031e447a7862e0297d1a66, type: 3}
   - {fileID: 8485078294492037666, guid: 53f223a5a629c6047a3423f91ee45453, type: 3}
+  - {fileID: 8485078294492037666, guid: 9505b1d057031e447a7862e0297d1a66, type: 3}
+  - {fileID: 8485078294492037666, guid: d63eb5301771d4a4b97978df38d6d0ab, type: 3}
+  - {fileID: 8485078294492037666, guid: d63eb5301771d4a4b97978df38d6d0ab, type: 3}
+  - {fileID: 8485078294492037666, guid: fdd150a7373125545b55a83be549bea9, type: 3}
+  - {fileID: 8485078294492037666, guid: d63eb5301771d4a4b97978df38d6d0ab, type: 3}
+  - {fileID: 8485078294492037666, guid: d63eb5301771d4a4b97978df38d6d0ab, type: 3}
   cameraGameObject: {fileID: 330585543}
   handCapacity: 1
   opponent: {fileID: 644973983}
@@ -1051,9 +1051,9 @@ MonoBehaviour:
   script:
   - tileIndex: 1
     placeFlipped: 0
-  - tileIndex: 0
-    placeFlipped: 0
   - tileIndex: 1
+    placeFlipped: 0
+  - tileIndex: 0
     placeFlipped: 0
   - tileIndex: 1
     placeFlipped: 0
@@ -1138,6 +1138,89 @@ MonoBehaviour:
   sceneViewId: 2
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!1 &681780334
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 681780335}
+  - component: {fileID: 681780337}
+  - component: {fileID: 681780336}
+  m_Layer: 0
+  m_Name: Visual
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &681780335
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 681780334}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1512755430}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!33 &681780336
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 681780334}
+  m_Mesh: {fileID: 4547268506808534155, guid: 6cfd61ee08f9b804988227168c2523ea, type: 3}
+--- !u!23 &681780337
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 681780334}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 3eb66c752107f204280c81101a8ba7c1, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &734808870
 GameObject:
   m_ObjectHideFlags: 0
@@ -1271,7 +1354,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3eb66c752107f204280c81101a8ba7c1, type: 2}
+  - {fileID: 2100000, guid: 68deef40eea87494e81b6a8abd4addd2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2300,6 +2383,161 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1477480637
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1477480638}
+  - component: {fileID: 1477480640}
+  - component: {fileID: 1477480639}
+  m_Layer: 0
+  m_Name: Visual
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1477480638
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1477480637}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1537887239}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!33 &1477480639
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1477480637}
+  m_Mesh: {fileID: 4547268506808534155, guid: 6cfd61ee08f9b804988227168c2523ea, type: 3}
+--- !u!23 &1477480640
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1477480637}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 3eb66c752107f204280c81101a8ba7c1, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &1512755429
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1512755430}
+  - component: {fileID: 1512755432}
+  - component: {fileID: 1512755431}
+  m_Layer: 0
+  m_Name: Tile(Clone)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1512755430
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1512755429}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.5, y: 0, z: 4.330127}
+  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 681780335}
+  m_Father: {fileID: 1640592682}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &1512755431
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1512755429}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.09
+  m_Height: 0.1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.02, z: 0}
+--- !u!114 &1512755432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1512755429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59aca424cf68ae14a9344371890e76eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tilePrefab: {fileID: 2057110637}
+  maxWidth: 2
+  spawningActor: {fileID: 644973983}
+  owningActor: {fileID: 644973983}
+  location: {x: 1, y: 5}
+  tileEffect: 0
+  teleportTarget: {fileID: 0}
+  arrowTarget: 0
+  arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &1523894161
 GameObject:
   m_ObjectHideFlags: 0
@@ -2383,6 +2621,78 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &1537887238
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1537887239}
+  - component: {fileID: 1537887241}
+  - component: {fileID: 1537887240}
+  m_Layer: 0
+  m_Name: Tile(Clone)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1537887239
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1537887238}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 3.4641016}
+  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1477480638}
+  m_Father: {fileID: 1640592682}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &1537887240
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1537887238}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.09
+  m_Height: 0.1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.02, z: 0}
+--- !u!114 &1537887241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1537887238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59aca424cf68ae14a9344371890e76eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tilePrefab: {fileID: 2057110637}
+  maxWidth: 2
+  spawningActor: {fileID: 644973983}
+  owningActor: {fileID: 644973983}
+  location: {x: 0, y: 4}
+  tileEffect: 0
+  teleportTarget: {fileID: 0}
+  arrowTarget: 0
+  arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &1594457495
 GameObject:
   m_ObjectHideFlags: 0
@@ -2494,6 +2804,8 @@ MonoBehaviour:
     - {x: 1, y: 3}
     - {x: 1, y: -3}
     - {x: 0, y: -4}
+    - {x: 1, y: 5}
+    - {x: 0, y: 4}
 --- !u!4 &1640592682
 Transform:
   m_ObjectHideFlags: 0
@@ -2514,6 +2826,8 @@ Transform:
   - {fileID: 1843547254}
   - {fileID: 92787836}
   - {fileID: 1594457496}
+  - {fileID: 1512755430}
+  - {fileID: 1537887239}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2560,7 +2874,7 @@ GameObject:
   - component: {fileID: 1700071207}
   - component: {fileID: 1700071206}
   m_Layer: 0
-  m_Name: InvSpawn1
+  m_Name: Tile(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2610,8 +2924,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilePrefab: {fileID: 2057110637}
   maxWidth: 2
-  spawningActor: {fileID: 644973983}
-  owningActor: {fileID: 644973983}
+  spawningActor: {fileID: 0}
+  owningActor: {fileID: 0}
   location: {x: 0, y: 2}
   tileEffect: 0
   teleportTarget: {fileID: 0}
@@ -2707,8 +3021,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 36
+  m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2841,7 +3155,7 @@ GameObject:
   - component: {fileID: 1843547256}
   - component: {fileID: 1843547255}
   m_Layer: 0
-  m_Name: InvSpawn2
+  m_Name: Tile(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2891,8 +3205,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilePrefab: {fileID: 2057110637}
   maxWidth: 2
-  spawningActor: {fileID: 644973983}
-  owningActor: {fileID: 644973983}
+  spawningActor: {fileID: 0}
+  owningActor: {fileID: 0}
   location: {x: 1, y: 3}
   tileEffect: 0
   teleportTarget: {fileID: 0}
@@ -2952,33 +3266,28 @@ MonoBehaviour:
 
 
     Drag
-    your card onto the blue tile to begin.'
-  - "You just placed a toy onto the board!\r When placing a piece, you can choose
-    which direction that piece will move or attack in, wherever applicable. For this
-    tutorial, you can only place pieces that attack right.\n\r\nEach turn, you will
-    draw a tile and place a piece onto the board. Your opponent will do the same.
-    Then, at the start of your next go, all of your pieces will move according to
-    their movement pattern.\r\n\r\nHover over your piece to learn more about your
-    piece."
-  - 'When you hover over a piece, you can see the piece''s movement and attack pattern
-    visualised on the board.
+    your card onto the blue tile, then click the right-hand side of the screen to
+    begin.'
+  - "You just placed a piece onto the board!\r\n\nWhen placing a piece, you can choose
+    which direction that piece will move or attack in. For this tutorial, you can
+    only place pieces that attack right.\r \n\nEach turn, you will draw a piece and
+    place it onto the board. \n\nAt the start of your next go, all of your pieces
+    will move according to their movement pattern.\r\n\nHover over your piece to
+    learn more."
+  - 'When you hover over a piece, you can see its movement and attack pattern visualised
+    on the board.
 
 
-
-    In the top left hand corner, you can also see
-    the piece''s card, which tells you how much damage the piece will do once it
-    reaches the other side (top right), the piece''s movement and attack pattern
-    (middle right), and any special powers the piece may have (middle bottom).
+    You can also see the piece''s card, which tells you how much
+    damage the piece will do (top right) and any special powers the piece may have
+    (middle bottom).
 
 
-
-    Use
-    this information to understand where your pieces and your opponent''s pieces
-    will move next turn.
+    Use this to understand where pieces will move and attack.
 
 
-
-    Place your next piece to continue.'
+    Place
+    your next piece to continue.'
   - 'Your piece is in the perfect position to attack your opponent''s piece next
     turn!
 
@@ -2987,22 +3296,20 @@ MonoBehaviour:
   - 'Nice! You just attacked your opponent''s piece, removing it from the board.
 
 
+    Place
+    another piece to continue.'
+  - "Oh dear! Your piece just got taken!\r\n\r\nPieces are also removed from the
+    board when another piece moves onto their tile. \r\n\nBeware, you can take your
+    own pieces if you're not careful!\r\n\nPlace another piece to continue!"
+  - 'Your piece just reached the other side of the board!
 
-    Pieces
-    can also be taken off the board when another piece moves into them. Beware, you
-    can take your own pieces if you''re not careful!
+
+    Once your piece enters
+    a red tile, it is removed from the board and deals damage to your opponent equal
+    to its damage value.
 
 
-
-    Place another piece to
-    continue.'
-  - "Oh dear! You piece just got taken!\r\n\r\nPieces are also removed from the board
-    when another piece moves onto their tile. \r\n\r\nBeware, you can take your own
-    pieces if you're not careful!\r\n\r\nPlace another piece to continue!"
-  - "Your piece is just one place away from the other side of the board! \r\n\r\nOnce
-    you enter your opponent's spawning tiles, your piece is removed from the board
-    and deals damage to your opponent equal to its damage value.\r\n\r\nPlace another
-    piece to win the game!"
+    Place another piece to win the game!'
 --- !u!1 &2032509643
 GameObject:
   m_ObjectHideFlags: 0
@@ -3095,7 +3402,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3eb66c752107f204280c81101a8ba7c1, type: 2}
+  - {fileID: 2100000, guid: 68deef40eea87494e81b6a8abd4addd2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
