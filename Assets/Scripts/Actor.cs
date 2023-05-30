@@ -35,7 +35,7 @@ public class Actor : MonoBehaviourPunCallbacks
     private readonly List<Card> _hand = new();
     
     [SerializeField]
-    private GameObject[] deck;
+    private List<GameObject> deck;
     
     [SerializeField]
     private GameObject cameraGameObject;
@@ -139,11 +139,11 @@ public class Actor : MonoBehaviourPunCallbacks
         if (!_canAct || _isActing) return;
         if (_hand.Count >= handCapacity) return;
         _isActing = true;
-        var deckIndexToGet = Random.Range(0, deck.Length);
+        var deckIndexToGet = Random.Range(0, deck.Count);
         if (drawCardsInOrder)
         {
             _lastDrawnDeckIndex++;
-            if (_lastDrawnDeckIndex >= deck.Length) _lastDrawnDeckIndex = 0;
+            if (_lastDrawnDeckIndex >= deck.Count) _lastDrawnDeckIndex = 0;
             deckIndexToGet = _lastDrawnDeckIndex;
         }
         if (GameManager.Instance.GameType == GameType.Multiplayer)

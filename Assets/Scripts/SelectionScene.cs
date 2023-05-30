@@ -24,6 +24,7 @@ public class SelectionScene : MonoBehaviour
 
     public void Initialize(List<GameObject> selectableCardPrefabs)
     {
+        NumSelectedCards = 0;
         foreach (var card in _selectableCards)
         {
             Destroy(card.gameObject);

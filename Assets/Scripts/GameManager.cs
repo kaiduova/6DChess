@@ -165,7 +165,7 @@ public class GameManager : MonoBehaviourPunCallbacks
         _currentIndexOnSceneOrder = -1;
     }
 
-    private void RandomlyAddToSceneOrder(IList<int> scenes, int maxScenes)
+    private void RandomlyAddToSceneOrder(List<int> scenes, int maxScenes)
     {
         while (true)
         {
@@ -177,15 +177,16 @@ public class GameManager : MonoBehaviourPunCallbacks
         }
     }
 
-    private List<T> RandomSelect<T>(IList<T> items, int numToSelect)
+    private List<T> RandomSelect<T>(List<T> items, int numToSelect)
     {
         List<T> returnList = new();
         while (true)
         {
-            if (items.Count == 0 || items.Count >= numToSelect) break;
+            if (items.Count == 0 || numToSelect == 0) break;
             var selected = items[Random.Range(0, items.Count)];
             returnList.Add(selected);
             items.Remove(selected);
+            numToSelect--;
         }
 
         return returnList;
@@ -226,7 +227,7 @@ public class GameManager : MonoBehaviourPunCallbacks
     {
         if (scene.buildIndex == selectionSceneIndex)
         {
-            SelectionScene.Instance.Initialize(RandomSelect(_selectableCardListToUse, numberOfSelectableCardsToOffer));
+            SelectionScene.Instance.Initialize(RandomSelect(_selectableCardListToUse.ToList(), numberOfSelectableCardsToOffer));
         }
     }
 }

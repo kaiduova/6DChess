@@ -2,6 +2,7 @@ using System;
 using Unity.VisualScripting;
 using UnityEngine;
 
+[RequireComponent(typeof(Collider))]
 public class SelectableCard : MonoBehaviour
 {
     public bool Selected { get; private set; }
@@ -30,7 +31,14 @@ public class SelectableCard : MonoBehaviour
     
     private void OnMouseDown()
     {
-        Select();
-        Deselect();
+        print("Clicked");
+        if (!Selected)
+        {
+            Select();
+        }
+        else
+        {
+            Deselect();
+        }
     }
 }
