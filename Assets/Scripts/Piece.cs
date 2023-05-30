@@ -42,6 +42,11 @@ public class Piece : MonoBehaviour
 
     [SerializeField]
     private int lifestealHealValue;
+    
+    private int _pauseCounter;
+
+    [SerializeField]
+    private int pauseTurnsAfterTurn;
 
     public bool QueueDestroy { get; set; }
 
@@ -109,6 +114,13 @@ public class Piece : MonoBehaviour
     public void Act(PieceFinishCallback callback)
     {
         _finishCallback = callback;
+        if (_pauseCounter > 0)
+        {
+            _pauseCounter--;
+            callback();
+            return;
+        }
+        _pauseCounter = pauseTurnsAfterTurn;
         NextAction();
     }
 

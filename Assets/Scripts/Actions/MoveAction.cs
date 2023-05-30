@@ -33,11 +33,6 @@ namespace Actions
 
         private bool _moving;
 
-        private int _pauseCounter;
-
-        [SerializeField]
-        private int pauseTurnsAfterMove;
-
         public static Vector2 TranslateToRelativeCoordinate(Direction direction)
         {
             return direction switch
@@ -56,13 +51,6 @@ namespace Actions
         {
             if (Piece.InSludge)
             {
-                callback();
-                return;
-            }
-
-            if (_pauseCounter > 0)
-            {
-                _pauseCounter--;
                 callback();
                 return;
             }
@@ -101,7 +89,6 @@ namespace Actions
             _moveTimer = moveDuration;
             _callback = callback;
             _moving = true;
-            _pauseCounter = pauseTurnsAfterMove;
         }
 
         private void Update()
