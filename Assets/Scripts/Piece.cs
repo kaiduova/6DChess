@@ -165,7 +165,7 @@ public class Piece : MonoBehaviour
         if (isForwardMoving) return;
         if (Actor.Side == Side.Normal)
         {
-            transform.GetChild(0).rotation = _isFlipped ? Quaternion.Euler(0, 60, 0) : Quaternion.Euler(0, -60, 0);
+            transform.GetChild(0).rotation = _isFlipped ? Quaternion.Euler(0, -60, 0) : Quaternion.Euler(0, 60, 0);
         }
         else
         {
