@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 206303078549874446}
   - component: {fileID: 206303078549874447}
   m_Layer: 0
-  m_Name: SelectableCard_Juggernaut
+  m_Name: 10D_Sel_Payload Card
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7128719c76cc424aa34e1278794af0ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardPrefab: {fileID: 8485078294492037666, guid: e3320a51cd5439d4f93530daf7d4071e,
+  cardPrefab: {fileID: 8485078294492037666, guid: 5b6ad4db8fedca84e999b762cfdc71d6,
     type: 3}
 --- !u!65 &206303078549874447
 BoxCollider:
@@ -123,7 +123,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 15eb809d4f7e0244ba15a48b873e09d3, type: 2}
+  - {fileID: 2100000, guid: 523d9ace205dd8942996a4a2d7cf0636, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
