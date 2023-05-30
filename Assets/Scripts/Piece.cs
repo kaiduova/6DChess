@@ -48,6 +48,9 @@ public class Piece : MonoBehaviour
     [SerializeField]
     private int pauseTurnsAfterTurn;
 
+    [SerializeField]
+    private bool isForwardMoving;
+
     public bool QueueDestroy { get; set; }
 
     public bool IsFlipped
@@ -156,7 +159,20 @@ public class Piece : MonoBehaviour
     {
         Actor.DestroyPiece(this);
     }
-    
+
+    private void Update()
+    {
+        if (isForwardMoving) return;
+        if (Actor.Side == Side.Normal)
+        {
+            transform.GetChild(0).rotation = _isFlipped ? Quaternion.Euler(0, 60, 0) : Quaternion.Euler(0, -60, 0);
+        }
+        else
+        {
+            transform.GetChild(0).rotation = _isFlipped ? Quaternion.Euler(0, 120, 0) : Quaternion.Euler(0, -120, 0);
+        }
+    }
+
     public static Vector3 InvertZ(Vector3 input)
     {
         Vector3 output;
