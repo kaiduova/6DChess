@@ -11,7 +11,7 @@ namespace Actions
         private Vector2 relativeAttackCoordinate;
 
         [SerializeField]
-        private float attackTime;
+        private float attackTime = 1;
         
         public override void PerformAction(ActionFinishCallback callback)
         {
