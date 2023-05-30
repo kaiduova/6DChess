@@ -10,9 +10,6 @@ namespace Actions
         [SerializeField]
         private Vector2 relativeAttackCoordinate;
 
-        [SerializeField]
-        private float attackTime = 1;
-        
         public override void PerformAction(ActionFinishCallback callback)
         {
             var targetTileLocation = Piece.Actor.Side == Side.Normal ? Piece.Tile.location + relativeAttackCoordinate : Piece.Tile.location + MoveAction.InvertY(relativeAttackCoordinate);
@@ -23,7 +20,7 @@ namespace Actions
                 return;
             }
 
-            StartCoroutine(PerformAttack(attackTime, targetTile, callback));
+            StartCoroutine(PerformAttack(1, targetTile, callback));
         }
         
         private IEnumerator PerformAttack(float inAttackTime, Tile inTargetTile, ActionFinishCallback callback)
