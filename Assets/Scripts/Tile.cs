@@ -186,7 +186,7 @@ public class Tile : MonoBehaviour
 
         if (isVengeful)
         {
-            piece.Destroy();
+            piece.QueueDestroy = true;
             return;
         }
         _currentPiece = piece;

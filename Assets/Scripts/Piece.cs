@@ -114,6 +114,13 @@ public class Piece : MonoBehaviour
 
     private void NextAction()
     {
+        if (QueueDestroy)
+        {
+            Destroy();
+            _finishCallback();
+            return;
+        }
+        
         if (Tile.OwningActor != null && Actor != Tile.OwningActor)
         {
             Tile.OwningActor.Health -= damage;
@@ -123,13 +130,6 @@ public class Piece : MonoBehaviour
             return;
         }
 
-        if (QueueDestroy)
-        {
-            Destroy();
-            _finishCallback();
-            return;
-        }
-        
         if (_actionIterator >= _orderedActions.Length)
         {
             _actionIterator = 0;

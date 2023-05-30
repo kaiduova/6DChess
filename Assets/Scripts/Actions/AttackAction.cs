@@ -23,7 +23,7 @@ namespace Actions
             targetTile.CurrentPiece.Destroy();
             if (isVengeful)
             {
-                Piece.Destroy();
+                Piece.QueueDestroy = true;
             }
             callback();
         }
