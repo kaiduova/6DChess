@@ -48,7 +48,6 @@ public class HoverDetail : MonoBehaviour
                 _timeToVanish = infoVanishDelay;
                 pieceInfoDisplay.sprite = cardPiece.pieceInfo;
                 _currentPiece = piece;
-                cardPiece.ShowIcons();
             }
             else
             {
