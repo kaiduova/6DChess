@@ -347,7 +347,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 68deef40eea87494e81b6a8abd4addd2, type: 2}
+  - {fileID: 2100000, guid: 80527c85f4d834a4f896ade8cfbb66b1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -431,13 +431,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilePrefab: {fileID: 153124602}
   maxWidth: 2
-  spawningActor: {fileID: 0}
-  owningActor: {fileID: 0}
+  spawningActor: {fileID: 644973983}
+  owningActor: {fileID: 644973983}
   location: {x: 2, y: 8}
   tileEffect: 0
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &33895122
 GameObject:
   m_ObjectHideFlags: 0
@@ -538,6 +541,9 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &59601528
 GameObject:
   m_ObjectHideFlags: 0
@@ -607,6 +613,9 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &78119714
 GameObject:
   m_ObjectHideFlags: 0
@@ -676,6 +685,9 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &108273423
 GameObject:
   m_ObjectHideFlags: 0
@@ -948,6 +960,9 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &128328598
 GameObject:
   m_ObjectHideFlags: 0
@@ -1100,6 +1115,9 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1001 &153124601
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1333,6 +1351,9 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &218360938
 GameObject:
   m_ObjectHideFlags: 0
@@ -1402,6 +1423,9 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &266305877
 GameObject:
   m_ObjectHideFlags: 0
@@ -1471,6 +1495,9 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &304027007
 GameObject:
   m_ObjectHideFlags: 0
@@ -1616,13 +1643,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilePrefab: {fileID: 153124602}
   maxWidth: 2
-  spawningActor: {fileID: 0}
-  owningActor: {fileID: 0}
+  spawningActor: {fileID: 484459020}
+  owningActor: {fileID: 484459020}
   location: {x: 2, y: 0}
   tileEffect: 0
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -2085,6 +2115,9 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &426228142
 GameObject:
   m_ObjectHideFlags: 0
@@ -2154,6 +2187,9 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &436325854
 GameObject:
   m_ObjectHideFlags: 0
@@ -2270,10 +2306,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deck:
   - {fileID: 8485078294492037666, guid: 1ca8b266d24e0c04c8ea4e097d56e3b5, type: 3}
-  - {fileID: 8485078294492037666, guid: e3320a51cd5439d4f93530daf7d4071e, type: 3}
   - {fileID: 8485078294492037666, guid: de200def760747145b7dba3c3ce33532, type: 3}
   - {fileID: 8485078294492037666, guid: b073fdbffd7ca534a89f02c8bc27cae2, type: 3}
   - {fileID: 8485078294492037666, guid: a8ce009d3e0b02f429d1d2f01ace6e43, type: 3}
+  - {fileID: 8485078294492037666, guid: 1ca8b266d24e0c04c8ea4e097d56e3b5, type: 3}
+  - {fileID: 8485078294492037666, guid: de200def760747145b7dba3c3ce33532, type: 3}
+  - {fileID: 8485078294492037666, guid: b073fdbffd7ca534a89f02c8bc27cae2, type: 3}
+  - {fileID: 8485078294492037666, guid: 1ca8b266d24e0c04c8ea4e097d56e3b5, type: 3}
   cameraGameObject: {fileID: 330585543}
   handCapacity: 4
   opponent: {fileID: 644973983}
@@ -2286,6 +2325,7 @@ MonoBehaviour:
   - {fileID: 1741705760}
   healthText: {fileID: 1433765878}
   health: 15
+  drawCardsInOrder: 0
 --- !u!4 &484459021
 Transform:
   m_ObjectHideFlags: 0
@@ -2658,6 +2698,9 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &585483933
 GameObject:
   m_ObjectHideFlags: 0
@@ -2810,6 +2853,9 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &618152964
 GameObject:
   m_ObjectHideFlags: 0
@@ -2879,6 +2925,9 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &634522078
 GameObject:
   m_ObjectHideFlags: 0
@@ -2948,6 +2997,9 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &644973980
 GameObject:
   m_ObjectHideFlags: 0
@@ -3025,6 +3077,7 @@ MonoBehaviour:
   - {fileID: 33895122}
   healthText: {fileID: 108273424}
   health: 15
+  drawCardsInOrder: 0
 --- !u!4 &644973984
 Transform:
   m_ObjectHideFlags: 0
@@ -3131,6 +3184,9 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &678931053
 GameObject:
   m_ObjectHideFlags: 0
@@ -3200,6 +3256,9 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &706577205
 GameObject:
   m_ObjectHideFlags: 0
@@ -3352,6 +3411,9 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &788007479
 GameObject:
   m_ObjectHideFlags: 0
@@ -3504,6 +3566,9 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &821849689
 GameObject:
   m_ObjectHideFlags: 0
@@ -3990,6 +4055,9 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &924030802
 GameObject:
   m_ObjectHideFlags: 0
@@ -4059,6 +4127,9 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &975243529
 GameObject:
   m_ObjectHideFlags: 0
@@ -4128,6 +4199,9 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &982251867
 GameObject:
   m_ObjectHideFlags: 0
@@ -4198,6 +4272,9 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &1012727304
 GameObject:
   m_ObjectHideFlags: 0
@@ -4560,6 +4637,9 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &1066379407
 GameObject:
   m_ObjectHideFlags: 0
@@ -4629,6 +4709,9 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1001 &1074012525
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4857,6 +4940,9 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &1104498104
 GameObject:
   m_ObjectHideFlags: 0
@@ -4919,13 +5005,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilePrefab: {fileID: 153124602}
   maxWidth: 2
-  spawningActor: {fileID: 0}
-  owningActor: {fileID: 0}
+  spawningActor: {fileID: 644973983}
+  owningActor: {fileID: 644973983}
   location: {x: -2, y: 8}
   tileEffect: 0
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &1125863887
 GameObject:
   m_ObjectHideFlags: 0
@@ -4995,6 +5084,9 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &1172201176
 GameObject:
   m_ObjectHideFlags: 0
@@ -5064,6 +5156,9 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &1181972593
 GameObject:
   m_ObjectHideFlags: 0
@@ -5133,6 +5228,9 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &1209443127
 GameObject:
   m_ObjectHideFlags: 0
@@ -6480,7 +6578,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 68deef40eea87494e81b6a8abd4addd2, type: 2}
+  - {fileID: 2100000, guid: 80527c85f4d834a4f896ade8cfbb66b1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6654,6 +6752,9 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &1637965007
 GameObject:
   m_ObjectHideFlags: 0
@@ -6723,6 +6824,9 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &1640592680
 GameObject:
   m_ObjectHideFlags: 0
@@ -7038,6 +7142,9 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &1695921080
 GameObject:
   m_ObjectHideFlags: 0
@@ -7107,6 +7214,9 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &1708864100
 GameObject:
   m_ObjectHideFlags: 0
@@ -7168,7 +7278,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 68deef40eea87494e81b6a8abd4addd2, type: 2}
+  - {fileID: 2100000, guid: 3eb66c752107f204280c81101a8ba7c1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7531,7 +7641,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 68deef40eea87494e81b6a8abd4addd2, type: 2}
+  - {fileID: 2100000, guid: 3eb66c752107f204280c81101a8ba7c1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7622,6 +7732,9 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &1790289948
 GameObject:
   m_ObjectHideFlags: 0
@@ -7684,13 +7797,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilePrefab: {fileID: 153124602}
   maxWidth: 2
-  spawningActor: {fileID: 0}
-  owningActor: {fileID: 0}
+  spawningActor: {fileID: 484459020}
+  owningActor: {fileID: 484459020}
   location: {x: -2, y: 0}
   tileEffect: 0
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &1797516677
 GameObject:
   m_ObjectHideFlags: 0
@@ -7843,6 +7959,9 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &1831811874
 GameObject:
   m_ObjectHideFlags: 0
@@ -7912,6 +8031,9 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &1844562842
 GameObject:
   m_ObjectHideFlags: 0
@@ -8064,6 +8186,9 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &1914964233
 GameObject:
   m_ObjectHideFlags: 0
@@ -8216,6 +8341,9 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &1945847085
 GameObject:
   m_ObjectHideFlags: 0
@@ -8847,6 +8975,9 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &2120204954
 GameObject:
   m_ObjectHideFlags: 0

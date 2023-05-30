@@ -62,6 +62,8 @@ MonoBehaviour:
   pieceInfo: {fileID: 21300000, guid: a09784ad8f2d1ae4281ed13a4418c523, type: 3}
   isVengeful: 0
   lifestealHealValue: 2
+  pauseTurnsAfterTurn: 0
+  isForwardMoving: 1
 --- !u!114 &4942057540051692973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78,7 +80,6 @@ MonoBehaviour:
   movePattern: 0
   isJump: 0
   moveDuration: 1
-  pauseTurnsAfterMove: 0
 --- !u!114 &9153199987196801462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,7 +110,6 @@ MonoBehaviour:
   movePattern: 0
   isJump: 0
   moveDuration: 1
-  pauseTurnsAfterMove: 0
 --- !u!114 &-6511377359171243633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,14 +177,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4942057540467675391}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: 0, y: 1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4942057540051692963}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!33 &4942057540467675388
 MeshFilter:
   m_ObjectHideFlags: 0

@@ -273,7 +273,6 @@ MonoBehaviour:
   arrowTarget: 0
   arrowSide: 0
   randomOriginalVisual: {fileID: 0}
-  randomTeleportVisual: {fileID: 0}
   randomInstakillVisual: {fileID: 0}
   randomSludgeVisual: {fileID: 0}
 --- !u!1 &13127086
@@ -429,7 +428,6 @@ MonoBehaviour:
   arrowTarget: 0
   arrowSide: 0
   randomOriginalVisual: {fileID: 0}
-  randomTeleportVisual: {fileID: 0}
   randomInstakillVisual: {fileID: 0}
   randomSludgeVisual: {fileID: 0}
 --- !u!1 &28939218
@@ -502,7 +500,6 @@ MonoBehaviour:
   arrowTarget: 0
   arrowSide: 0
   randomOriginalVisual: {fileID: 0}
-  randomTeleportVisual: {fileID: 0}
   randomInstakillVisual: {fileID: 0}
   randomSludgeVisual: {fileID: 0}
 --- !u!1 &33895122
@@ -772,7 +769,6 @@ MonoBehaviour:
   arrowTarget: 0
   arrowSide: 0
   randomOriginalVisual: {fileID: 0}
-  randomTeleportVisual: {fileID: 0}
   randomInstakillVisual: {fileID: 0}
   randomSludgeVisual: {fileID: 0}
 --- !u!1 &90629769
@@ -928,7 +924,6 @@ MonoBehaviour:
   arrowTarget: 0
   arrowSide: 0
   randomOriginalVisual: {fileID: 0}
-  randomTeleportVisual: {fileID: 0}
   randomInstakillVisual: {fileID: 0}
   randomSludgeVisual: {fileID: 0}
 --- !u!1001 &103547434
@@ -1445,7 +1440,6 @@ MonoBehaviour:
   arrowTarget: 0
   arrowSide: 0
   randomOriginalVisual: {fileID: 0}
-  randomTeleportVisual: {fileID: 0}
   randomInstakillVisual: {fileID: 0}
   randomSludgeVisual: {fileID: 0}
 --- !u!1001 &179423515
@@ -1614,7 +1608,6 @@ MonoBehaviour:
   arrowTarget: 0
   arrowSide: 0
   randomOriginalVisual: {fileID: 0}
-  randomTeleportVisual: {fileID: 0}
   randomInstakillVisual: {fileID: 0}
   randomSludgeVisual: {fileID: 0}
 --- !u!1 &195976990
@@ -1770,7 +1763,6 @@ MonoBehaviour:
   arrowTarget: 0
   arrowSide: 0
   randomOriginalVisual: {fileID: 0}
-  randomTeleportVisual: {fileID: 0}
   randomInstakillVisual: {fileID: 0}
   randomSludgeVisual: {fileID: 0}
 --- !u!1 &210629964
@@ -1843,7 +1835,6 @@ MonoBehaviour:
   arrowTarget: 0
   arrowSide: 0
   randomOriginalVisual: {fileID: 0}
-  randomTeleportVisual: {fileID: 0}
   randomInstakillVisual: {fileID: 0}
   randomSludgeVisual: {fileID: 0}
 --- !u!1 &252483956
@@ -1999,7 +1990,6 @@ MonoBehaviour:
   arrowTarget: 0
   arrowSide: 0
   randomOriginalVisual: {fileID: 0}
-  randomTeleportVisual: {fileID: 0}
   randomInstakillVisual: {fileID: 0}
   randomSludgeVisual: {fileID: 0}
 --- !u!1 &255453770
@@ -2321,7 +2311,6 @@ MonoBehaviour:
   arrowTarget: 0
   arrowSide: 0
   randomOriginalVisual: {fileID: 0}
-  randomTeleportVisual: {fileID: 0}
   randomInstakillVisual: {fileID: 0}
   randomSludgeVisual: {fileID: 0}
 --- !u!1 &330585543
@@ -2836,7 +2825,6 @@ MonoBehaviour:
   arrowTarget: 0
   arrowSide: 0
   randomOriginalVisual: {fileID: 0}
-  randomTeleportVisual: {fileID: 0}
   randomInstakillVisual: {fileID: 0}
   randomSludgeVisual: {fileID: 0}
 --- !u!1 &391291954
@@ -3259,7 +3247,6 @@ MonoBehaviour:
   arrowTarget: 0
   arrowSide: 0
   randomOriginalVisual: {fileID: 0}
-  randomTeleportVisual: {fileID: 0}
   randomInstakillVisual: {fileID: 0}
   randomSludgeVisual: {fileID: 0}
 --- !u!1 &436283967
@@ -3332,7 +3319,6 @@ MonoBehaviour:
   arrowTarget: 0
   arrowSide: 0
   randomOriginalVisual: {fileID: 0}
-  randomTeleportVisual: {fileID: 0}
   randomInstakillVisual: {fileID: 0}
   randomSludgeVisual: {fileID: 0}
 --- !u!1 &484459019
@@ -3368,10 +3354,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deck:
   - {fileID: 8485078294492037666, guid: 1ca8b266d24e0c04c8ea4e097d56e3b5, type: 3}
-  - {fileID: 8485078294492037666, guid: e3320a51cd5439d4f93530daf7d4071e, type: 3}
   - {fileID: 8485078294492037666, guid: de200def760747145b7dba3c3ce33532, type: 3}
   - {fileID: 8485078294492037666, guid: b073fdbffd7ca534a89f02c8bc27cae2, type: 3}
   - {fileID: 8485078294492037666, guid: a8ce009d3e0b02f429d1d2f01ace6e43, type: 3}
+  - {fileID: 8485078294492037666, guid: 1ca8b266d24e0c04c8ea4e097d56e3b5, type: 3}
+  - {fileID: 8485078294492037666, guid: de200def760747145b7dba3c3ce33532, type: 3}
+  - {fileID: 8485078294492037666, guid: b073fdbffd7ca534a89f02c8bc27cae2, type: 3}
+  - {fileID: 8485078294492037666, guid: 1ca8b266d24e0c04c8ea4e097d56e3b5, type: 3}
   cameraGameObject: {fileID: 330585543}
   handCapacity: 4
   opponent: {fileID: 644973983}
@@ -3384,6 +3373,7 @@ MonoBehaviour:
   - {fileID: 1741705760}
   healthText: {fileID: 1433765878}
   health: 15
+  drawCardsInOrder: 0
 --- !u!4 &484459021
 Transform:
   m_ObjectHideFlags: 0
@@ -3666,7 +3656,6 @@ MonoBehaviour:
   arrowTarget: 0
   arrowSide: 0
   randomOriginalVisual: {fileID: 0}
-  randomTeleportVisual: {fileID: 0}
   randomInstakillVisual: {fileID: 0}
   randomSludgeVisual: {fileID: 0}
 --- !u!1001 &607957221
@@ -3825,7 +3814,6 @@ MonoBehaviour:
   arrowTarget: 0
   arrowSide: 0
   randomOriginalVisual: {fileID: 0}
-  randomTeleportVisual: {fileID: 0}
   randomInstakillVisual: {fileID: 0}
   randomSludgeVisual: {fileID: 0}
 --- !u!1 &637933688
@@ -3898,7 +3886,6 @@ MonoBehaviour:
   arrowTarget: 0
   arrowSide: 0
   randomOriginalVisual: {fileID: 0}
-  randomTeleportVisual: {fileID: 0}
   randomInstakillVisual: {fileID: 0}
   randomSludgeVisual: {fileID: 0}
 --- !u!1001 &640228217
@@ -4136,6 +4123,7 @@ MonoBehaviour:
   - {fileID: 33895122}
   healthText: {fileID: 108273424}
   health: 15
+  drawCardsInOrder: 0
 --- !u!4 &644973984
 Transform:
   m_ObjectHideFlags: 0
@@ -4296,7 +4284,6 @@ MonoBehaviour:
   arrowTarget: 0
   arrowSide: 0
   randomOriginalVisual: {fileID: 0}
-  randomTeleportVisual: {fileID: 0}
   randomInstakillVisual: {fileID: 0}
   randomSludgeVisual: {fileID: 0}
 --- !u!136 &647053112
@@ -4400,7 +4387,6 @@ MonoBehaviour:
   arrowTarget: 0
   arrowSide: 0
   randomOriginalVisual: {fileID: 0}
-  randomTeleportVisual: {fileID: 0}
   randomInstakillVisual: {fileID: 0}
   randomSludgeVisual: {fileID: 0}
 --- !u!1 &683438359
@@ -4473,7 +4459,6 @@ MonoBehaviour:
   arrowTarget: 0
   arrowSide: 0
   randomOriginalVisual: {fileID: 0}
-  randomTeleportVisual: {fileID: 0}
   randomInstakillVisual: {fileID: 0}
   randomSludgeVisual: {fileID: 0}
 --- !u!1 &712806986
@@ -4546,7 +4531,6 @@ MonoBehaviour:
   arrowTarget: 0
   arrowSide: 0
   randomOriginalVisual: {fileID: 0}
-  randomTeleportVisual: {fileID: 0}
   randomInstakillVisual: {fileID: 0}
   randomSludgeVisual: {fileID: 0}
 --- !u!1 &713953337
@@ -5035,7 +5019,6 @@ MonoBehaviour:
   arrowTarget: 0
   arrowSide: 0
   randomOriginalVisual: {fileID: 0}
-  randomTeleportVisual: {fileID: 0}
   randomInstakillVisual: {fileID: 0}
   randomSludgeVisual: {fileID: 0}
 --- !u!1 &815028579
@@ -5108,7 +5091,6 @@ MonoBehaviour:
   arrowTarget: 0
   arrowSide: 0
   randomOriginalVisual: {fileID: 0}
-  randomTeleportVisual: {fileID: 0}
   randomInstakillVisual: {fileID: 0}
   randomSludgeVisual: {fileID: 0}
 --- !u!1 &824791762
@@ -5182,7 +5164,6 @@ MonoBehaviour:
   arrowTarget: 0
   arrowSide: 0
   randomOriginalVisual: {fileID: 0}
-  randomTeleportVisual: {fileID: 0}
   randomInstakillVisual: {fileID: 0}
   randomSludgeVisual: {fileID: 0}
 --- !u!1 &828525149
@@ -5553,7 +5534,6 @@ MonoBehaviour:
   arrowTarget: 0
   arrowSide: 0
   randomOriginalVisual: {fileID: 0}
-  randomTeleportVisual: {fileID: 0}
   randomInstakillVisual: {fileID: 0}
   randomSludgeVisual: {fileID: 0}
 --- !u!1 &897041504
@@ -5911,7 +5891,6 @@ MonoBehaviour:
   arrowTarget: 0
   arrowSide: 0
   randomOriginalVisual: {fileID: 0}
-  randomTeleportVisual: {fileID: 0}
   randomInstakillVisual: {fileID: 0}
   randomSludgeVisual: {fileID: 0}
 --- !u!1 &950376570
@@ -6067,7 +6046,6 @@ MonoBehaviour:
   arrowTarget: 0
   arrowSide: 0
   randomOriginalVisual: {fileID: 0}
-  randomTeleportVisual: {fileID: 0}
   randomInstakillVisual: {fileID: 0}
   randomSludgeVisual: {fileID: 0}
 --- !u!1 &958510791
@@ -6140,7 +6118,6 @@ MonoBehaviour:
   arrowTarget: 0
   arrowSide: 0
   randomOriginalVisual: {fileID: 0}
-  randomTeleportVisual: {fileID: 0}
   randomInstakillVisual: {fileID: 0}
   randomSludgeVisual: {fileID: 0}
 --- !u!1 &968824720
@@ -6296,7 +6273,6 @@ MonoBehaviour:
   arrowTarget: 0
   arrowSide: 0
   randomOriginalVisual: {fileID: 0}
-  randomTeleportVisual: {fileID: 0}
   randomInstakillVisual: {fileID: 0}
   randomSludgeVisual: {fileID: 0}
 --- !u!1 &994901084
@@ -6369,7 +6345,6 @@ MonoBehaviour:
   arrowTarget: 0
   arrowSide: 0
   randomOriginalVisual: {fileID: 0}
-  randomTeleportVisual: {fileID: 0}
   randomInstakillVisual: {fileID: 0}
   randomSludgeVisual: {fileID: 0}
 --- !u!1 &997675444
@@ -6525,7 +6500,6 @@ MonoBehaviour:
   arrowTarget: 0
   arrowSide: 0
   randomOriginalVisual: {fileID: 0}
-  randomTeleportVisual: {fileID: 0}
   randomInstakillVisual: {fileID: 0}
   randomSludgeVisual: {fileID: 0}
 --- !u!1 &1024122256
@@ -6599,7 +6573,6 @@ MonoBehaviour:
   arrowTarget: 0
   arrowSide: 0
   randomOriginalVisual: {fileID: 0}
-  randomTeleportVisual: {fileID: 0}
   randomInstakillVisual: {fileID: 0}
   randomSludgeVisual: {fileID: 0}
 --- !u!1 &1035871805
@@ -6973,7 +6946,6 @@ MonoBehaviour:
   arrowTarget: 0
   arrowSide: 0
   randomOriginalVisual: {fileID: 0}
-  randomTeleportVisual: {fileID: 0}
   randomInstakillVisual: {fileID: 0}
   randomSludgeVisual: {fileID: 0}
 --- !u!1001 &1117673366
@@ -7536,7 +7508,6 @@ MonoBehaviour:
   arrowTarget: 0
   arrowSide: 0
   randomOriginalVisual: {fileID: 0}
-  randomTeleportVisual: {fileID: 0}
   randomInstakillVisual: {fileID: 0}
   randomSludgeVisual: {fileID: 0}
 --- !u!1 &1208401222
@@ -7858,7 +7829,6 @@ MonoBehaviour:
   arrowTarget: 0
   arrowSide: 0
   randomOriginalVisual: {fileID: 0}
-  randomTeleportVisual: {fileID: 0}
   randomInstakillVisual: {fileID: 0}
   randomSludgeVisual: {fileID: 0}
 --- !u!1 &1254516564
@@ -8014,7 +7984,6 @@ MonoBehaviour:
   arrowTarget: 0
   arrowSide: 0
   randomOriginalVisual: {fileID: 0}
-  randomTeleportVisual: {fileID: 0}
   randomInstakillVisual: {fileID: 0}
   randomSludgeVisual: {fileID: 0}
 --- !u!1001 &1308039532
@@ -8162,7 +8131,6 @@ MonoBehaviour:
   arrowTarget: 0
   arrowSide: 0
   randomOriginalVisual: {fileID: 0}
-  randomTeleportVisual: {fileID: 0}
   randomInstakillVisual: {fileID: 0}
   randomSludgeVisual: {fileID: 0}
 --- !u!1 &1319278080
@@ -8318,7 +8286,6 @@ MonoBehaviour:
   arrowTarget: 0
   arrowSide: 0
   randomOriginalVisual: {fileID: 0}
-  randomTeleportVisual: {fileID: 0}
   randomInstakillVisual: {fileID: 0}
   randomSludgeVisual: {fileID: 0}
 --- !u!1 &1386674153
@@ -8391,7 +8358,6 @@ MonoBehaviour:
   arrowTarget: 0
   arrowSide: 0
   randomOriginalVisual: {fileID: 0}
-  randomTeleportVisual: {fileID: 0}
   randomInstakillVisual: {fileID: 0}
   randomSludgeVisual: {fileID: 0}
 --- !u!1 &1389506871
@@ -8614,7 +8580,6 @@ MonoBehaviour:
   arrowTarget: 0
   arrowSide: 0
   randomOriginalVisual: {fileID: 0}
-  randomTeleportVisual: {fileID: 0}
   randomInstakillVisual: {fileID: 0}
   randomSludgeVisual: {fileID: 0}
 --- !u!1 &1416524591
@@ -8687,7 +8652,6 @@ MonoBehaviour:
   arrowTarget: 0
   arrowSide: 0
   randomOriginalVisual: {fileID: 0}
-  randomTeleportVisual: {fileID: 0}
   randomInstakillVisual: {fileID: 0}
   randomSludgeVisual: {fileID: 0}
 --- !u!1001 &1424652293
@@ -9007,7 +8971,6 @@ MonoBehaviour:
   arrowTarget: 0
   arrowSide: 0
   randomOriginalVisual: {fileID: 0}
-  randomTeleportVisual: {fileID: 0}
   randomInstakillVisual: {fileID: 0}
   randomSludgeVisual: {fileID: 0}
 --- !u!1 &1471444041
@@ -9148,7 +9111,6 @@ MonoBehaviour:
   arrowTarget: 0
   arrowSide: 0
   randomOriginalVisual: {fileID: 0}
-  randomTeleportVisual: {fileID: 0}
   randomInstakillVisual: {fileID: 0}
   randomSludgeVisual: {fileID: 0}
 --- !u!1 &1490671463
@@ -9221,7 +9183,6 @@ MonoBehaviour:
   arrowTarget: 0
   arrowSide: 0
   randomOriginalVisual: {fileID: 0}
-  randomTeleportVisual: {fileID: 0}
   randomInstakillVisual: {fileID: 0}
   randomSludgeVisual: {fileID: 0}
 --- !u!1 &1512366683
@@ -9544,7 +9505,6 @@ MonoBehaviour:
   arrowTarget: 0
   arrowSide: 0
   randomOriginalVisual: {fileID: 0}
-  randomTeleportVisual: {fileID: 0}
   randomInstakillVisual: {fileID: 0}
   randomSludgeVisual: {fileID: 0}
 --- !u!1 &1554395051
@@ -9618,7 +9578,6 @@ MonoBehaviour:
   arrowTarget: 0
   arrowSide: 0
   randomOriginalVisual: {fileID: 0}
-  randomTeleportVisual: {fileID: 0}
   randomInstakillVisual: {fileID: 0}
   randomSludgeVisual: {fileID: 0}
 --- !u!1 &1608823917
@@ -9691,7 +9650,6 @@ MonoBehaviour:
   arrowTarget: 0
   arrowSide: 0
   randomOriginalVisual: {fileID: 0}
-  randomTeleportVisual: {fileID: 0}
   randomInstakillVisual: {fileID: 0}
   randomSludgeVisual: {fileID: 0}
 --- !u!1 &1613724374
@@ -9847,7 +9805,6 @@ MonoBehaviour:
   arrowTarget: 0
   arrowSide: 0
   randomOriginalVisual: {fileID: 0}
-  randomTeleportVisual: {fileID: 0}
   randomInstakillVisual: {fileID: 0}
   randomSludgeVisual: {fileID: 0}
 --- !u!1 &1640592680
@@ -10213,7 +10170,6 @@ MonoBehaviour:
   arrowTarget: 0
   arrowSide: 0
   randomOriginalVisual: {fileID: 0}
-  randomTeleportVisual: {fileID: 0}
   randomInstakillVisual: {fileID: 0}
   randomSludgeVisual: {fileID: 0}
 --- !u!1001 &1694015979
@@ -10444,7 +10400,6 @@ MonoBehaviour:
   arrowTarget: 0
   arrowSide: 0
   randomOriginalVisual: {fileID: 0}
-  randomTeleportVisual: {fileID: 0}
   randomInstakillVisual: {fileID: 0}
   randomSludgeVisual: {fileID: 0}
 --- !u!1 &1737387493
@@ -10872,7 +10827,6 @@ MonoBehaviour:
   arrowTarget: 0
   arrowSide: 0
   randomOriginalVisual: {fileID: 0}
-  randomTeleportVisual: {fileID: 0}
   randomInstakillVisual: {fileID: 0}
   randomSludgeVisual: {fileID: 0}
 --- !u!1 &1767237761
@@ -10945,7 +10899,6 @@ MonoBehaviour:
   arrowTarget: 0
   arrowSide: 0
   randomOriginalVisual: {fileID: 0}
-  randomTeleportVisual: {fileID: 0}
   randomInstakillVisual: {fileID: 0}
   randomSludgeVisual: {fileID: 0}
 --- !u!1001 &1769016482
@@ -11343,7 +11296,6 @@ MonoBehaviour:
   arrowTarget: 0
   arrowSide: 0
   randomOriginalVisual: {fileID: 0}
-  randomTeleportVisual: {fileID: 0}
   randomInstakillVisual: {fileID: 0}
   randomSludgeVisual: {fileID: 0}
 --- !u!1001 &1803774474
@@ -11423,6 +11375,12 @@ PrefabInstance:
 --- !u!4 &1803774475 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 196362062396034093, guid: 90db7f3d90923dc42ac4bc157f4953e4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1803774474}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1803774476 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 716722074727143063, guid: 90db7f3d90923dc42ac4bc157f4953e4,
     type: 3}
   m_PrefabInstance: {fileID: 1803774474}
   m_PrefabAsset: {fileID: 0}
@@ -11663,7 +11621,6 @@ MonoBehaviour:
   arrowTarget: 0
   arrowSide: 0
   randomOriginalVisual: {fileID: 0}
-  randomTeleportVisual: {fileID: 0}
   randomInstakillVisual: {fileID: 0}
   randomSludgeVisual: {fileID: 0}
 --- !u!1 &1829250032
@@ -11736,7 +11693,6 @@ MonoBehaviour:
   arrowTarget: 0
   arrowSide: 0
   randomOriginalVisual: {fileID: 0}
-  randomTeleportVisual: {fileID: 0}
   randomInstakillVisual: {fileID: 0}
   randomSludgeVisual: {fileID: 0}
 --- !u!1 &1840106124
@@ -11862,7 +11818,6 @@ MonoBehaviour:
   arrowTarget: 0
   arrowSide: 0
   randomOriginalVisual: {fileID: 0}
-  randomTeleportVisual: {fileID: 0}
   randomInstakillVisual: {fileID: 0}
   randomSludgeVisual: {fileID: 0}
 --- !u!136 &1842901530
@@ -11966,7 +11921,6 @@ MonoBehaviour:
   arrowTarget: 0
   arrowSide: 0
   randomOriginalVisual: {fileID: 0}
-  randomTeleportVisual: {fileID: 0}
   randomInstakillVisual: {fileID: 0}
   randomSludgeVisual: {fileID: 0}
 --- !u!1 &1886327117
@@ -12039,7 +11993,6 @@ MonoBehaviour:
   arrowTarget: 0
   arrowSide: 0
   randomOriginalVisual: {fileID: 0}
-  randomTeleportVisual: {fileID: 0}
   randomInstakillVisual: {fileID: 0}
   randomSludgeVisual: {fileID: 0}
 --- !u!1001 &1886571234
@@ -12276,7 +12229,6 @@ MonoBehaviour:
   arrowTarget: 0
   arrowSide: 0
   randomOriginalVisual: {fileID: 0}
-  randomTeleportVisual: {fileID: 0}
   randomInstakillVisual: {fileID: 0}
   randomSludgeVisual: {fileID: 0}
 --- !u!1 &1924261197
@@ -12349,7 +12301,6 @@ MonoBehaviour:
   arrowTarget: 0
   arrowSide: 0
   randomOriginalVisual: {fileID: 0}
-  randomTeleportVisual: {fileID: 0}
   randomInstakillVisual: {fileID: 0}
   randomSludgeVisual: {fileID: 0}
 --- !u!1 &1945847085
@@ -12457,9 +12408,8 @@ MonoBehaviour:
   arrowTarget: 0
   arrowSide: 0
   randomOriginalVisual: {fileID: 1886571236}
-  randomTeleportVisual: {fileID: 607957223}
-  randomInstakillVisual: {fileID: 0}
-  randomSludgeVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 607957223}
+  randomSludgeVisual: {fileID: 1803774476}
 --- !u!1 &1957596911
 GameObject:
   m_ObjectHideFlags: 0
@@ -12530,7 +12480,6 @@ MonoBehaviour:
   arrowTarget: 0
   arrowSide: 0
   randomOriginalVisual: {fileID: 0}
-  randomTeleportVisual: {fileID: 0}
   randomInstakillVisual: {fileID: 0}
   randomSludgeVisual: {fileID: 0}
 --- !u!1 &1976150119
@@ -12603,7 +12552,6 @@ MonoBehaviour:
   arrowTarget: 0
   arrowSide: 0
   randomOriginalVisual: {fileID: 0}
-  randomTeleportVisual: {fileID: 0}
   randomInstakillVisual: {fileID: 0}
   randomSludgeVisual: {fileID: 0}
 --- !u!1 &1999810402
@@ -12677,7 +12625,6 @@ MonoBehaviour:
   arrowTarget: 0
   arrowSide: 0
   randomOriginalVisual: {fileID: 0}
-  randomTeleportVisual: {fileID: 0}
   randomInstakillVisual: {fileID: 0}
   randomSludgeVisual: {fileID: 0}
 --- !u!1 &2012104371
@@ -13362,7 +13309,6 @@ MonoBehaviour:
   arrowTarget: 0
   arrowSide: 0
   randomOriginalVisual: {fileID: 0}
-  randomTeleportVisual: {fileID: 0}
   randomInstakillVisual: {fileID: 0}
   randomSludgeVisual: {fileID: 0}
 --- !u!1 &2105132981
@@ -13699,7 +13645,6 @@ MonoBehaviour:
   arrowTarget: 0
   arrowSide: 0
   randomOriginalVisual: {fileID: 0}
-  randomTeleportVisual: {fileID: 0}
   randomInstakillVisual: {fileID: 0}
   randomSludgeVisual: {fileID: 0}
 --- !u!1001 &1477295875636831010

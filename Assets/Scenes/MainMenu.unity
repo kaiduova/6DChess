@@ -1811,21 +1811,36 @@ MonoBehaviour:
   selectionSceneIndex: 3
   numberOfSelectableCardsToOffer: 4
   fadeScreen: {fileID: 1478371093}
-  easyScenes: 0600000007000000
-  mediumScenes: 
-  hardScenes: 
-  bossScenes: 
+  easyScenes: 060000000700000008000000
+  mediumScenes: 090000000a000000
+  hardScenes: 0b000000
+  bossScenes: 0c000000
   numEasyScenesToSelect: 3
-  numMediumScenesToSelect: 4
-  numHardScenesToSelect: 2
+  numMediumScenesToSelect: 2
+  numHardScenesToSelect: 1
   numBossScenesToSelect: 1
   easySelectableCards:
+  - {fileID: 206303078549874440, guid: da7a53865182c5d44924c2fb60acb467, type: 3}
   - {fileID: 206303078549874440, guid: 7f7f2642859b24849b75cd5482dd1b18, type: 3}
-  - {fileID: 206303078549874440, guid: 7f7f2642859b24849b75cd5482dd1b18, type: 3}
-  - {fileID: 206303078549874440, guid: 7f7f2642859b24849b75cd5482dd1b18, type: 3}
-  - {fileID: 206303078549874440, guid: 7f7f2642859b24849b75cd5482dd1b18, type: 3}
-  mediumSelectableCards: []
-  hardSelectableCards: []
+  - {fileID: 206303078549874440, guid: ad109bd500c6a9c408cfa69c70a8af5c, type: 3}
+  - {fileID: 206303078549874440, guid: bf9b9708b0429ad4cb447e4bb1242f82, type: 3}
+  - {fileID: 206303078549874440, guid: 177aaa1206e1f164798dae69e503e325, type: 3}
+  - {fileID: 206303078549874440, guid: bf9b9708b0429ad4cb447e4bb1242f82, type: 3}
+  mediumSelectableCards:
+  - {fileID: 206303078549874440, guid: ed8bc5d40854ca04a8393e5109af9fb9, type: 3}
+  - {fileID: 206303078549874440, guid: dd34a473cde120c48b629202e3c34eb8, type: 3}
+  - {fileID: 206303078549874440, guid: 086f43217d84c4e4b90a55a404848669, type: 3}
+  - {fileID: 206303078549874440, guid: aec09ae2d943de149b86b7c8141a3c2a, type: 3}
+  - {fileID: 206303078549874440, guid: f86d2efaca311734baf2da678ea2c275, type: 3}
+  - {fileID: 206303078549874440, guid: c42d4f3cbbf0a92428fc59652cd13f4f, type: 3}
+  - {fileID: 206303078549874440, guid: a881bdc97ebe3e44383c18e523529051, type: 3}
+  hardSelectableCards:
+  - {fileID: 206303078549874440, guid: 8e6e3b54ee4266947a32896cd7df4253, type: 3}
+  - {fileID: 206303078549874440, guid: 69b5afa9a32406148a76224d6db2609a, type: 3}
+  - {fileID: 206303078549874440, guid: 12a98c2998b767941a67d0fee32483c3, type: 3}
+  - {fileID: 206303078549874440, guid: 39e2f696af180ec42b3318787602b77b, type: 3}
+  - {fileID: 206303078549874440, guid: 3b8621bad4749bd44a41238000341ae0, type: 3}
+  - {fileID: 206303078549874440, guid: 6a97702999fad804c889a1925b43baa0, type: 3}
   bossSelectableCards: []
 --- !u!114 &1478371093
 MonoBehaviour:

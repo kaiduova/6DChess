@@ -57,6 +57,8 @@ MonoBehaviour:
   pieceInfo: {fileID: 21300000, guid: a09784ad8f2d1ae4281ed13a4418c523, type: 3}
   isVengeful: 0
   lifestealHealValue: 0
+  pauseTurnsAfterTurn: 0
+  isForwardMoving: 1
 --- !u!114 &4942057540051692973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73,7 +75,6 @@ MonoBehaviour:
   movePattern: 0
   isJump: 1
   moveDuration: 0.5
-  pauseTurnsAfterMove: 0
 --- !u!114 &5260292286299714863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90,7 +91,6 @@ MonoBehaviour:
   movePattern: 0
   isJump: 0
   moveDuration: 0.5
-  pauseTurnsAfterMove: 0
 --- !u!114 &3038874532450007924
 MonoBehaviour:
   m_ObjectHideFlags: 0
