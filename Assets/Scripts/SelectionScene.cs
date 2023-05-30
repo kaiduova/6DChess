@@ -12,7 +12,7 @@ public class SelectionScene : MonoBehaviour
     [SerializeField]
     public int maxNumSelectedCards, cardsToAddPerSelection;
 
-    private List<SelectableCard> _selectableCards;
+    private List<SelectableCard> _selectableCards = new();
 
     [SerializeField]
     private float spacing;

@@ -62,6 +62,8 @@ public class Piece : MonoBehaviour
 
     public bool QueueDestroy { get; set; }
 
+    public bool StopRotationLock { get; set; }
+
     public bool IsFlipped
     {
         get => _isFlipped;
@@ -192,7 +194,7 @@ public class Piece : MonoBehaviour
 
     private void Update()
     {
-        if (isForwardMoving) return;
+        if (isForwardMoving || StopRotationLock) return;
         var originalX = transform.GetChild(0).rotation.eulerAngles.x;
         var originalZ = transform.GetChild(0).rotation.eulerAngles.z;
         if (Actor.Side == Side.Normal)

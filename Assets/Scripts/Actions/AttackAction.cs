@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Linq;
 using UnityEngine;
 
@@ -8,6 +9,12 @@ namespace Actions
     {
         [SerializeField]
         private Vector2 relativeAttackCoordinate;
+
+        [SerializeField]
+        private Direction animationDirection;
+
+        [SerializeField]
+        private float attackTime;
         
         public override void PerformAction(ActionFinishCallback callback)
         {
@@ -27,5 +34,12 @@ namespace Actions
             }
             callback();
         }
+
+        /*
+        private IEnumerator PerformAttack(float inAttackTime, Direction inAnimationDirection, )
+        {
+            Piece.StopRotationLock = true;
+        }
+        */
     }
 }
