@@ -67,6 +67,11 @@ public class Actor : MonoBehaviourPunCallbacks
     [SerializeField]
     private int health;
 
+    [SerializeField]
+    private bool drawCardsInOrder;
+
+    private int _lastDrawnDeckIndex;
+
     public int Health
     {
         get => health;
@@ -134,13 +139,20 @@ public class Actor : MonoBehaviourPunCallbacks
         if (!_canAct || _isActing) return;
         if (_hand.Count >= handCapacity) return;
         _isActing = true;
+        var deckIndexToGet = Random.Range(0, deck.Length);
+        if (drawCardsInOrder)
+        {
+            _lastDrawnDeckIndex++;
+            if (_lastDrawnDeckIndex >= deck.Length) _lastDrawnDeckIndex = 0;
+            deckIndexToGet = _lastDrawnDeckIndex;
+        }
         if (GameManager.Instance.GameType == GameType.Multiplayer)
         {
-            photonView.RPC(nameof(DrawCommon), RpcTarget.All, Random.Range(0, deck.Length));
+            photonView.RPC(nameof(DrawCommon), RpcTarget.All, deckIndexToGet);
         }
         else
         {
-            DrawCommon(Random.Range(0, deck.Length));
+            DrawCommon(deckIndexToGet);
         }
     }
 
