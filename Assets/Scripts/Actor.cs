@@ -70,7 +70,7 @@ public class Actor : MonoBehaviourPunCallbacks
     [SerializeField]
     private bool drawCardsInOrder;
 
-    private int _lastDrawnDeckIndex;
+    private int _lastDrawnDeckIndex = 0;
 
     public int Health
     {
@@ -142,9 +142,9 @@ public class Actor : MonoBehaviourPunCallbacks
         var deckIndexToGet = Random.Range(0, deck.Count);
         if (drawCardsInOrder)
         {
+            deckIndexToGet = _lastDrawnDeckIndex;
             _lastDrawnDeckIndex++;
             if (_lastDrawnDeckIndex >= deck.Count) _lastDrawnDeckIndex = 0;
-            deckIndexToGet = _lastDrawnDeckIndex;
         }
         if (GameManager.Instance.GameType == GameType.Multiplayer)
         {
