@@ -570,7 +570,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8611590ccff488c81d1ea7ed09cde00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxNumSelectedCards: 2
+  maxNumSelectedCards: 1
+  cardsToAddPerSelection: 2
   spacing: 4
 --- !u!4 &1016137553
 Transform:

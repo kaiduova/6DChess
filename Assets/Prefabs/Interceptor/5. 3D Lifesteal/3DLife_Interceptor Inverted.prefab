@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3603423070702273948
 Transform:
   m_ObjectHideFlags: 0
@@ -29,9 +29,10 @@ Transform:
   m_LocalPosition: {x: 0, y: 1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 5667916061050486258}
   m_Father: {fileID: 3603423070857443521}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!33 &3603423070702273950
 MeshFilter:
@@ -48,7 +49,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3603423070702273949}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -121,7 +122,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5667916061050486258}
   - {fileID: 3603423070702273948}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -157,6 +157,7 @@ MonoBehaviour:
   lifestealHealValue: 3
   pauseTurnsAfterTurn: 0
   isForwardMoving: 0
+  textSectionTriggerBindings: []
 --- !u!114 &3603423070857443535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -294,7 +295,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 3603423070857443521}
+    m_TransformParent: {fileID: 3603423070702273948}
     m_Modifications:
     - target: {fileID: 4075446420587282535, guid: 79e9c128c777ec3478c0f85ad525e3ff,
         type: 3}
@@ -309,7 +310,7 @@ PrefabInstance:
     - target: {fileID: 4075446420587282535, guid: 79e9c128c777ec3478c0f85ad525e3ff,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.75
+      value: -0.75
       objectReference: {fileID: 0}
     - target: {fileID: 4075446420587282535, guid: 79e9c128c777ec3478c0f85ad525e3ff,
         type: 3}

@@ -2290,6 +2290,7 @@ MonoBehaviour:
   currentlyActing: {fileID: 1035871807}
   time: {fileID: 2087780480}
   directionalIndicator: {fileID: 1142104208}
+  placeDirectionLock: 0
 --- !u!114 &484459023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3050,6 +3051,8 @@ MonoBehaviour:
   actor: {fileID: 644973983}
   spawnsPerTurn: 1
   movesPerTurn: 1
+  useScript: 0
+  script: []
 --- !u!114 &644973982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3067,6 +3070,7 @@ MonoBehaviour:
   currentlyActing: {fileID: 1035871807}
   time: {fileID: 2087780480}
   directionalIndicator: {fileID: 1142104208}
+  placeDirectionLock: 0
 --- !u!114 &644973983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8043,7 +8047,7 @@ MonoBehaviour:
   location: {x: -4, y: 0}
   tileEffect: 5
   teleportTarget: {fileID: 0}
-  arrowTarget: 2
+  arrowTarget: 1
   arrowSide: 1
   randomOriginalVisual: {fileID: 0}
   randomInstakillVisual: {fileID: 0}
