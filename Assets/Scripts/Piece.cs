@@ -163,13 +163,15 @@ public class Piece : MonoBehaviour
     private void Update()
     {
         if (isForwardMoving) return;
+        var originalX = transform.GetChild(0).rotation.eulerAngles.x;
+        var originalZ = transform.GetChild(0).rotation.eulerAngles.z;
         if (Actor.Side == Side.Normal)
         {
-            transform.GetChild(0).rotation = _isFlipped ? Quaternion.Euler(0, -60, 0) : Quaternion.Euler(0, 60, 0);
+            transform.GetChild(0).rotation = _isFlipped ? Quaternion.Euler(originalX, -60, originalZ) : Quaternion.Euler(originalX, 60, originalZ);
         }
         else
         {
-            transform.GetChild(0).rotation = _isFlipped ? Quaternion.Euler(0, 120, 0) : Quaternion.Euler(0, -120, 0);
+            transform.GetChild(0).rotation = _isFlipped ? Quaternion.Euler(originalX, 120, originalZ) : Quaternion.Euler(originalX, -120, originalZ);
         }
     }
 
