@@ -2714,6 +2714,7 @@ MonoBehaviour:
   - {fileID: 1741705760}
   healthText: {fileID: 1433765878}
   health: 15
+  drawCardsInOrder: 0
 --- !u!4 &484459021
 Transform:
   m_ObjectHideFlags: 0
@@ -2746,6 +2747,7 @@ MonoBehaviour:
   currentlyActing: {fileID: 1035871807}
   time: {fileID: 2087780480}
   directionalIndicator: {fileID: 1945847085}
+  placeDirectionLock: 0
 --- !u!114 &484459023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3124,6 +3126,8 @@ MonoBehaviour:
   actor: {fileID: 644973983}
   spawnsPerTurn: 2
   movesPerTurn: 1
+  useScript: 0
+  script: []
 --- !u!114 &644973982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3141,6 +3145,7 @@ MonoBehaviour:
   currentlyActing: {fileID: 1035871807}
   time: {fileID: 2087780480}
   directionalIndicator: {fileID: 1945847085}
+  placeDirectionLock: 0
 --- !u!114 &644973983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3154,7 +3159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deck:
-  - {fileID: 8485078294492037666, guid: 414d28755a378fd4f8f461463db42fc0, type: 3}
+  - {fileID: 8485078294492037666, guid: b24daa19c7f92a943a303c23c032a066, type: 3}
   cameraGameObject: {fileID: 900251165}
   handCapacity: 1
   opponent: {fileID: 484459020}
@@ -3164,6 +3169,7 @@ MonoBehaviour:
   - {fileID: 33895122}
   healthText: {fileID: 108273424}
   health: 25
+  drawCardsInOrder: 0
 --- !u!4 &644973984
 Transform:
   m_ObjectHideFlags: 0

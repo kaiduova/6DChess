@@ -1811,11 +1811,11 @@ MonoBehaviour:
   selectionSceneIndex: 3
   numberOfSelectableCardsToOffer: 4
   fadeScreen: {fileID: 1478371093}
-  easyScenes: 060000000700000008000000
-  mediumScenes: 090000000a000000
-  hardScenes: 0b000000
-  bossScenes: 0c000000
-  numEasyScenesToSelect: 3
+  easyScenes: 0600000007000000
+  mediumScenes: 08000000090000000a0000000b000000
+  hardScenes: 0c0000000d000000
+  bossScenes: 0d000000
+  numEasyScenesToSelect: 2
   numMediumScenesToSelect: 2
   numHardScenesToSelect: 1
   numBossScenesToSelect: 1

@@ -3406,6 +3406,7 @@ MonoBehaviour:
   currentlyActing: {fileID: 1035871807}
   time: {fileID: 2087780480}
   directionalIndicator: {fileID: 1945847085}
+  placeDirectionLock: 0
 --- !u!114 &484459023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4081,6 +4082,8 @@ MonoBehaviour:
   actor: {fileID: 644973983}
   spawnsPerTurn: 1
   movesPerTurn: 1
+  useScript: 0
+  script: []
 --- !u!114 &644973982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4098,6 +4101,7 @@ MonoBehaviour:
   currentlyActing: {fileID: 1035871807}
   time: {fileID: 2087780480}
   directionalIndicator: {fileID: 1945847085}
+  placeDirectionLock: 0
 --- !u!114 &644973983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4111,9 +4115,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deck:
-  - {fileID: 8485078294492037666, guid: 0662d731c8e730d498c59be9be720e87, type: 3}
-  - {fileID: 8485078294492037666, guid: 18f84c6f1a1469b40bfcd28b95f4b821, type: 3}
-  - {fileID: 8485078294492037666, guid: 3e294a83e44e915479b9e6d79f11ede1, type: 3}
+  - {fileID: 8485078294492037666, guid: e88728510d8837c42889d3b2ab306943, type: 3}
+  - {fileID: 8485078294492037666, guid: 1963162b4e863cc4cb3061aed87da282, type: 3}
+  - {fileID: 8485078294492037666, guid: b083b5320e7c3b64db7f39e05d594e30, type: 3}
+  - {fileID: 8485078294492037666, guid: 18aa10804ef6f4e42a69d5f06f149a63, type: 3}
   cameraGameObject: {fileID: 900251165}
   handCapacity: 1
   opponent: {fileID: 484459020}
