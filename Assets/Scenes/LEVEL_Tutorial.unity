@@ -939,7 +939,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a68f6c5bf5a6dd942b2c4af24293afef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deck: []
+  deck:
+  - {fileID: 8485078294492037666, guid: 53f223a5a629c6047a3423f91ee45453, type: 3}
   cameraGameObject: {fileID: 330585543}
   handCapacity: 4
   opponent: {fileID: 644973983}
@@ -948,7 +949,7 @@ MonoBehaviour:
   handLocationMarkers:
   - {fileID: 119623336}
   healthText: {fileID: 1433765878}
-  health: 15
+  health: 5
   drawCardsInOrder: 1
 --- !u!4 &484459021
 Transform:
@@ -1074,7 +1075,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a68f6c5bf5a6dd942b2c4af24293afef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deck: []
+  deck:
+  - {fileID: 0}
   cameraGameObject: {fileID: 900251165}
   handCapacity: 1
   opponent: {fileID: 484459020}
@@ -1083,7 +1085,7 @@ MonoBehaviour:
   handLocationMarkers:
   - {fileID: 33895122}
   healthText: {fileID: 108273424}
-  health: 15
+  health: 2
   drawCardsInOrder: 1
 --- !u!4 &644973984
 Transform:
