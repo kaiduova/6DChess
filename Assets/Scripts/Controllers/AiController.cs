@@ -6,6 +6,13 @@ using Random = UnityEngine.Random;
 
 namespace Controllers
 {
+    [Serializable]
+    public struct ScriptDirection
+    {
+        public int tileIndex;
+        public bool placeFlipped;
+    }
+    
     public class AiController : Controller
     {
         [SerializeField]
@@ -14,6 +21,14 @@ namespace Controllers
         private int _spawnsLeft, _movesLeft;
 
         private readonly List<Tile> _occupiedTiles = new();
+
+        [SerializeField]
+        private bool useScript;
+
+        [SerializeField]
+        private ScriptDirection[] script;
+        
+        private int _scriptIndex = 0;
 
         private void Start()
         {
@@ -34,11 +49,19 @@ namespace Controllers
             
             if (_spawnsLeft > 0 && !Actor.IsActing)
             {
-                var spawnableTileList = Board.Instance.Tiles.Where(tile => tile.SpawningActor == Actor).ToList();
-                spawnableTileList.RemoveAll(tile => _occupiedTiles.Contains(tile));
-                var tileToSpawnOn = spawnableTileList[Random.Range(0, spawnableTileList.Count)];
-                Actor.SpawnPiece(tileToSpawnOn, Actor.Hand.Last(), RandomBool());
-                _occupiedTiles.Add(tileToSpawnOn);
+                var spawnableTileList = Board.Instance.Tiles.Where(tile => tile.SpawningActor == Actor).OrderBy(tile => tile.location.x).ToList();
+                if (useScript && _scriptIndex < script.Length)
+                {
+                    Actor.SpawnPiece(spawnableTileList[script[_scriptIndex].tileIndex], Actor.Hand.Last(), script[_scriptIndex].placeFlipped);
+                    _scriptIndex++;
+                }
+                else
+                {
+                    spawnableTileList.RemoveAll(tile => _occupiedTiles.Contains(tile));
+                    var tileToSpawnOn = spawnableTileList[Random.Range(0, spawnableTileList.Count)];
+                    Actor.SpawnPiece(tileToSpawnOn, Actor.Hand.Last(), RandomBool());
+                    _occupiedTiles.Add(tileToSpawnOn);
+                }
                 _spawnsLeft--;
             }
 

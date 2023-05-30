@@ -58,8 +58,7 @@ public class Piece : MonoBehaviour
     [SerializeField]
     private bool isForwardMoving;
 
-    [SerializeField]
-    private TextSectionTriggerBinding[] textSectionTriggerBindings;
+    [SerializeField] public TextSectionTriggerBinding[] textSectionTriggerBindings;
 
     public bool QueueDestroy { get; set; }
 
@@ -101,6 +100,13 @@ public class Piece : MonoBehaviour
 
     public void ShowIcons()
     {
+        foreach (var triggerBinding in textSectionTriggerBindings)
+        {
+            if (triggerBinding.condition == TextSectionTrigger.Hovered)
+            {
+                TutorialText.Instance.TriggerSection(triggerBinding.index);
+            }
+        }
         if (indicatorIcons == null) return;
         for (var i = 0; i < indicatorIcons.Length; i++)
         {
@@ -148,13 +154,6 @@ public class Piece : MonoBehaviour
     {
         if (QueueDestroy)
         {
-            foreach (var triggerBinding in textSectionTriggerBindings)
-            {
-                if (triggerBinding.condition == TextSectionTrigger.PieceDestroyed)
-                {
-                    TutorialText.Instance.TriggerSection(triggerBinding.index);
-                }
-            }
             Destroy();
             _finishCallback();
             return;
@@ -164,6 +163,13 @@ public class Piece : MonoBehaviour
         {
             Tile.OwningActor.Health -= damage;
             Actor.Health += lifestealHealValue;
+            foreach (var triggerBinding in textSectionTriggerBindings)
+            {
+                if (triggerBinding.condition == TextSectionTrigger.DamageDealt)
+                {
+                    TutorialText.Instance.TriggerSection(triggerBinding.index);
+                }
+            }
             Destroy();
             _finishCallback();
             return;

@@ -200,6 +200,13 @@ public class Actor : MonoBehaviourPunCallbacks
 
     public void DestroyPiece(Piece piece)
     {
+        foreach (var triggerBinding in piece.textSectionTriggerBindings)
+        {
+            if (triggerBinding.condition == TextSectionTrigger.PieceDestroyed)
+            {
+                TutorialText.Instance.TriggerSection(triggerBinding.index);
+            }
+        }
         _pieces.Remove(piece);
         Destroy(piece.gameObject);
         //Destroy animation.
