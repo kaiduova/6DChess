@@ -10,7 +10,7 @@ public class SelectionScene : MonoBehaviour
     public int NumSelectedCards { get; set; }
 
     [SerializeField]
-    public int maxNumSelectedCards;
+    public int maxNumSelectedCards, cardsToAddPerSelection;
 
     private List<SelectableCard> _selectableCards;
 
@@ -44,7 +44,11 @@ public class SelectionScene : MonoBehaviour
             instanceTransform.position -= new Vector3(moveLeftBy, 0f);
         }
 
-        _selectableCards = instantiatedCardPrefabs.Select(instance => instance.gameObject.GetComponent<SelectableCard>()).ToList();
+        for (var i = 0; i < cardsToAddPerSelection; i++)
+        {
+            _selectableCards = instantiatedCardPrefabs
+                .Select(instance => instance.gameObject.GetComponent<SelectableCard>()).ToList();
+        }
     }
 
     public void ConfirmButton()

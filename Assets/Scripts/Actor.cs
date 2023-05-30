@@ -5,6 +5,7 @@ using System.Linq;
 using Controllers;
 using Photon.Pun;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -119,6 +120,11 @@ public class Actor : MonoBehaviourPunCallbacks
 
     private void StartGame()
     {
+        if (GameManager.Instance.GameType == GameType.Singleplayer && Side == Side.Normal)
+        {
+            deck.AddRange(GameManager.Instance.AddedCardPrefabs);
+        }
+        
         _canAct = true;
         _isActing = false;
     }

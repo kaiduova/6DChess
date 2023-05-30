@@ -223,7 +223,6 @@ public class GameManager : MonoBehaviourPunCallbacks
 
     public void OnSceneLoaded(Scene scene, LoadSceneMode loadSceneMode)
     {
-        
         if (scene.buildIndex == selectionSceneIndex)
         {
             SelectionScene.Instance.Initialize(RandomSelect(_selectableCardListToUse, numberOfSelectableCardsToOffer));

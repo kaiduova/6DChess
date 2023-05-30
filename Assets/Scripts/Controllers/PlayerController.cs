@@ -27,7 +27,7 @@ namespace Controllers
         [SerializeField]
         private GameObject directionalIndicator;
 
-        public static PlayerController Instance { get; set; }
+        public static PlayerController Instance { get; private set; }
 
         private void Start()
         {

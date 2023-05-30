@@ -44,7 +44,6 @@ public class ButtonFunctions : MonoBehaviourPunCallbacks
         GameManager.Instance.ResetAddedCards();
         if (inputFieldScene.text.IsNullOrEmpty())
         {
-
             GameManager.Instance.LoadNextGameScene();
         }
         else
