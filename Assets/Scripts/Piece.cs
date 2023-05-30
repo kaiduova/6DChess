@@ -171,7 +171,7 @@ public class Piece : MonoBehaviour
         }
         else
         {
-            transform.GetChild(0).rotation = _isFlipped ? Quaternion.Euler(originalX, 120, originalZ) : Quaternion.Euler(originalX, -120, originalZ);
+            transform.GetChild(0).rotation = _isFlipped ? Quaternion.Euler(originalX, -120, originalZ) : Quaternion.Euler(originalX, 120, originalZ);
         }
     }
 
