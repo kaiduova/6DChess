@@ -6,6 +6,13 @@ using UnityEngine;
 public delegate void PieceFinishCallback();
 
 [Serializable]
+public struct TextSectionTriggerBinding
+{
+    public TextSectionTrigger condition;
+    public int index;
+}
+
+[Serializable]
 public struct IndicatorIcon
 {
     public Vector2 relativeCoordinate;
@@ -51,6 +58,8 @@ public class Piece : MonoBehaviour
     [SerializeField]
     private bool isForwardMoving;
 
+    [SerializeField] public TextSectionTriggerBinding[] textSectionTriggerBindings;
+
     public bool QueueDestroy { get; set; }
 
     public bool IsFlipped
@@ -67,6 +76,13 @@ public class Piece : MonoBehaviour
 
     private void Start()
     {
+        foreach (var triggerBinding in textSectionTriggerBindings)
+        {
+            if (triggerBinding.condition == TextSectionTrigger.PiecePlaced)
+            {
+                TutorialText.Instance.TriggerSection(triggerBinding.index);
+            }
+        }
         if (indicatorIcons != null)
         {
             for (var i = 0; i < indicatorIcons.Length; i++)
@@ -84,6 +100,13 @@ public class Piece : MonoBehaviour
 
     public void ShowIcons()
     {
+        foreach (var triggerBinding in textSectionTriggerBindings)
+        {
+            if (triggerBinding.condition == TextSectionTrigger.Hovered)
+            {
+                TutorialText.Instance.TriggerSection(triggerBinding.index);
+            }
+        }
         if (indicatorIcons == null) return;
         for (var i = 0; i < indicatorIcons.Length; i++)
         {
@@ -140,6 +163,13 @@ public class Piece : MonoBehaviour
         {
             Tile.OwningActor.Health -= damage;
             Actor.Health += lifestealHealValue;
+            foreach (var triggerBinding in textSectionTriggerBindings)
+            {
+                if (triggerBinding.condition == TextSectionTrigger.DamageDealt)
+                {
+                    TutorialText.Instance.TriggerSection(triggerBinding.index);
+                }
+            }
             Destroy();
             _finishCallback();
             return;
@@ -171,7 +201,7 @@ public class Piece : MonoBehaviour
         }
         else
         {
-            transform.GetChild(0).rotation = _isFlipped ? Quaternion.Euler(originalX, 120, originalZ) : Quaternion.Euler(originalX, -120, originalZ);
+            transform.GetChild(0).rotation = _isFlipped ? Quaternion.Euler(originalX, -120, originalZ) : Quaternion.Euler(originalX, 120, originalZ);
         }
     }
 

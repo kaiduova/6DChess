@@ -4,6 +4,13 @@ using UnityEngine;
 
 namespace Controllers
 {
+    public enum PlaceDirection
+    {
+        None,
+        Left,
+        Right
+    }
+    
     public class PlayerController : Controller
     {
         [SerializeField]
@@ -26,6 +33,9 @@ namespace Controllers
 
         [SerializeField]
         private GameObject directionalIndicator;
+
+        [SerializeField]
+        private PlaceDirection placeDirectionLock;
 
         public static PlayerController Instance { get; private set; }
 
@@ -79,10 +89,14 @@ namespace Controllers
                 {
                     if (ray.GetPoint(enter).x >= _currentlyPlacingTile.transform.position.x)
                     {
+                        //Trying to place right for normal side.
+                        if (placeDirectionLock == PlaceDirection.Left && Actor.Side == Side.Normal) return;
                         SpawnOnSide(Actor.Side != Side.Normal);
                     }
                     else
                     {
+                        //Trying to place left for normal side.
+                        if (placeDirectionLock == PlaceDirection.Right && Actor.Side == Side.Normal) return; 
                         SpawnOnSide(Actor.Side == Side.Normal);
                     }
                 }
