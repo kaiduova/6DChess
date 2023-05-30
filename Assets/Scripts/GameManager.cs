@@ -169,10 +169,11 @@ public class GameManager : MonoBehaviourPunCallbacks
     {
         while (true)
         {
-            if (scenes.Count == 0 || scenes.Count >= maxScenes) break;
+            if (scenes.Count == 0 || maxScenes == 0) break;
             var selectedScene = scenes[Random.Range(0, scenes.Count)];
             _sceneOrder.Add(selectedScene);
             scenes.Remove(selectedScene);
+            maxScenes--;
         }
     }
 
