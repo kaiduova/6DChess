@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4001098184373674234}
   - component: {fileID: 7612671613917601634}
   m_Layer: 0
-  m_Name: TutorialVanguard
+  m_Name: FIRST_TutorialVanguard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -58,21 +58,16 @@ MonoBehaviour:
   - relativeCoordinate: {x: 1, y: 3}
     iconObject: {fileID: 5485747449275024183, guid: 2cf66392ebeb4a54bb94fe8b0dd5c788,
       type: 3}
-  - relativeCoordinate: {x: 2, y: 4}
-    iconObject: {fileID: 5485747449275024183, guid: 2cf66392ebeb4a54bb94fe8b0dd5c788,
-      type: 3}
   pieceInfo: {fileID: 21300000, guid: efa1b94c43d5f05478d648c1b236782d, type: 3}
   isVengeful: 0
   lifestealHealValue: 0
   pauseTurnsAfterTurn: 0
   isForwardMoving: 1
   textSectionTriggerBindings:
-  - condition: 3
-    index: 0
   - condition: 0
-    index: 0
-  - condition: 2
-    index: 0
+    index: 1
+  - condition: 3
+    index: 2
 --- !u!114 &4942057540051692973
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -554,7 +554,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 180}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -940,9 +940,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deck:
+  - {fileID: 8485078294492037666, guid: 9505b1d057031e447a7862e0297d1a66, type: 3}
+  - {fileID: 8485078294492037666, guid: 9505b1d057031e447a7862e0297d1a66, type: 3}
+  - {fileID: 8485078294492037666, guid: 9505b1d057031e447a7862e0297d1a66, type: 3}
+  - {fileID: 8485078294492037666, guid: 9505b1d057031e447a7862e0297d1a66, type: 3}
+  - {fileID: 8485078294492037666, guid: 9505b1d057031e447a7862e0297d1a66, type: 3}
+  - {fileID: 8485078294492037666, guid: 9505b1d057031e447a7862e0297d1a66, type: 3}
   - {fileID: 8485078294492037666, guid: 53f223a5a629c6047a3423f91ee45453, type: 3}
   cameraGameObject: {fileID: 330585543}
-  handCapacity: 4
+  handCapacity: 1
   opponent: {fileID: 644973983}
   side: 0
   cardSpawnLocationMarker: {fileID: 1652907326}
@@ -1043,7 +1049,15 @@ MonoBehaviour:
   movesPerTurn: 1
   useScript: 1
   script:
+  - tileIndex: 1
+    placeFlipped: 0
   - tileIndex: 0
+    placeFlipped: 0
+  - tileIndex: 1
+    placeFlipped: 0
+  - tileIndex: 1
+    placeFlipped: 0
+  - tileIndex: 1
     placeFlipped: 0
 --- !u!114 &644973982
 MonoBehaviour:
@@ -1076,7 +1090,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deck:
-  - {fileID: 0}
+  - {fileID: 8485078294492037666, guid: 066ad2e6f24a48f40abb348d12d6725d, type: 3}
   cameraGameObject: {fileID: 900251165}
   handCapacity: 1
   opponent: {fileID: 484459020}
@@ -1085,8 +1099,8 @@ MonoBehaviour:
   handLocationMarkers:
   - {fileID: 33895122}
   healthText: {fileID: 108273424}
-  health: 2
-  drawCardsInOrder: 1
+  health: 4
+  drawCardsInOrder: 0
 --- !u!4 &644973984
 Transform:
   m_ObjectHideFlags: 0
@@ -1498,7 +1512,7 @@ Camera:
     m_Bits: 4294967295
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
+  m_TargetDisplay: 1
   m_TargetEye: 3
   m_HDR: 1
   m_AllowMSAA: 1
@@ -1759,7 +1773,7 @@ Transform:
   m_Children:
   - {fileID: 61838553}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1302707326
 GameObject:
@@ -2211,7 +2225,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2664,7 +2678,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Welcome to Wind-Up Mayhem!
+  m_text: "Welcome to Wind-Up Mayhem! \n\nThe goal of the game is to reduce your
+    opponent's life to 0 by getting your wind-up toys to the other side of the board.\n\nDrag
+    your card onto the blue tile to begin."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2915,7 +2931,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1916226476
 MonoBehaviour:
@@ -2931,10 +2947,62 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tmpTextBox: {fileID: 1763451098}
   textSections:
-  - Welcome to Wind-Up Mayhem!
-  - 
-  - 
-  - 
+  - 'Welcome to Wind-Up Mayhem! The goal of the game is to reduce your opponent''s
+    life to 0 by getting your wind-up toys to the other side of the board.
+
+
+    Drag
+    your card onto the blue tile to begin.'
+  - "You just placed a toy onto the board!\r When placing a piece, you can choose
+    which direction that piece will move or attack in, wherever applicable. For this
+    tutorial, you can only place pieces that attack right.\n\r\nEach turn, you will
+    draw a tile and place a piece onto the board. Your opponent will do the same.
+    Then, at the start of your next go, all of your pieces will move according to
+    their movement pattern.\r\n\r\nHover over your piece to learn more about your
+    piece."
+  - 'When you hover over a piece, you can see the piece''s movement and attack pattern
+    visualised on the board.
+
+
+
+    In the top left hand corner, you can also see
+    the piece''s card, which tells you how much damage the piece will do once it
+    reaches the other side (top right), the piece''s movement and attack pattern
+    (middle right), and any special powers the piece may have (middle bottom).
+
+
+
+    Use
+    this information to understand where your pieces and your opponent''s pieces
+    will move next turn.
+
+
+
+    Place your next piece to continue.'
+  - 'Your piece is in the perfect position to attack your opponent''s piece next
+    turn!
+
+
+    Place another piece to continue.'
+  - 'Nice! You just attacked your opponent''s piece, removing it from the board.
+
+
+
+    Pieces
+    can also be taken off the board when another piece moves into them. Beware, you
+    can take your own pieces if you''re not careful!
+
+
+
+    Place another piece to
+    continue.'
+  - "Oh dear! You piece just got taken!\r\n\r\nPieces are also removed from the board
+    when another piece moves onto their tile. \r\n\r\nBeware, you can take your own
+    pieces if you're not careful!\r\n\r\nPlace another piece to continue!"
+  - "Your piece is just one place away from the other side of the board! \r\n\r\nOnce
+    you enter your opponent's spawning tiles, your piece is removed from the board
+    and deals damage to your opponent equal to its damage value.\r\n\r\nPlace another
+    piece to win the game!"
 --- !u!1 &2032509643
 GameObject:
   m_ObjectHideFlags: 0
@@ -3361,5 +3429,5 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
