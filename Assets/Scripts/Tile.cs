@@ -113,7 +113,6 @@ public class Tile : MonoBehaviour
     public Side arrowSide;
 
     [SerializeField] public GameObject randomOriginalVisual,
-        randomTeleportVisual,
         randomInstakillVisual,
         randomSludgeVisual;
 
@@ -139,11 +138,6 @@ public class Tile : MonoBehaviour
         if (randomOriginalVisual != null)
         {
             randomOriginalVisual.SetActive(true);
-        }
-
-        if (randomTeleportVisual != null)
-        {
-            randomTeleportVisual.SetActive(false);
         }
 
         if (randomInstakillVisual != null)

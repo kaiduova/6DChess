@@ -26,7 +26,7 @@ namespace Actions
                 {
                     case TileEffect.Random:
                         IList enumValues = Enum.GetValues(typeof(TileEffect));
-                        Piece.Tile.tileEffect = (TileEffect)enumValues[Random.Range(2, enumValues.Count - 1)];
+                        Piece.Tile.tileEffect = (TileEffect)enumValues[Random.Range(3, enumValues.Count - 1)];
                         if (Piece.Tile.randomOriginalVisual != null)
                         {
                             Piece.Tile.randomOriginalVisual.SetActive(false);
@@ -42,11 +42,6 @@ namespace Actions
                             Piece.Tile.randomSludgeVisual.SetActive(true);
                         }
                         
-                        if (Piece.Tile.randomTeleportVisual != null && Piece.Tile.tileEffect == TileEffect.Teleport)
-                        {
-                            Piece.Tile.randomTeleportVisual.SetActive(true);
-                        }
-
                         continue;
                     case TileEffect.Teleport:
                         var oldTile = Piece.Tile;
