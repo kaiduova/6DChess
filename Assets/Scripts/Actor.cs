@@ -231,10 +231,10 @@ public class Actor : MonoBehaviourPunCallbacks
         for (var angle = 0f; angle <= 180f; angle += 18f)
         {
             card.transform.rotation = Quaternion.Euler(0, 0, angle);
-            yield return new WaitForSeconds(0.05f);
+            yield return new WaitForSeconds(0.03f);
         }
 
-        const float duration = 0.5f;
+        const float duration = 0.2f;
         for (var t = 0f; t <= duration; t += Time.deltaTime)
         {
             card.transform.position = Vector3.Lerp(cardSpawnLocationMarker.transform.position, handLocationMarkers[index].transform.position, t/duration);
