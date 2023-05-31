@@ -24,6 +24,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Surrender()
     {
+        Time.timeScale = 1;
         GameManager.Instance.EndSession(PlayerController.Instance.Actor.Opponent);
     }
 }
