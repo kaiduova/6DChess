@@ -46,3 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 6497775202150385789, guid: 4159aea420b6ad14ca9113c961c616be,
     type: 3}
+  spawnFxPrefab: {fileID: 2437192201116142456, guid: 128ec305d7ec2ee44a632c5f03e394ac,
+    type: 3}
+  attackFxPrefab: {fileID: 2077370501052686419, guid: 2fe5c6acf3ce08041912a809d1e640ec,
+    type: 3}

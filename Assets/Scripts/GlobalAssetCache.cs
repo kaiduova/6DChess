@@ -8,6 +8,9 @@ public class GlobalAssetCache : MonoBehaviour
     [SerializeField]
     public GameObject explosionPrefab;
 
+    [SerializeField]
+    public GameObject spawnFxPrefab, attackFxPrefab;
+
     private void Awake()
     {
         Instance = this;

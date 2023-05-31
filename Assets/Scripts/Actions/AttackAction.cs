@@ -31,8 +31,11 @@ namespace Actions
             //Rotate and play animation.
             var lookRotation =
                 Quaternion.LookRotation(inTargetTile.transform.position - transform.position, Vector3.up);
-            Piece.transform.GetChild(0).rotation = Quaternion.Euler(originalRotation.eulerAngles.x, lookRotation.eulerAngles.y, originalRotation.eulerAngles.z);
-
+            Transform pieceTransform;
+            (pieceTransform = Piece.transform).GetChild(0).rotation = Quaternion.Euler(originalRotation.eulerAngles.x, lookRotation.eulerAngles.y, originalRotation.eulerAngles.z);
+            Instantiate(GlobalAssetCache.Instance.attackFxPrefab, pieceTransform.position + Vector3.up * 1f,
+                Quaternion.Euler(0, lookRotation.eulerAngles.y, 0));
+            
             yield return new WaitForSeconds(inAttackTime);
             
             inTargetTile.CurrentPiece.Destroy();

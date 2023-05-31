@@ -268,7 +268,8 @@ public class Actor : MonoBehaviourPunCallbacks
         tile.SetOrReplacePieceOnTile(pieceComp);
         _pieces.Add(pieceComp);
         pieceComp.Actor = this;
-        //Spawn animation here.
+        Instantiate(GlobalAssetCache.Instance.spawnFxPrefab, pieceComp.transform.position + Vector3.up * 1.5f,
+            Quaternion.identity);
         Destroy(_hand[cardIndex].gameObject);
         //Card destroy animation here.
         _hand.RemoveAt(cardIndex);
