@@ -62,7 +62,7 @@ MonoBehaviour:
   - relativeCoordinate: {x: 2, y: 4}
     iconObject: {fileID: 5485747449275024183, guid: 2cf66392ebeb4a54bb94fe8b0dd5c788,
       type: 3}
-  pieceInfo: {fileID: 21300000, guid: e762102a636a4684aad716e027e57c9a, type: 3}
+  pieceInfo: {fileID: 21300000, guid: 13714ddb86346bd4f88c13f5fbd70442, type: 3}
   isVengeful: 0
   lifestealHealValue: 0
   pauseTurnsAfterTurn: 0
@@ -142,7 +142,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actionOrder: 5
   relativeAttackCoordinate: {x: 0, y: 2}
-  attackTime: 1
 --- !u!136 &-2719358620055397977
 CapsuleCollider:
   m_ObjectHideFlags: 0

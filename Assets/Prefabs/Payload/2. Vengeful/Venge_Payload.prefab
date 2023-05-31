@@ -50,7 +50,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 8
   indicatorIcons: []
-  pieceInfo: {fileID: 21300000, guid: 60d2adf499d9de749819e4d8c6efb548, type: 3}
+  pieceInfo: {fileID: 21300000, guid: 2a4788a97aeab994e8d894d4a360bc87, type: 3}
   isVengeful: 1
   lifestealHealValue: 0
   pauseTurnsAfterTurn: 0
