@@ -177,6 +177,9 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &33895122
 GameObject:
   m_ObjectHideFlags: 0
@@ -263,6 +266,9 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!136 &98569787
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -504,6 +510,9 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!136 &110809863
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -852,6 +861,9 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &320448125
 GameObject:
   m_ObjectHideFlags: 0
@@ -1053,6 +1065,82 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!1 &371186019
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 371186022}
+  - component: {fileID: 371186021}
+  - component: {fileID: 371186020}
+  m_Layer: 5
+  m_Name: Hover Detail
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &371186020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371186019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: f90b4a54e388c564983b152f96083006, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &371186021
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371186019}
+  m_CullTransparentMesh: 1
+--- !u!224 &371186022
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371186019}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1389506875}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -697, y: -72}
+  m_SizeDelta: {x: 433.659, y: 630.473}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1303,6 +1391,9 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!136 &428982462
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1454,6 +1545,9 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &484459019
 GameObject:
   m_ObjectHideFlags: 0
@@ -1486,7 +1580,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deck:
-  - {fileID: 8485078294492037666, guid: 5b5bf157d89d3d64a857d3f5cf627cd7, type: 3}
+  - {fileID: 8485078294492037666, guid: e3320a51cd5439d4f93530daf7d4071e, type: 3}
   cameraGameObject: {fileID: 330585543}
   handCapacity: 4
   opponent: {fileID: 644973983}
@@ -1499,6 +1593,7 @@ MonoBehaviour:
   - {fileID: 1741705760}
   healthText: {fileID: 1433765878}
   health: 15
+  drawCardsInOrder: 0
 --- !u!4 &484459021
 Transform:
   m_ObjectHideFlags: 0
@@ -1531,6 +1626,7 @@ MonoBehaviour:
   currentlyActing: {fileID: 1035871807}
   time: {fileID: 2087780480}
   directionalIndicator: {fileID: 1519834468}
+  placeDirectionLock: 0
 --- !u!114 &484459023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1773,6 +1869,9 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &644973980
 GameObject:
   m_ObjectHideFlags: 0
@@ -1808,6 +1907,8 @@ MonoBehaviour:
   actor: {fileID: 644973983}
   spawnsPerTurn: 1
   movesPerTurn: 1
+  useScript: 0
+  script: []
 --- !u!114 &644973982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1825,6 +1926,7 @@ MonoBehaviour:
   currentlyActing: {fileID: 1035871807}
   time: {fileID: 2087780480}
   directionalIndicator: {fileID: 1519834468}
+  placeDirectionLock: 0
 --- !u!114 &644973983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1838,7 +1940,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deck:
-  - {fileID: 8485078294492037666, guid: fb7fbb5685c02f84f84291fe80b88413, type: 3}
+  - {fileID: 8485078294492037666, guid: 10f57e92de1199c4c9f8573a27cf657e, type: 3}
   cameraGameObject: {fileID: 900251165}
   handCapacity: 1
   opponent: {fileID: 484459020}
@@ -1848,6 +1950,7 @@ MonoBehaviour:
   - {fileID: 33895122}
   healthText: {fileID: 108273424}
   health: 15
+  drawCardsInOrder: 0
 --- !u!4 &644973984
 Transform:
   m_ObjectHideFlags: 0
@@ -1939,6 +2042,9 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &679316103
 GameObject:
   m_ObjectHideFlags: 0
@@ -1993,6 +2099,9 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &694966396
 GameObject:
   m_ObjectHideFlags: 0
@@ -2131,6 +2240,9 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!136 &768401263
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2199,6 +2311,9 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &812528750
 GameObject:
   m_ObjectHideFlags: 0
@@ -2385,6 +2500,9 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &900251165
 GameObject:
   m_ObjectHideFlags: 0
@@ -2557,6 +2675,9 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &1035638919
 GameObject:
   m_ObjectHideFlags: 0
@@ -2611,6 +2732,9 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &1035871805
 GameObject:
   m_ObjectHideFlags: 0
@@ -3381,6 +3505,9 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &1307640618
 GameObject:
   m_ObjectHideFlags: 0
@@ -3436,6 +3563,9 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!136 &1307640621
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3462,6 +3592,7 @@ GameObject:
   - component: {fileID: 1389506874}
   - component: {fileID: 1389506873}
   - component: {fileID: 1389506872}
+  - component: {fileID: 1389506876}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -3544,6 +3675,7 @@ RectTransform:
   m_Children:
   - {fileID: 1035871806}
   - {fileID: 2087780479}
+  - {fileID: 371186022}
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3552,6 +3684,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1389506876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1389506871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f1089b230064e0fa33ccdb5b16ebdba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pieceInfoDisplay: {fileID: 371186020}
+  infoVanishDelay: 0.5
 --- !u!1 &1405525473
 GameObject:
   m_ObjectHideFlags: 0
@@ -3637,6 +3783,9 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &1433765877
 GameObject:
   m_ObjectHideFlags: 0
@@ -3864,6 +4013,9 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!136 &1460321686
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4116,6 +4268,9 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!136 &1566726479
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4595,6 +4750,9 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &1769349793
 GameObject:
   m_ObjectHideFlags: 0
@@ -4899,6 +5057,9 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!136 &1954789721
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4968,6 +5129,9 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!136 &1956255903
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5037,6 +5201,9 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!136 &1959297213
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5271,6 +5438,9 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &1993503702
 GameObject:
   m_ObjectHideFlags: 0
@@ -5605,6 +5775,9 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1 &2120204954
 GameObject:
   m_ObjectHideFlags: 0
@@ -5757,6 +5930,9 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
+  randomOriginalVisual: {fileID: 0}
+  randomInstakillVisual: {fileID: 0}
+  randomSludgeVisual: {fileID: 0}
 --- !u!1001 &21842010674646711
 PrefabInstance:
   m_ObjectHideFlags: 0

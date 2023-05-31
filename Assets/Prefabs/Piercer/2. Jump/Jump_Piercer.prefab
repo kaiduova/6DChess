@@ -75,7 +75,7 @@ MonoBehaviour:
   actionOrder: 1
   movePattern: 0
   isJump: 1
-  moveDuration: 0.5
+  moveDuration: 0.2
 --- !u!114 &5260292286299714863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -91,7 +91,7 @@ MonoBehaviour:
   actionOrder: 2
   movePattern: 0
   isJump: 0
-  moveDuration: 0.5
+  moveDuration: 0.2
 --- !u!114 &3038874532450007924
 MonoBehaviour:
   m_ObjectHideFlags: 0
