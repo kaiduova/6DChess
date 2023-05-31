@@ -12,7 +12,17 @@ namespace Actions
 
         public override void PerformAction(ActionFinishCallback callback)
         {
-            var targetTileLocation = Piece.Actor.Side == Side.Normal ? Piece.Tile.location + relativeAttackCoordinate : Piece.Tile.location + MoveAction.InvertY(relativeAttackCoordinate);
+            var processedRelativeAttackCoordinate = relativeAttackCoordinate;
+            if (Piece.Actor.Side != Side.Normal)
+            {
+                processedRelativeAttackCoordinate = MoveAction.InvertY(processedRelativeAttackCoordinate);
+            }
+
+            if (Piece.IsFlipped)
+            {
+                processedRelativeAttackCoordinate = MoveAction.InvertX(processedRelativeAttackCoordinate);
+            }
+            var targetTileLocation = Piece.Tile.location + processedRelativeAttackCoordinate;
             var targetTile = Board.Instance.Tiles.FirstOrDefault(tile => tile.location == targetTileLocation);
             if (targetTile == null || targetTile.CurrentPiece == null)
             {
