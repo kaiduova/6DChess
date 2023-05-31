@@ -4112,9 +4112,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deck:
   - {fileID: 8485078294492037666, guid: e88728510d8837c42889d3b2ab306943, type: 3}
-  - {fileID: 8485078294492037666, guid: 1963162b4e863cc4cb3061aed87da282, type: 3}
-  - {fileID: 8485078294492037666, guid: b083b5320e7c3b64db7f39e05d594e30, type: 3}
-  - {fileID: 8485078294492037666, guid: 18aa10804ef6f4e42a69d5f06f149a63, type: 3}
+  - {fileID: 8485078294492037666, guid: d1e517ca329e7b946add3a3436c409f4, type: 3}
+  - {fileID: 8485078294492037666, guid: 5b157c04510131a4fbe785ea5e93160b, type: 3}
+  - {fileID: 8485078294492037666, guid: 3ddd5e20ff00a4d4890394a1155606a9, type: 3}
   cameraGameObject: {fileID: 900251165}
   handCapacity: 1
   opponent: {fileID: 484459020}

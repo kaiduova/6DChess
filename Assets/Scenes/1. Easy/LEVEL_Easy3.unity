@@ -2262,7 +2262,7 @@ MonoBehaviour:
   - {fileID: 8485078294492037666, guid: 18f84c6f1a1469b40bfcd28b95f4b821, type: 3}
   - {fileID: 8485078294492037666, guid: 3e294a83e44e915479b9e6d79f11ede1, type: 3}
   - {fileID: 8485078294492037666, guid: 10f57e92de1199c4c9f8573a27cf657e, type: 3}
-  - {fileID: 8485078294492037666, guid: 8afa191e22204774db0a5d07afda20e0, type: 3}
+  - {fileID: 8485078294492037666, guid: 1ecb8a94a632f3b47ae108ff6fae04c7, type: 3}
   cameraGameObject: {fileID: 900251165}
   handCapacity: 1
   opponent: {fileID: 484459020}

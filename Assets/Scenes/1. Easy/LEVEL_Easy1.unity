@@ -2614,8 +2614,8 @@ MonoBehaviour:
   deck:
   - {fileID: 8485078294492037666, guid: 18f84c6f1a1469b40bfcd28b95f4b821, type: 3}
   - {fileID: 8485078294492037666, guid: e88728510d8837c42889d3b2ab306943, type: 3}
-  - {fileID: 8485078294492037666, guid: e3320a51cd5439d4f93530daf7d4071e, type: 3}
-  - {fileID: 8485078294492037666, guid: f3d69cb3ed6352a47b7241d9ef972e35, type: 3}
+  - {fileID: 8485078294492037666, guid: 10f57e92de1199c4c9f8573a27cf657e, type: 3}
+  - {fileID: 8485078294492037666, guid: c6885cbc9c603b944afba4673a373a19, type: 3}
   cameraGameObject: {fileID: 900251165}
   handCapacity: 1
   opponent: {fileID: 484459020}
