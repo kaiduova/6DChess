@@ -41,6 +41,11 @@ public class GameManager : MonoBehaviourPunCallbacks
     [SerializeField]
     private GameObject[] easySelectableCards, mediumSelectableCards, hardSelectableCards, bossSelectableCards;
 
+    [SerializeField]
+    private bool speedMode;
+
+    public bool SpeedMode => speedMode;
+
     public List<GameObject> AddedCardPrefabs { get; } = new();
 
     private GameObject[] _selectableCardListToUse;

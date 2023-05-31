@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3134073, g: 0.3391749, b: 0.3817357, a: 1}
+  m_IndirectSpecularColor: {r: 0.31340906, g: 0.33917564, b: 0.3817359, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8923,12 +8923,12 @@ MonoBehaviour:
   selectionSceneIndex: 3
   numberOfSelectableCardsToOffer: 4
   fadeScreen: {fileID: 1478371093}
-  easyScenes: 0600000007000000
-  mediumScenes: 08000000090000000a0000000b000000
-  hardScenes: 0c0000000d000000
-  bossScenes: 0e000000
-  numEasyScenesToSelect: 2
-  numMediumScenesToSelect: 3
+  easyScenes: 060000000700000008000000
+  mediumScenes: 090000000a000000
+  hardScenes: 0b000000
+  bossScenes: 0c000000
+  numEasyScenesToSelect: 3
+  numMediumScenesToSelect: 2
   numHardScenesToSelect: 1
   numBossScenesToSelect: 1
   easySelectableCards:
@@ -8954,6 +8954,7 @@ MonoBehaviour:
   - {fileID: 206303078549874440, guid: 3b8621bad4749bd44a41238000341ae0, type: 3}
   - {fileID: 206303078549874440, guid: 6a97702999fad804c889a1925b43baa0, type: 3}
   bossSelectableCards: []
+  speedMode: 0
 --- !u!114 &1478371093
 MonoBehaviour:
   m_ObjectHideFlags: 0

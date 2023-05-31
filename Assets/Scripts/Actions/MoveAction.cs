@@ -33,6 +33,14 @@ namespace Actions
 
         private bool _moving;
 
+        private void Start()
+        {
+            if (GameManager.Instance != null && GameManager.Instance.SpeedMode)
+            {
+                moveDuration /= 2f;
+            }
+        }
+
         public static Vector2 TranslateToRelativeCoordinate(Direction direction)
         {
             return direction switch
