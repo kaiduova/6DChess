@@ -2807,17 +2807,30 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'first thing
+  m_text: 'Assets Used
 
-    second thing
 
-    third thing
+    New York Hardcore by Woodcutter
 
-    four
+    jersy m54 by justme54s
 
-    five
+    the
+    wasteland lite by aquarius max
 
-    six'
+    pbr metal barrels pack by marco siino
+
+    skybox
+    series free by avionx
+
+    swamp grass material by casual2d
+
+    ultimate sfx
+    and music bundle by sidearm studios
+
+    hammered silver metal texture seamless
+    on sketchup texture club
+
+    severe rust by pixel soup'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 05f150b5895da3c49a28942558462db3, type: 2}
   m_sharedMaterial: {fileID: -632664934958204428, guid: 05f150b5895da3c49a28942558462db3,
@@ -2827,7 +2840,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -6821,7 +6834,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -8436,7 +8449,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
