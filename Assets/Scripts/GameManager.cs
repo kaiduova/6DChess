@@ -76,6 +76,15 @@ public class GameManager : MonoBehaviourPunCallbacks
         else Instance = this;
         DontDestroyOnLoad(this);
         PhotonNetwork.AutomaticallySyncScene = true;
+        if (!PlayerPrefs.HasKey("Volume"))
+        {
+            PlayerPrefs.SetFloat("Volume", 0.5f);
+            Volume = 0.5f;
+        }
+        else
+        {
+            Volume = PlayerPrefs.GetFloat("Volume");
+        }
     }
 
     private void Start()
@@ -86,8 +95,6 @@ public class GameManager : MonoBehaviourPunCallbacks
         }
 
         SceneManager.sceneLoaded += OnSceneLoaded;
-        
-        PlayerPrefs.SetFloat("Volume", 0.2f);
     }
 
     private void Update()

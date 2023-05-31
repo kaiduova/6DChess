@@ -208,8 +208,9 @@ public class Actor : MonoBehaviourPunCallbacks
             }
         }
         _pieces.Remove(piece);
+        Instantiate(GlobalAssetCache.Instance.explosionPrefab, piece.transform.position + Vector3.up,
+            Quaternion.identity);
         Destroy(piece.gameObject);
-        //Destroy animation.
     }
 
     [PunRPC]

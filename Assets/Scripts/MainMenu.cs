@@ -3,6 +3,7 @@ using Controllers;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
@@ -16,6 +17,9 @@ public class MainMenu : MonoBehaviour
     [SerializeField]
     private TMP_Text scoreText;
 
+    [SerializeField]
+    private Slider volumeSlider;
+
     private void Start()
     {
         if (mainPanel != null && settingsPanel != null && creditsPanel != null)
@@ -23,6 +27,11 @@ public class MainMenu : MonoBehaviour
             mainPanel.SetActive(true);
             settingsPanel.SetActive(false);
             creditsPanel.SetActive(false);
+        }
+
+        if (volumeSlider != null)
+        {
+            volumeSlider.value = GameManager.Instance.Volume;
         }
     }
 
@@ -67,7 +76,7 @@ public class MainMenu : MonoBehaviour
         creditsPanel.SetActive(true);
     }
 
-    public void OnVolumeSliderChange(float value)
+    public void OnVolumeSliderChange(Single value)
     {
         PlayerPrefs.SetFloat("Volume", value);
     }
