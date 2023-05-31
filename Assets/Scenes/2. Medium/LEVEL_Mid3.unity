@@ -4512,7 +4512,7 @@ MonoBehaviour:
   spawningActor: {fileID: 0}
   owningActor: {fileID: 0}
   location: {x: 2, y: 4}
-  tileEffect: 0
+  tileEffect: 4
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
@@ -8128,7 +8128,7 @@ MonoBehaviour:
   spawningActor: {fileID: 0}
   owningActor: {fileID: 0}
   location: {x: -2, y: 4}
-  tileEffect: 0
+  tileEffect: 4
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
@@ -8445,7 +8445,7 @@ MonoBehaviour:
   spawningActor: {fileID: 0}
   owningActor: {fileID: 0}
   location: {x: 0, y: 4}
-  tileEffect: 0
+  tileEffect: 4
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
@@ -8671,7 +8671,7 @@ MonoBehaviour:
   spawningActor: {fileID: 0}
   owningActor: {fileID: 0}
   location: {x: 3, y: 5}
-  tileEffect: 4
+  tileEffect: 5
   teleportTarget: {fileID: 0}
   arrowTarget: 4
   arrowSide: 1

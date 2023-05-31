@@ -1187,7 +1187,7 @@ MonoBehaviour:
   spawningActor: {fileID: 0}
   owningActor: {fileID: 0}
   location: {x: -4, y: 0}
-  tileEffect: 0
+  tileEffect: 4
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
@@ -2045,7 +2045,7 @@ MonoBehaviour:
   spawningActor: {fileID: 0}
   owningActor: {fileID: 0}
   location: {x: 0, y: 4}
-  tileEffect: 0
+  tileEffect: 3
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
@@ -2679,7 +2679,7 @@ MonoBehaviour:
   spawningActor: {fileID: 0}
   owningActor: {fileID: 0}
   location: {x: -2, y: 0}
-  tileEffect: 0
+  tileEffect: 4
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
@@ -3628,6 +3628,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sludge
       objectReference: {fileID: 0}
+    - target: {fileID: 9018164653143567256, guid: be93aaea13317a743859d57933660d58,
+        type: 3}
+      propertyPath: tileEffect
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be93aaea13317a743859d57933660d58, type: 3}
 --- !u!1 &839340003 stripped
@@ -3946,7 +3951,7 @@ MonoBehaviour:
   spawningActor: {fileID: 0}
   owningActor: {fileID: 0}
   location: {x: 2, y: 4}
-  tileEffect: 0
+  tileEffect: 3
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
@@ -5147,7 +5152,7 @@ MonoBehaviour:
   spawningActor: {fileID: 0}
   owningActor: {fileID: 0}
   location: {x: 2, y: 8}
-  tileEffect: 0
+  tileEffect: 4
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
@@ -6023,7 +6028,7 @@ MonoBehaviour:
   spawningActor: {fileID: 0}
   owningActor: {fileID: 0}
   location: {x: -2, y: 8}
-  tileEffect: 0
+  tileEffect: 4
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
@@ -7054,7 +7059,7 @@ MonoBehaviour:
   spawningActor: {fileID: 0}
   owningActor: {fileID: 0}
   location: {x: -2, y: 4}
-  tileEffect: 0
+  tileEffect: 3
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
@@ -7419,7 +7424,7 @@ MonoBehaviour:
   spawningActor: {fileID: 0}
   owningActor: {fileID: 0}
   location: {x: 0, y: 8}
-  tileEffect: 0
+  tileEffect: 4
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
@@ -7492,7 +7497,7 @@ MonoBehaviour:
   spawningActor: {fileID: 0}
   owningActor: {fileID: 0}
   location: {x: -4, y: 8}
-  tileEffect: 0
+  tileEffect: 4
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
@@ -8629,7 +8634,7 @@ MonoBehaviour:
   spawningActor: {fileID: 0}
   owningActor: {fileID: 0}
   location: {x: -4, y: 4}
-  tileEffect: 0
+  tileEffect: 3
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
@@ -8857,7 +8862,7 @@ MonoBehaviour:
   spawningActor: {fileID: 0}
   owningActor: {fileID: 0}
   location: {x: 2, y: 0}
-  tileEffect: 0
+  tileEffect: 4
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0

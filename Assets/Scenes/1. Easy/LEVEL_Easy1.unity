@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.010486948, g: 0.05298245, b: 0.15319037, a: 1}
+  m_IndirectSpecularColor: {r: 0.010486943, g: 0.05298245, b: 0.15319028, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3103,8 +3103,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilePrefab: {fileID: 819090373}
   maxWidth: 2
-  spawningActor: {fileID: 0}
-  owningActor: {fileID: 0}
+  spawningActor: {fileID: 644973983}
+  owningActor: {fileID: 644973983}
   location: {x: 1, y: 9}
   tileEffect: 0
   teleportTarget: {fileID: 0}

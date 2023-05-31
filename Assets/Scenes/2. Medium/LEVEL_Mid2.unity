@@ -6357,7 +6357,7 @@ GameObject:
   - component: {fileID: 994901087}
   - component: {fileID: 994901086}
   m_Layer: 0
-  m_Name: NormTeleportR
+  m_Name: Tile(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
