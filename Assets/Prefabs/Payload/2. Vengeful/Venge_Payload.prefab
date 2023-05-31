@@ -56,9 +56,7 @@ MonoBehaviour:
   lifestealHealValue: 0
   pauseTurnsAfterTurn: 0
   isForwardMoving: 1
-  textSectionTriggerBindings:
-  - condition: 1
-    index: 0
+  textSectionTriggerBindings: []
 --- !u!114 &167588935009502908
 MonoBehaviour:
   m_ObjectHideFlags: 0

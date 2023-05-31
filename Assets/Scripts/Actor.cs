@@ -202,6 +202,7 @@ public class Actor : MonoBehaviourPunCallbacks
     {
         foreach (var triggerBinding in piece.textSectionTriggerBindings)
         {
+            if (TutorialText.Instance == null) continue;
             if (triggerBinding.condition == TextSectionTrigger.PieceDestroyed)
             {
                 TutorialText.Instance.TriggerSection(triggerBinding.index);

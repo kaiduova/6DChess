@@ -80,6 +80,7 @@ public class Piece : MonoBehaviour
     {
         foreach (var triggerBinding in textSectionTriggerBindings)
         {
+            if (TutorialText.Instance == null) continue;
             if (triggerBinding.condition == TextSectionTrigger.PiecePlaced)
             {
                 TutorialText.Instance.TriggerSection(triggerBinding.index);
@@ -106,6 +107,7 @@ public class Piece : MonoBehaviour
         {
             if (triggerBinding.condition == TextSectionTrigger.Hovered)
             {
+                if (TutorialText.Instance == null) continue;
                 TutorialText.Instance.TriggerSection(triggerBinding.index);
             }
         }
@@ -169,6 +171,7 @@ public class Piece : MonoBehaviour
             {
                 if (triggerBinding.condition == TextSectionTrigger.DamageDealt)
                 {
+                    if (TutorialText.Instance == null) continue;
                     TutorialText.Instance.TriggerSection(triggerBinding.index);
                 }
             }
