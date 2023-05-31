@@ -66,6 +66,8 @@ public class GameManager : MonoBehaviourPunCallbacks
 
     private bool _inSelectionScene;
 
+    public float Volume { get; set; }
+
     private void Awake()
     {
         if (Instance != null) Destroy(gameObject);
@@ -82,10 +84,17 @@ public class GameManager : MonoBehaviourPunCallbacks
         }
 
         SceneManager.sceneLoaded += OnSceneLoaded;
+        
+        PlayerPrefs.SetFloat("Volume", 0.2f);
     }
 
     private void Update()
     {
+        if (PlayerPrefs.HasKey("Volume"))
+        {
+            Volume = PlayerPrefs.GetFloat("Volume");
+        }
+
         Connected = PhotonNetwork.IsConnected;
         
         if (PhotonNetwork.IsConnectedAndReady && PhotonNetwork.InRoom)

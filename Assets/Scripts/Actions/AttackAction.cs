@@ -31,7 +31,7 @@ namespace Actions
             //Rotate and play animation.
             var lookRotation =
                 Quaternion.LookRotation(inTargetTile.transform.position - transform.position, Vector3.up);
-            Piece.transform.GetChild(0).rotation = Quaternion.Euler(originalRotation.eulerAngles.x, lookRotation.y, originalRotation.eulerAngles.z);
+            Piece.transform.GetChild(0).rotation = Quaternion.Euler(originalRotation.eulerAngles.x, lookRotation.eulerAngles.y, originalRotation.eulerAngles.z);
 
             yield return new WaitForSeconds(inAttackTime);
             

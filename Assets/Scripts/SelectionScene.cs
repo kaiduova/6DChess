@@ -35,7 +35,7 @@ public class SelectionScene : MonoBehaviour
         var previousPosition = Vector3.zero;
         foreach (var prefab in selectableCardPrefabs)
         {
-            instantiatedCardPrefabs.Add(Instantiate(prefab, previousPosition, Quaternion.identity));
+            instantiatedCardPrefabs.Add(Instantiate(prefab, previousPosition, Quaternion.Euler(0, 180, 0)));
             previousPosition += new Vector3(spacing, 0f);
         }
         previousPosition -= new Vector3(spacing, 0f);
