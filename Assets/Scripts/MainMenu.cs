@@ -11,13 +11,27 @@ public class MainMenu : MonoBehaviour
     private GameObject mainPanel, settingsPanel, creditsPanel;
 
     [SerializeField]
-    private int tutorialSceneIndex;
+    private int tutorialSceneIndex, mainMenuSceneIndex;
+
+    [SerializeField]
+    private TMP_Text scoreText;
 
     private void Start()
     {
-        mainPanel.SetActive(true);
-        settingsPanel.SetActive(false);
-        creditsPanel.SetActive(false);
+        if (mainPanel != null && settingsPanel != null && creditsPanel != null)
+        {
+            mainPanel.SetActive(true);
+            settingsPanel.SetActive(false);
+            creditsPanel.SetActive(false);
+        }
+    }
+
+    private void Update()
+    {
+        if (scoreText != null)
+        {
+            scoreText.text = "Levels completed: " + GameManager.Instance.CurrentIndexOnSceneOrder;
+        }
     }
 
     public void Play()
@@ -61,5 +75,10 @@ public class MainMenu : MonoBehaviour
     public void Quit()
     {
         Application.Quit();
+    }
+
+    public void ReturnToMainMenu()
+    {
+        SceneManager.LoadScene(mainMenuSceneIndex);
     }
 }

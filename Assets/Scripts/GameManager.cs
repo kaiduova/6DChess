@@ -64,6 +64,8 @@ public class GameManager : MonoBehaviourPunCallbacks
 
     private int _currentIndexOnSceneOrder;
 
+    public int CurrentIndexOnSceneOrder => _currentIndexOnSceneOrder;
+
     private bool _inSelectionScene;
 
     public float Volume { get; set; }
