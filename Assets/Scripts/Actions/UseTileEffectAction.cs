@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Linq;
+using System.Net.NetworkInformation;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -19,6 +20,18 @@ namespace Actions
 
         public override void PerformAction(ActionFinishCallback callback)
         {
+            if (Piece.Tile.CurrentPiece == null || Piece.Tile.CurrentPiece != Piece)
+            {
+                if (Piece.Tile.tileEffect is TileEffect.Teleport or TileEffect.Arrow)
+                {
+                    Piece.Tile.SetOrReplacePieceOnTile(Piece);
+                }
+                else
+                {
+                    callback();
+                    return;
+                }
+            }
             while (true)
             {
                 _callback = callback;

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4942057540051692963}
   - component: {fileID: 4942057540051692972}
   - component: {fileID: 4942057540051692973}
+  - component: {fileID: 1615551883229748212}
   - component: {fileID: 5260292286299714863}
   - component: {fileID: -6511377359171243633}
   - component: {fileID: -2724974174929449194}
@@ -77,6 +78,20 @@ MonoBehaviour:
   movePattern: 0
   isJump: 1
   moveDuration: 0.2
+--- !u!114 &1615551883229748212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4942057540051692970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7313f5aa48a4cf481a0befede4aac5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionOrder: 2
+  arrowMoveDuration: 1
 --- !u!114 &5260292286299714863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,7 +104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cd8c17e93a6436080e6369f09d5cd35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actionOrder: 2
+  actionOrder: 3
   movePattern: 0
   isJump: 0
   moveDuration: 0.2
@@ -105,7 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7313f5aa48a4cf481a0befede4aac5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actionOrder: 3
+  actionOrder: 4
   arrowMoveDuration: 1
 --- !u!136 &-2724974174929449194
 CapsuleCollider:
