@@ -4027,7 +4027,7 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   arrowTarget: 0
   arrowSide: 0
-  randomOriginalVisual: {fileID: 0}
+  randomOriginalVisual: {fileID: 1132841492}
   randomInstakillVisual: {fileID: 1905038156}
   randomSludgeVisual: {fileID: 739169608}
 --- !u!1 &832575517
@@ -5647,6 +5647,12 @@ PrefabInstance:
 --- !u!4 &1132841491 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8050177591135461274, guid: fdaea0be131ffde4eacad700c880470d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1132841490}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1132841492 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7276736669821175072, guid: fdaea0be131ffde4eacad700c880470d,
     type: 3}
   m_PrefabInstance: {fileID: 1132841490}
   m_PrefabAsset: {fileID: 0}
