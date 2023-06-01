@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7128719c76cc424aa34e1278794af0ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardPrefab: {fileID: 4942057540051692970, guid: 8decd60071a13a74fa5437b3047a39ae,
+  cardPrefab: {fileID: 8485078294492037666, guid: 5a7c14eda71b1f84ea1cc4ed7ca4ba2c,
     type: 3}
 --- !u!65 &206303078549874447
 BoxCollider:
