@@ -63,7 +63,7 @@ public class SelectionScene : MonoBehaviour
     {
         foreach (var card in _selectableCards)
         {
-            card.Selected = false;
+            card.Deselect();
         }
     }
 }
