@@ -56,7 +56,7 @@ MonoBehaviour:
   - relativeCoordinate: {x: 0, y: 4}
     iconObject: {fileID: 1737966203021383954, guid: ecc1796cafe6a3440afa55a326e71d55,
       type: 3}
-  pieceInfo: {fileID: 21300000, guid: a09784ad8f2d1ae4281ed13a4418c523, type: 3}
+  pieceInfo: {fileID: 21300000, guid: f3f43166b68482e43b94aaab6fa373d1, type: 3}
   isVengeful: 0
   lifestealHealValue: 0
   pauseTurnsAfterTurn: 0
