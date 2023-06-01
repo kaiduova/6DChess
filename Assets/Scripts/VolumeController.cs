@@ -11,6 +11,6 @@ public class VolumeController: MonoBehaviour
 
     private void Update()
     {
-        _audioSource.volume = GameManager.Instance.Volume * 0.08f;
+        _audioSource.volume = GameManager.Instance.Volume * 0.11f;
     }
 }

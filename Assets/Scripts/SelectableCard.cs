@@ -5,13 +5,17 @@ using UnityEngine;
 [RequireComponent(typeof(Collider))]
 public class SelectableCard : MonoBehaviour
 {
-    public bool Selected { get; private set; }
+    public bool Selected { get; set; }
 
     [SerializeField]
     public GameObject cardPrefab;
 
     public void Select()
     {
+        if (SelectionScene.Instance.maxNumSelectedCards == 1)
+        {
+            SelectionScene.Instance.DeselectAll();
+        }
         if (Selected) return;
         if (SelectionScene.Instance.maxNumSelectedCards > SelectionScene.Instance.NumSelectedCards)
         {

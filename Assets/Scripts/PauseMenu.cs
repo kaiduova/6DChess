@@ -7,11 +7,13 @@ public class PauseMenu : MonoBehaviour
     private bool _active;
 
     [SerializeField]
-    private GameObject pauseMenu;
+    private GameObject pauseMenu, mainContainer, tileContainer;
 
     private void Start()
     {
         pauseMenu.SetActive(false);
+        mainContainer.SetActive(true);
+        tileContainer.SetActive(false);
     }
 
     private void Update()
@@ -26,5 +28,17 @@ public class PauseMenu : MonoBehaviour
     {
         Time.timeScale = 1;
         GameManager.Instance.EndSession(PlayerController.Instance.Actor.Opponent);
+    }
+
+    public void ToTileContainer()
+    {
+        mainContainer.SetActive(false);
+        tileContainer.SetActive(true);
+    }
+    
+    public void ToMainContainer()
+    {
+        mainContainer.SetActive(true);
+        tileContainer.SetActive(false);
     }
 }

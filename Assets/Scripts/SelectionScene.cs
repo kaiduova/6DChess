@@ -58,4 +58,12 @@ public class SelectionScene : MonoBehaviour
         GameManager.Instance.AddedCardPrefabs.AddRange(_selectableCards.Where(card => card.Selected).Select(card => card.cardPrefab));
         GameManager.Instance.LoadNextGameScene();
     }
+
+    public void DeselectAll()
+    {
+        foreach (var card in _selectableCards)
+        {
+            card.Selected = false;
+        }
+    }
 }
