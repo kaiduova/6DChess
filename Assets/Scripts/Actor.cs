@@ -286,6 +286,12 @@ public class Actor : MonoBehaviourPunCallbacks
     [PunRPC]
     private void PerformPieceActionsCommon()
     {
+        foreach (var piece in _pieces)
+        {
+            if (piece == null) continue;
+            piece.InSludge = false;
+        }
+
         _isActing = true;
         if (side == Side.Normal)
         {
