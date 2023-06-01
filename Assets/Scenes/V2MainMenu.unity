@@ -9920,7 +9920,7 @@ MonoBehaviour:
   - {fileID: 206303078549874440, guid: ad109bd500c6a9c408cfa69c70a8af5c, type: 3}
   - {fileID: 206303078549874440, guid: bf9b9708b0429ad4cb447e4bb1242f82, type: 3}
   - {fileID: 206303078549874440, guid: 177aaa1206e1f164798dae69e503e325, type: 3}
-  - {fileID: 206303078549874440, guid: bf9b9708b0429ad4cb447e4bb1242f82, type: 3}
+  - {fileID: 206303078549874440, guid: ed8bc5d40854ca04a8393e5109af9fb9, type: 3}
   mediumSelectableCards:
   - {fileID: 206303078549874440, guid: ed8bc5d40854ca04a8393e5109af9fb9, type: 3}
   - {fileID: 206303078549874440, guid: dd34a473cde120c48b629202e3c34eb8, type: 3}

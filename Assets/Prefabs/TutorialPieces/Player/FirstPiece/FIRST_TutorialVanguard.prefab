@@ -35,6 +35,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4942057540467675390}
+  - {fileID: 5387779317990184281}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -58,9 +59,9 @@ MonoBehaviour:
   - relativeCoordinate: {x: 1, y: 3}
     iconObject: {fileID: 5485747449275024183, guid: 2cf66392ebeb4a54bb94fe8b0dd5c788,
       type: 3}
-  pieceInfo: {fileID: 21300000, guid: 5e84445eb2449f1429964fc96a481865, type: 3}
+  pieceInfo: {fileID: 21300000, guid: 13e948bc2f854ff41823438a32ffab6e, type: 3}
   isVengeful: 0
-  lifestealHealValue: 0
+  lifestealHealValue: 2
   pauseTurnsAfterTurn: 0
   isForwardMoving: 1
   textSectionTriggerBindings:
@@ -300,4 +301,79 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4075446420587282535, guid: 79e9c128c777ec3478c0f85ad525e3ff,
     type: 3}
   m_PrefabInstance: {fileID: 2543493123171151348}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2683974452552477005
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4942057540051692963}
+    m_Modifications:
+    - target: {fileID: 8068858667843025940, guid: 29339d92f680f1541af3ca1b78646a90,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8068858667843025940, guid: 29339d92f680f1541af3ca1b78646a90,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8068858667843025940, guid: 29339d92f680f1541af3ca1b78646a90,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8068858667843025940, guid: 29339d92f680f1541af3ca1b78646a90,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8068858667843025940, guid: 29339d92f680f1541af3ca1b78646a90,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8068858667843025940, guid: 29339d92f680f1541af3ca1b78646a90,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8068858667843025940, guid: 29339d92f680f1541af3ca1b78646a90,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8068858667843025940, guid: 29339d92f680f1541af3ca1b78646a90,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8068858667843025940, guid: 29339d92f680f1541af3ca1b78646a90,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8068858667843025940, guid: 29339d92f680f1541af3ca1b78646a90,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8068858667843025940, guid: 29339d92f680f1541af3ca1b78646a90,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9174290919043669213, guid: 29339d92f680f1541af3ca1b78646a90,
+        type: 3}
+      propertyPath: m_Name
+      value: LifestealFx
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 29339d92f680f1541af3ca1b78646a90, type: 3}
+--- !u!4 &5387779317990184281 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8068858667843025940, guid: 29339d92f680f1541af3ca1b78646a90,
+    type: 3}
+  m_PrefabInstance: {fileID: 2683974452552477005}
   m_PrefabAsset: {fileID: 0}
