@@ -59,7 +59,7 @@ MonoBehaviour:
   - relativeCoordinate: {x: 0, y: 4}
     iconObject: {fileID: 1737966203021383954, guid: ecc1796cafe6a3440afa55a326e71d55,
       type: 3}
-  pieceInfo: {fileID: 21300000, guid: a09784ad8f2d1ae4281ed13a4418c523, type: 3}
+  pieceInfo: {fileID: 21300000, guid: 79f0c1aaf009f074a9c2f77a339746c2, type: 3}
   isVengeful: 0
   lifestealHealValue: 2
   pauseTurnsAfterTurn: 0
