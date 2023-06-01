@@ -1,10 +1,12 @@
 using System;
 using Controllers;
 using TMPro;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
+using WebSocketSharp;
 
 public class MainMenu : MonoBehaviour
 {
@@ -19,6 +21,9 @@ public class MainMenu : MonoBehaviour
 
     [SerializeField]
     private Slider volumeSlider;
+    
+    [SerializeField]
+    private TMP_InputField sceneInputField;
 
     private void Start()
     {
@@ -52,7 +57,7 @@ public class MainMenu : MonoBehaviour
 
     public void Tutorial()
     {
-        SceneManager.LoadScene(tutorialSceneIndex);
+        GameManager.Instance.LoadSpecificScene(tutorialSceneIndex);
     }
     
     public void ToMainPanel()
@@ -89,5 +94,24 @@ public class MainMenu : MonoBehaviour
     public void ReturnToMainMenu()
     {
         SceneManager.LoadScene(mainMenuSceneIndex);
+    }
+
+    public void LoadSpecificScene()
+    {
+        if (sceneInputField == null || sceneInputField.text.IsNullOrEmpty()) return;
+        if (!int.TryParse(sceneInputField.text, out var sceneIndex))
+        {
+            return;
+        }
+        if (sceneIndex is > 0 and < 10)
+        {
+            sceneIndex += 5;
+            GameManager.Instance.LoadSpecificScene(sceneIndex);
+        }
+    }
+
+    public void OnSpeedModeToggle(Boolean state)
+    {
+        GameManager.Instance.SpeedMode = state;
     }
 }

@@ -24,7 +24,7 @@ namespace Actions
             }
             var targetTileLocation = Piece.Tile.location + processedRelativeAttackCoordinate;
             var targetTile = Board.Instance.Tiles.FirstOrDefault(tile => tile.location == targetTileLocation);
-            if (targetTile == null || targetTile.CurrentPiece == null)
+            if (targetTile == null || targetTile.CurrentPiece == null || targetTile.CurrentPiece.Actor == Piece.Actor)
             {
                 callback();
                 return;

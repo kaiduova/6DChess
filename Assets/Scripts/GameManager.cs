@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviourPunCallbacks
     [SerializeField]
     private bool speedMode;
 
-    public bool SpeedMode => speedMode;
+    public bool SpeedMode { get => speedMode; set => speedMode = value; }
 
     public List<GameObject> AddedCardPrefabs { get; } = new();
 
@@ -238,12 +238,22 @@ public class GameManager : MonoBehaviourPunCallbacks
             GameDifficulty = GameDifficulty.Boss;
             _selectableCardListToUse = bossSelectableCards;
         }
+
         SceneManager.LoadScene(_sceneOrder[_currentIndexOnSceneOrder]);
     }
 
     public void ResetAddedCards()
     {
         AddedCardPrefabs.Clear();
+    }
+
+    public void LoadSpecificScene(int sceneIndex)
+    {
+        _sceneOrder.Clear();
+        AddedCardPrefabs.Clear();
+        _sceneOrder.Add(sceneIndex);
+        _currentIndexOnSceneOrder = -1;
+        LoadNextGameScene();
     }
 
     public void OnSceneLoaded(Scene scene, LoadSceneMode loadSceneMode)
